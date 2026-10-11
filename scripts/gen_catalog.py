@@ -30,7 +30,7 @@ def add(prefix: str, number: int, title: str, title_te: str, template: str, summ
     version = extra.pop("version", "v3")
     nav = extra.pop("nav", stakeholder if kind == "mobile" else f"bo-{stakeholder}")
     route = f"/{group}/{slug}"
-    file = f"app/({group})/{slug}.tsx"
+    file = f"app/{group}/{slug}.tsx"
     screens.append(
         {
             "id": sid,
@@ -339,20 +339,29 @@ slugs = [s["slug"] for s in screens]
 if len(slugs) != len(set(slugs)):
     raise SystemExit("Duplicate slugs")
 
-# Clear generated route groups but keep root layout files.
+# Route folders are real URL segments (`/producer/...`). Parentheses would hide the segment.
 keep_groups = set()
 for screen in screens:
-    group_dir = APP / f"({screen['group']})"
+    group_dir = APP / screen["group"]
     keep_groups.add(group_dir.name)
     group_dir.mkdir(parents=True, exist_ok=True)
 
-for child in APP.iterdir():
-    if child.is_dir() and child.name.startswith("(") and child.name not in keep_groups:
-        shutil.rmtree(child)
+for child in list(APP.iterdir()):
+    if not child.is_dir():
+        continue
+    if child.name.startswith("(") or (child.name not in keep_groups and child.name not in {"node_modules"}):
+        # Drop previous group folders, including the invisible `(group)` routes.
+        if child.name.startswith("(") or child.name in {
+            "onboarding", "producer", "agent", "buyer", "quality", "transport", "storage",
+            "bank", "insurance", "yard", "inputs", "shared", "admin", "backoffice",
+        }:
+            shutil.rmtree(child)
+            if child.name in keep_groups:
+                child.mkdir()
 
 written_groups = set()
 for screen in screens:
-    group_dir = APP / f"({screen['group']})"
+    group_dir = APP / screen["group"]
     if screen["group"] not in written_groups:
         for old in group_dir.glob("*.tsx"):
             old.unlink()

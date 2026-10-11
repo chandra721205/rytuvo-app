@@ -4,7 +4,7 @@ Rytuvo is a single Expo application. Mobile stakeholders use grouped expo-router
 
 ## Navigation
 
-`app/_layout.tsx` is a headerless stack. `app/index.tsx` renders the splash (`OB-01`). Each other route is a thin file:
+`app/_layout.tsx` is a headerless stack. `app/index.tsx` renders the splash (`OB-01`). Stakeholder folders are real URL segments (`app/producer/p-01-home.tsx` is `/producer/p-01-home`). Parentheses would hide that segment, so they are not used. Each other route is a thin file:
 
 ```tsx
 export default function Route() {

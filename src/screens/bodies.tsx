@@ -296,7 +296,7 @@ function Auction({ spec }: { spec: ScreenSpec }) {
   const [reserve, setReserveValue] = useState(lot ? String(lot.reservePaise / 100) : '');
   const [price, setPrice] = useState('22150');
   if (!lot) return null;
-  const visible = can(role, 'reserve.view') || spec.stakeholder === 'producer' || spec.stakeholder === 'agent' || spec.kind === 'desktop';
+  const visible = can(role, 'reserve.view');
   const lotBids = bids.filter((bid) => bid.lotId === lot.id);
   return (
     <View style={{ gap: 12 }}>
@@ -330,7 +330,7 @@ function Auction({ spec }: { spec: ScreenSpec }) {
             key={bid.id}
             label={bid.label}
             price={`${formatInr(bid.pricePaise)} / q`}
-            meta={`${bid.source === 'ai' ? 'AI' : 'Manual'} · ${bid.status === 'rejected_below_reserve' ? tx('Below reserve', 'రిజర్వ్ కంటే తక్కువ') : bid.status}`}
+            meta={`${bid.source === 'ai' ? 'AI' : 'Manual'} · ${bid.status === 'rejected_below_reserve' ? (visible ? tx('Below reserve', 'రిజర్వ్ కంటే తక్కువ') : tx('Bid not accepted', 'బిడ్ అంగీకరించబడలేదు')) : bid.status}`}
             when={bid.createdAt.slice(11, 16)}
             top={bid.status === 'leading'}
             tone={bid.status === 'rejected_below_reserve' ? 'danger' : bid.status === 'leading' ? 'success' : 'default'}

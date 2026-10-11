@@ -14,7 +14,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-01-splash",
     "route": "/onboarding/ob-01-splash",
-    "file": "app/(onboarding)/ob-01-splash.tsx",
+    "file": "app/onboarding/ob-01-splash.tsx",
     "kind": "mobile",
     "template": "splash",
     "hideNav": true
@@ -32,7 +32,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-02-language",
     "route": "/onboarding/ob-02-language",
-    "file": "app/(onboarding)/ob-02-language.tsx",
+    "file": "app/onboarding/ob-02-language.tsx",
     "kind": "mobile",
     "template": "language",
     "hideNav": true
@@ -50,7 +50,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-03-mobile-number",
     "route": "/onboarding/ob-03-mobile-number",
-    "file": "app/(onboarding)/ob-03-mobile-number.tsx",
+    "file": "app/onboarding/ob-03-mobile-number.tsx",
     "kind": "mobile",
     "template": "phone",
     "hideNav": true
@@ -68,7 +68,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-04-verify-otp",
     "route": "/onboarding/ob-04-verify-otp",
-    "file": "app/(onboarding)/ob-04-verify-otp.tsx",
+    "file": "app/onboarding/ob-04-verify-otp.tsx",
     "kind": "mobile",
     "template": "otp",
     "hideNav": true,
@@ -91,7 +91,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-05-choose-role",
     "route": "/onboarding/ob-05-choose-role",
-    "file": "app/(onboarding)/ob-05-choose-role.tsx",
+    "file": "app/onboarding/ob-05-choose-role.tsx",
     "kind": "mobile",
     "template": "roles",
     "hideNav": true
@@ -109,7 +109,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-06-profile",
     "route": "/onboarding/ob-06-profile",
-    "file": "app/(onboarding)/ob-06-profile.tsx",
+    "file": "app/onboarding/ob-06-profile.tsx",
     "kind": "mobile",
     "template": "form",
     "hideNav": true
@@ -127,7 +127,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-07-kyc-levels",
     "route": "/onboarding/ob-07-kyc-levels",
-    "file": "app/(onboarding)/ob-07-kyc-levels.tsx",
+    "file": "app/onboarding/ob-07-kyc-levels.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "levels"
@@ -145,7 +145,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-08-aadhaar",
     "route": "/onboarding/ob-08-aadhaar",
-    "file": "app/(onboarding)/ob-08-aadhaar.tsx",
+    "file": "app/onboarding/ob-08-aadhaar.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "identity"
@@ -163,7 +163,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-09-selfie-check",
     "route": "/onboarding/ob-09-selfie-check",
-    "file": "app/(onboarding)/ob-09-selfie-check.tsx",
+    "file": "app/onboarding/ob-09-selfie-check.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "selfie"
@@ -181,7 +181,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-10-bank-and-pan",
     "route": "/onboarding/ob-10-bank-and-pan",
-    "file": "app/(onboarding)/ob-10-bank-and-pan.tsx",
+    "file": "app/onboarding/ob-10-bank-and-pan.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "bank"
@@ -199,7 +199,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-11-business-type",
     "route": "/onboarding/ob-11-business-type",
-    "file": "app/(onboarding)/ob-11-business-type.tsx",
+    "file": "app/onboarding/ob-11-business-type.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -216,7 +216,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-12-verification-pending",
     "route": "/onboarding/ob-12-verification-pending",
-    "file": "app/(onboarding)/ob-12-verification-pending.tsx",
+    "file": "app/onboarding/ob-12-verification-pending.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "pending"
@@ -234,7 +234,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-13-org-approved",
     "route": "/onboarding/ob-13-org-approved",
-    "file": "app/(onboarding)/ob-13-org-approved.tsx",
+    "file": "app/onboarding/ob-13-org-approved.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -260,7 +260,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-14-welcome-bonus",
     "route": "/onboarding/ob-14-welcome-bonus",
-    "file": "app/(onboarding)/ob-14-welcome-bonus.tsx",
+    "file": "app/onboarding/ob-14-welcome-bonus.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -286,7 +286,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-15-welcome-1",
     "route": "/onboarding/ob-15-welcome-1",
-    "file": "app/(onboarding)/ob-15-welcome-1.tsx",
+    "file": "app/onboarding/ob-15-welcome-1.tsx",
     "kind": "mobile",
     "template": "flow",
     "notes": [
@@ -309,7 +309,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-16-welcome-2",
     "route": "/onboarding/ob-16-welcome-2",
-    "file": "app/(onboarding)/ob-16-welcome-2.tsx",
+    "file": "app/onboarding/ob-16-welcome-2.tsx",
     "kind": "mobile",
     "template": "flow",
     "notes": [
@@ -332,7 +332,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-17-welcome-3",
     "route": "/onboarding/ob-17-welcome-3",
-    "file": "app/(onboarding)/ob-17-welcome-3.tsx",
+    "file": "app/onboarding/ob-17-welcome-3.tsx",
     "kind": "mobile",
     "template": "flow",
     "notes": [
@@ -355,7 +355,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-18-welcome-back",
     "route": "/onboarding/ob-18-welcome-back",
-    "file": "app/(onboarding)/ob-18-welcome-back.tsx",
+    "file": "app/onboarding/ob-18-welcome-back.tsx",
     "kind": "mobile",
     "template": "phone",
     "hideNav": true
@@ -373,7 +373,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-19-recover-account",
     "route": "/onboarding/ob-19-recover-account",
-    "file": "app/(onboarding)/ob-19-recover-account.tsx",
+    "file": "app/onboarding/ob-19-recover-account.tsx",
     "kind": "mobile",
     "template": "phone",
     "hideNav": true
@@ -391,7 +391,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-20-add-more-roles",
     "route": "/onboarding/ob-20-add-more-roles",
-    "file": "app/(onboarding)/ob-20-add-more-roles.tsx",
+    "file": "app/onboarding/ob-20-add-more-roles.tsx",
     "kind": "mobile",
     "template": "roles"
   },
@@ -408,7 +408,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-21-permissions",
     "route": "/onboarding/ob-21-permissions",
-    "file": "app/(onboarding)/ob-21-permissions.tsx",
+    "file": "app/onboarding/ob-21-permissions.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -448,7 +448,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-22-address",
     "route": "/onboarding/ob-22-address",
-    "file": "app/(onboarding)/ob-22-address.tsx",
+    "file": "app/onboarding/ob-22-address.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -465,7 +465,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-23-kyc-upgrade",
     "route": "/onboarding/ob-23-kyc-upgrade",
-    "file": "app/(onboarding)/ob-23-kyc-upgrade.tsx",
+    "file": "app/onboarding/ob-23-kyc-upgrade.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -482,7 +482,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-24-commodities-and-yards",
     "route": "/onboarding/ob-24-commodities-and-yards",
-    "file": "app/(onboarding)/ob-24-commodities-and-yards.tsx",
+    "file": "app/onboarding/ob-24-commodities-and-yards.tsx",
     "kind": "mobile",
     "template": "cascade"
   },
@@ -499,7 +499,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-25-yard-cascade",
     "route": "/onboarding/ob-25-yard-cascade",
-    "file": "app/(onboarding)/ob-25-yard-cascade.tsx",
+    "file": "app/onboarding/ob-25-yard-cascade.tsx",
     "kind": "mobile",
     "template": "cascade"
   },
@@ -516,7 +516,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-26-kyc-trader",
     "route": "/onboarding/ob-26-kyc-trader",
-    "file": "app/(onboarding)/ob-26-kyc-trader.tsx",
+    "file": "app/onboarding/ob-26-kyc-trader.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "purpose"
@@ -534,7 +534,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-27-kyc-transporter",
     "route": "/onboarding/ob-27-kyc-transporter",
-    "file": "app/(onboarding)/ob-27-kyc-transporter.tsx",
+    "file": "app/onboarding/ob-27-kyc-transporter.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "identity"
@@ -552,7 +552,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-28-kyc-inspector",
     "route": "/onboarding/ob-28-kyc-inspector",
-    "file": "app/(onboarding)/ob-28-kyc-inspector.tsx",
+    "file": "app/onboarding/ob-28-kyc-inspector.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "pending"
@@ -570,7 +570,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-29-kyc-storage",
     "route": "/onboarding/ob-29-kyc-storage",
-    "file": "app/(onboarding)/ob-29-kyc-storage.tsx",
+    "file": "app/onboarding/ob-29-kyc-storage.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "address"
@@ -588,7 +588,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-30-kyc-bank",
     "route": "/onboarding/ob-30-kyc-bank",
-    "file": "app/(onboarding)/ob-30-kyc-bank.tsx",
+    "file": "app/onboarding/ob-30-kyc-bank.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "pending"
@@ -606,7 +606,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-31-kyc-insurance",
     "route": "/onboarding/ob-31-kyc-insurance",
-    "file": "app/(onboarding)/ob-31-kyc-insurance.tsx",
+    "file": "app/onboarding/ob-31-kyc-insurance.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "levels"
@@ -624,7 +624,7 @@ export const catalog: ScreenSpec[] = [
     "group": "onboarding",
     "slug": "ob-32-buyer-purposes",
     "route": "/onboarding/ob-32-buyer-purposes",
-    "file": "app/(onboarding)/ob-32-buyer-purposes.tsx",
+    "file": "app/onboarding/ob-32-buyer-purposes.tsx",
     "kind": "mobile",
     "template": "purposes",
     "hideNav": true
@@ -642,7 +642,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-01-home",
     "route": "/producer/p-01-home",
-    "file": "app/(producer)/p-01-home.tsx",
+    "file": "app/producer/p-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -702,7 +702,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-02-farm-and-plots",
     "route": "/producer/p-02-farm-and-plots",
-    "file": "app/(producer)/p-02-farm-and-plots.tsx",
+    "file": "app/producer/p-02-farm-and-plots.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -744,7 +744,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-03-crop-cycle",
     "route": "/producer/p-03-crop-cycle",
-    "file": "app/(producer)/p-03-crop-cycle.tsx",
+    "file": "app/producer/p-03-crop-cycle.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -784,7 +784,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-04-today",
     "route": "/producer/p-04-today",
-    "file": "app/(producer)/p-04-today.tsx",
+    "file": "app/producer/p-04-today.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -827,7 +827,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-05-create-listing",
     "route": "/producer/p-05-create-listing",
-    "file": "app/(producer)/p-05-create-listing.tsx",
+    "file": "app/producer/p-05-create-listing.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -844,7 +844,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-06-live-bids",
     "route": "/producer/p-06-live-bids",
-    "file": "app/(producer)/p-06-live-bids.tsx",
+    "file": "app/producer/p-06-live-bids.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -862,7 +862,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-07-negotiation",
     "route": "/producer/p-07-negotiation",
-    "file": "app/(producer)/p-07-negotiation.tsx",
+    "file": "app/producer/p-07-negotiation.tsx",
     "kind": "mobile",
     "template": "chat",
     "items": [
@@ -893,7 +893,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-08-sale-otp",
     "route": "/producer/p-08-sale-otp",
-    "file": "app/(producer)/p-08-sale-otp.tsx",
+    "file": "app/producer/p-08-sale-otp.tsx",
     "kind": "mobile",
     "template": "otp",
     "primary": {
@@ -915,7 +915,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-09-deal",
     "route": "/producer/p-09-deal",
-    "file": "app/(producer)/p-09-deal.tsx",
+    "file": "app/producer/p-09-deal.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -949,7 +949,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-10-quality-result",
     "route": "/producer/p-10-quality-result",
-    "file": "app/(producer)/p-10-quality-result.tsx",
+    "file": "app/producer/p-10-quality-result.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -983,7 +983,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-11-arrivals",
     "route": "/producer/p-11-arrivals",
-    "file": "app/(producer)/p-11-arrivals.tsx",
+    "file": "app/producer/p-11-arrivals.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1009,7 +1009,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-12-payments",
     "route": "/producer/p-12-payments",
-    "file": "app/(producer)/p-12-payments.tsx",
+    "file": "app/producer/p-12-payments.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "ledger",
@@ -1028,7 +1028,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-13-advances",
     "route": "/producer/p-13-advances",
-    "file": "app/(producer)/p-13-advances.tsx",
+    "file": "app/producer/p-13-advances.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1054,7 +1054,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-14-agent-links",
     "route": "/producer/p-14-agent-links",
-    "file": "app/(producer)/p-14-agent-links.tsx",
+    "file": "app/producer/p-14-agent-links.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1081,7 +1081,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-15-coins",
     "route": "/producer/p-15-coins",
-    "file": "app/(producer)/p-15-coins.tsx",
+    "file": "app/producer/p-15-coins.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1110,7 +1110,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-16-profile",
     "route": "/producer/p-16-profile",
-    "file": "app/(producer)/p-16-profile.tsx",
+    "file": "app/producer/p-16-profile.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1139,7 +1139,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-17-edit-profile",
     "route": "/producer/p-17-edit-profile",
-    "file": "app/(producer)/p-17-edit-profile.tsx",
+    "file": "app/producer/p-17-edit-profile.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1156,7 +1156,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-18-language",
     "route": "/producer/p-18-language",
-    "file": "app/(producer)/p-18-language.tsx",
+    "file": "app/producer/p-18-language.tsx",
     "kind": "mobile",
     "template": "language"
   },
@@ -1173,7 +1173,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-19-add-plot",
     "route": "/producer/p-19-add-plot",
-    "file": "app/(producer)/p-19-add-plot.tsx",
+    "file": "app/producer/p-19-add-plot.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1190,7 +1190,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-20-plot-detail",
     "route": "/producer/p-20-plot-detail",
-    "file": "app/(producer)/p-20-plot-detail.tsx",
+    "file": "app/producer/p-20-plot-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1219,7 +1219,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-21-assign-crop",
     "route": "/producer/p-21-assign-crop",
-    "file": "app/(producer)/p-21-assign-crop.tsx",
+    "file": "app/producer/p-21-assign-crop.tsx",
     "kind": "mobile",
     "template": "cascade"
   },
@@ -1236,7 +1236,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-22-crop-calendar",
     "route": "/producer/p-22-crop-calendar",
-    "file": "app/(producer)/p-22-crop-calendar.tsx",
+    "file": "app/producer/p-22-crop-calendar.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1270,7 +1270,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-23-add-activity",
     "route": "/producer/p-23-add-activity",
-    "file": "app/(producer)/p-23-add-activity.tsx",
+    "file": "app/producer/p-23-add-activity.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1287,7 +1287,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-24-activity-detail",
     "route": "/producer/p-24-activity-detail",
-    "file": "app/(producer)/p-24-activity-detail.tsx",
+    "file": "app/producer/p-24-activity-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1316,7 +1316,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-25-input-cost",
     "route": "/producer/p-25-input-cost",
-    "file": "app/(producer)/p-25-input-cost.tsx",
+    "file": "app/producer/p-25-input-cost.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1333,7 +1333,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-26-labour",
     "route": "/producer/p-26-labour",
-    "file": "app/(producer)/p-26-labour.tsx",
+    "file": "app/producer/p-26-labour.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1350,7 +1350,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-27-harvest-batches",
     "route": "/producer/p-27-harvest-batches",
-    "file": "app/(producer)/p-27-harvest-batches.tsx",
+    "file": "app/producer/p-27-harvest-batches.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1409,7 +1409,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-28-record-harvest",
     "route": "/producer/p-28-record-harvest",
-    "file": "app/(producer)/p-28-record-harvest.tsx",
+    "file": "app/producer/p-28-record-harvest.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1426,7 +1426,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-29-process-and-pack",
     "route": "/producer/p-29-process-and-pack",
-    "file": "app/(producer)/p-29-process-and-pack.tsx",
+    "file": "app/producer/p-29-process-and-pack.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1443,7 +1443,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-30-self-quality",
     "route": "/producer/p-30-self-quality",
-    "file": "app/(producer)/p-30-self-quality.tsx",
+    "file": "app/producer/p-30-self-quality.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1460,7 +1460,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-31-create-token",
     "route": "/producer/p-31-create-token",
-    "file": "app/(producer)/p-31-create-token.tsx",
+    "file": "app/producer/p-31-create-token.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -1477,7 +1477,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-32-token-created",
     "route": "/producer/p-32-token-created",
-    "file": "app/(producer)/p-32-token-created.tsx",
+    "file": "app/producer/p-32-token-created.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1503,7 +1503,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-33-my-tokens",
     "route": "/producer/p-33-my-tokens",
-    "file": "app/(producer)/p-33-my-tokens.tsx",
+    "file": "app/producer/p-33-my-tokens.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1562,7 +1562,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-34-token-detail",
     "route": "/producer/p-34-token-detail",
-    "file": "app/(producer)/p-34-token-detail.tsx",
+    "file": "app/producer/p-34-token-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1596,7 +1596,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-35-sell-options",
     "route": "/producer/p-35-sell-options",
-    "file": "app/(producer)/p-35-sell-options.tsx",
+    "file": "app/producer/p-35-sell-options.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1630,7 +1630,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-36-preview-listing",
     "route": "/producer/p-36-preview-listing",
-    "file": "app/(producer)/p-36-preview-listing.tsx",
+    "file": "app/producer/p-36-preview-listing.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1659,7 +1659,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-37-listing-published",
     "route": "/producer/p-37-listing-published",
-    "file": "app/(producer)/p-37-listing-published.tsx",
+    "file": "app/producer/p-37-listing-published.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1683,7 +1683,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-38-my-listings",
     "route": "/producer/p-38-my-listings",
-    "file": "app/(producer)/p-38-my-listings.tsx",
+    "file": "app/producer/p-38-my-listings.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1742,7 +1742,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-39-final-offer",
     "route": "/producer/p-39-final-offer",
-    "file": "app/(producer)/p-39-final-offer.tsx",
+    "file": "app/producer/p-39-final-offer.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -1760,7 +1760,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-40-settlement",
     "route": "/producer/p-40-settlement",
-    "file": "app/(producer)/p-40-settlement.tsx",
+    "file": "app/producer/p-40-settlement.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1794,7 +1794,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-41-change-agent",
     "route": "/producer/p-41-change-agent",
-    "file": "app/(producer)/p-41-change-agent.tsx",
+    "file": "app/producer/p-41-change-agent.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1818,7 +1818,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-42-arrange-transport",
     "route": "/producer/p-42-arrange-transport",
-    "file": "app/(producer)/p-42-arrange-transport.tsx",
+    "file": "app/producer/p-42-arrange-transport.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1844,7 +1844,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-43-transport-permit",
     "route": "/producer/p-43-transport-permit",
-    "file": "app/(producer)/p-43-transport-permit.tsx",
+    "file": "app/producer/p-43-transport-permit.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1868,7 +1868,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-44-find-storage",
     "route": "/producer/p-44-find-storage",
-    "file": "app/(producer)/p-44-find-storage.tsx",
+    "file": "app/producer/p-44-find-storage.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1894,7 +1894,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-45-storage-detail",
     "route": "/producer/p-45-storage-detail",
-    "file": "app/(producer)/p-45-storage-detail.tsx",
+    "file": "app/producer/p-45-storage-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -1923,7 +1923,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-46-confirm-storage",
     "route": "/producer/p-46-confirm-storage",
-    "file": "app/(producer)/p-46-confirm-storage.tsx",
+    "file": "app/producer/p-46-confirm-storage.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -1940,7 +1940,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-47-sample-requests",
     "route": "/producer/p-47-sample-requests",
-    "file": "app/(producer)/p-47-sample-requests.tsx",
+    "file": "app/producer/p-47-sample-requests.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1966,7 +1966,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-48-loan-offers",
     "route": "/producer/p-48-loan-offers",
-    "file": "app/(producer)/p-48-loan-offers.tsx",
+    "file": "app/producer/p-48-loan-offers.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -1992,7 +1992,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-49-apply-for-loan",
     "route": "/producer/p-49-apply-for-loan",
-    "file": "app/(producer)/p-49-apply-for-loan.tsx",
+    "file": "app/producer/p-49-apply-for-loan.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -2009,7 +2009,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-50-my-loans",
     "route": "/producer/p-50-my-loans",
-    "file": "app/(producer)/p-50-my-loans.tsx",
+    "file": "app/producer/p-50-my-loans.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -2035,7 +2035,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-51-my-ledger",
     "route": "/producer/p-51-my-ledger",
-    "file": "app/(producer)/p-51-my-ledger.tsx",
+    "file": "app/producer/p-51-my-ledger.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "ledger"
@@ -2053,7 +2053,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-52-request-advance",
     "route": "/producer/p-52-request-advance",
-    "file": "app/(producer)/p-52-request-advance.tsx",
+    "file": "app/producer/p-52-request-advance.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -2070,7 +2070,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-53-repay-advance",
     "route": "/producer/p-53-repay-advance",
-    "file": "app/(producer)/p-53-repay-advance.tsx",
+    "file": "app/producer/p-53-repay-advance.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -2087,7 +2087,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-54-market-prices",
     "route": "/producer/p-54-market-prices",
-    "file": "app/(producer)/p-54-market-prices.tsx",
+    "file": "app/producer/p-54-market-prices.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -2138,7 +2138,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-55-ask-grok",
     "route": "/producer/p-55-ask-grok",
-    "file": "app/(producer)/p-55-ask-grok.tsx",
+    "file": "app/producer/p-55-ask-grok.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "chat"
@@ -2156,7 +2156,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-56-weather-and-risk",
     "route": "/producer/p-56-weather-and-risk",
-    "file": "app/(producer)/p-56-weather-and-risk.tsx",
+    "file": "app/producer/p-56-weather-and-risk.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -2185,7 +2185,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-57-demand-forecast",
     "route": "/producer/p-57-demand-forecast",
-    "file": "app/(producer)/p-57-demand-forecast.tsx",
+    "file": "app/producer/p-57-demand-forecast.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -2211,7 +2211,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-58-profit-estimator",
     "route": "/producer/p-58-profit-estimator",
-    "file": "app/(producer)/p-58-profit-estimator.tsx",
+    "file": "app/producer/p-58-profit-estimator.tsx",
     "kind": "mobile",
     "template": "detail",
     "stats": [
@@ -2245,7 +2245,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-59-services",
     "route": "/producer/p-59-services",
-    "file": "app/(producer)/p-59-services.tsx",
+    "file": "app/producer/p-59-services.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -2271,7 +2271,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-60-request-service",
     "route": "/producer/p-60-request-service",
-    "file": "app/(producer)/p-60-request-service.tsx",
+    "file": "app/producer/p-60-request-service.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -2288,7 +2288,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-61-track-service",
     "route": "/producer/p-61-track-service",
-    "file": "app/(producer)/p-61-track-service.tsx",
+    "file": "app/producer/p-61-track-service.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -2312,7 +2312,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-62-service-settlement",
     "route": "/producer/p-62-service-settlement",
-    "file": "app/(producer)/p-62-service-settlement.tsx",
+    "file": "app/producer/p-62-service-settlement.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -2336,7 +2336,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-63-my-team",
     "route": "/producer/p-63-my-team",
-    "file": "app/(producer)/p-63-my-team.tsx",
+    "file": "app/producer/p-63-my-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -2354,7 +2354,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-64-invite-member",
     "route": "/producer/p-64-invite-member",
-    "file": "app/(producer)/p-64-invite-member.tsx",
+    "file": "app/producer/p-64-invite-member.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -2371,7 +2371,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-65-role-limits",
     "route": "/producer/p-65-role-limits",
-    "file": "app/(producer)/p-65-role-limits.tsx",
+    "file": "app/producer/p-65-role-limits.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -2389,7 +2389,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-66-notifications",
     "route": "/producer/p-66-notifications",
-    "file": "app/(producer)/p-66-notifications.tsx",
+    "file": "app/producer/p-66-notifications.tsx",
     "kind": "mobile",
     "template": "alerts",
     "items": [
@@ -2432,7 +2432,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-67-welcome-coins",
     "route": "/producer/p-67-welcome-coins",
-    "file": "app/(producer)/p-67-welcome-coins.tsx",
+    "file": "app/producer/p-67-welcome-coins.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -2456,7 +2456,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-68-disputes",
     "route": "/producer/p-68-disputes",
-    "file": "app/(producer)/p-68-disputes.tsx",
+    "file": "app/producer/p-68-disputes.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -2482,7 +2482,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-69-documents",
     "route": "/producer/p-69-documents",
-    "file": "app/(producer)/p-69-documents.tsx",
+    "file": "app/producer/p-69-documents.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -2511,7 +2511,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-70-settings",
     "route": "/producer/p-70-settings",
-    "file": "app/(producer)/p-70-settings.tsx",
+    "file": "app/producer/p-70-settings.tsx",
     "kind": "mobile",
     "template": "settings",
     "items": [
@@ -2542,7 +2542,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-71-help",
     "route": "/producer/p-71-help",
-    "file": "app/(producer)/p-71-help.tsx",
+    "file": "app/producer/p-71-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -2571,7 +2571,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-72-empty-lots",
     "route": "/producer/p-72-empty-lots",
-    "file": "app/(producer)/p-72-empty-lots.tsx",
+    "file": "app/producer/p-72-empty-lots.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -2588,7 +2588,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-73-loading",
     "route": "/producer/p-73-loading",
-    "file": "app/(producer)/p-73-loading.tsx",
+    "file": "app/producer/p-73-loading.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -2605,7 +2605,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-74-offline",
     "route": "/producer/p-74-offline",
-    "file": "app/(producer)/p-74-offline.tsx",
+    "file": "app/producer/p-74-offline.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -2622,7 +2622,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-75-error",
     "route": "/producer/p-75-error",
-    "file": "app/(producer)/p-75-error.tsx",
+    "file": "app/producer/p-75-error.tsx",
     "kind": "mobile",
     "template": "error"
   },
@@ -2639,7 +2639,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-76-weighment-live",
     "route": "/producer/p-76-weighment-live",
-    "file": "app/(producer)/p-76-weighment-live.tsx",
+    "file": "app/producer/p-76-weighment-live.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "live"
@@ -2657,7 +2657,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-77-token-autofill",
     "route": "/producer/p-77-token-autofill",
-    "file": "app/(producer)/p-77-token-autofill.tsx",
+    "file": "app/producer/p-77-token-autofill.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "autofill"
@@ -2675,7 +2675,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-78-discrepancy",
     "route": "/producer/p-78-discrepancy",
-    "file": "app/(producer)/p-78-discrepancy.tsx",
+    "file": "app/producer/p-78-discrepancy.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "discrepancy"
@@ -2693,7 +2693,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-79-resolved-bag",
     "route": "/producer/p-79-resolved-bag",
-    "file": "app/(producer)/p-79-resolved-bag.tsx",
+    "file": "app/producer/p-79-resolved-bag.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "resolved"
@@ -2711,7 +2711,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-80-offline-queue",
     "route": "/producer/p-80-offline-queue",
-    "file": "app/(producer)/p-80-offline-queue.tsx",
+    "file": "app/producer/p-80-offline-queue.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "offline"
@@ -2729,7 +2729,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-81-final-summary",
     "route": "/producer/p-81-final-summary",
-    "file": "app/(producer)/p-81-final-summary.tsx",
+    "file": "app/producer/p-81-final-summary.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "summary"
@@ -2747,7 +2747,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-82-sms-preview",
     "route": "/producer/p-82-sms-preview",
-    "file": "app/(producer)/p-82-sms-preview.tsx",
+    "file": "app/producer/p-82-sms-preview.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "sms"
@@ -2765,7 +2765,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-83-offer-and-reserve",
     "route": "/producer/p-83-offer-and-reserve",
-    "file": "app/(producer)/p-83-offer-and-reserve.tsx",
+    "file": "app/producer/p-83-offer-and-reserve.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "offer"
@@ -2783,7 +2783,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-84-bids-versus-reserve",
     "route": "/producer/p-84-bids-versus-reserve",
-    "file": "app/(producer)/p-84-bids-versus-reserve.tsx",
+    "file": "app/producer/p-84-bids-versus-reserve.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -2801,7 +2801,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-85-edit-reserve",
     "route": "/producer/p-85-edit-reserve",
-    "file": "app/(producer)/p-85-edit-reserve.tsx",
+    "file": "app/producer/p-85-edit-reserve.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "edit"
@@ -2819,7 +2819,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-86-close-sold",
     "route": "/producer/p-86-close-sold",
-    "file": "app/(producer)/p-86-close-sold.tsx",
+    "file": "app/producer/p-86-close-sold.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "sold"
@@ -2837,7 +2837,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-87-close-unsold",
     "route": "/producer/p-87-close-unsold",
-    "file": "app/(producer)/p-87-close-unsold.tsx",
+    "file": "app/producer/p-87-close-unsold.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "unsold"
@@ -2855,7 +2855,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-88-agent-price-otp",
     "route": "/producer/p-88-agent-price-otp",
-    "file": "app/(producer)/p-88-agent-price-otp.tsx",
+    "file": "app/producer/p-88-agent-price-otp.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -2872,7 +2872,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-89-lots-by-commodity",
     "route": "/producer/p-89-lots-by-commodity",
-    "file": "app/(producer)/p-89-lots-by-commodity.tsx",
+    "file": "app/producer/p-89-lots-by-commodity.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -2931,7 +2931,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-90-create-lot-cascade",
     "route": "/producer/p-90-create-lot-cascade",
-    "file": "app/(producer)/p-90-create-lot-cascade.tsx",
+    "file": "app/producer/p-90-create-lot-cascade.tsx",
     "kind": "mobile",
     "template": "cascade"
   },
@@ -2948,7 +2948,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-91-bag-picker",
     "route": "/producer/p-91-bag-picker",
-    "file": "app/(producer)/p-91-bag-picker.tsx",
+    "file": "app/producer/p-91-bag-picker.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -2965,7 +2965,7 @@ export const catalog: ScreenSpec[] = [
     "group": "producer",
     "slug": "p-92-paddy-unit",
     "route": "/producer/p-92-paddy-unit",
-    "file": "app/(producer)/p-92-paddy-unit.tsx",
+    "file": "app/producer/p-92-paddy-unit.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -2982,7 +2982,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-01-home",
     "route": "/agent/a-01-home",
-    "file": "app/(agent)/a-01-home.tsx",
+    "file": "app/agent/a-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -3042,7 +3042,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-02-my-farmers",
     "route": "/agent/a-02-my-farmers",
-    "file": "app/(agent)/a-02-my-farmers.tsx",
+    "file": "app/agent/a-02-my-farmers.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3085,7 +3085,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-03-alerts",
     "route": "/agent/a-03-alerts",
-    "file": "app/(agent)/a-03-alerts.tsx",
+    "file": "app/agent/a-03-alerts.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "alerts"
@@ -3103,7 +3103,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-04-auction-desk",
     "route": "/agent/a-04-auction-desk",
-    "file": "app/(agent)/a-04-auction-desk.tsx",
+    "file": "app/agent/a-04-auction-desk.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -3121,7 +3121,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-05-tasks",
     "route": "/agent/a-05-tasks",
-    "file": "app/(agent)/a-05-tasks.tsx",
+    "file": "app/agent/a-05-tasks.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3164,7 +3164,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-06-business-profile",
     "route": "/agent/a-06-business-profile",
-    "file": "app/(agent)/a-06-business-profile.tsx",
+    "file": "app/agent/a-06-business-profile.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -3193,7 +3193,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-07-my-team",
     "route": "/agent/a-07-my-team",
-    "file": "app/(agent)/a-07-my-team.tsx",
+    "file": "app/agent/a-07-my-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -3211,7 +3211,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-08-add-producer",
     "route": "/agent/a-08-add-producer",
-    "file": "app/(agent)/a-08-add-producer.tsx",
+    "file": "app/agent/a-08-add-producer.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3228,7 +3228,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-09-producer-profile",
     "route": "/agent/a-09-producer-profile",
-    "file": "app/(agent)/a-09-producer-profile.tsx",
+    "file": "app/agent/a-09-producer-profile.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -3257,7 +3257,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-10-confirm-arrival",
     "route": "/agent/a-10-confirm-arrival",
-    "file": "app/(agent)/a-10-confirm-arrival.tsx",
+    "file": "app/agent/a-10-confirm-arrival.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3274,7 +3274,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-11-advance-ledger",
     "route": "/agent/a-11-advance-ledger",
-    "file": "app/(agent)/a-11-advance-ledger.tsx",
+    "file": "app/agent/a-11-advance-ledger.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3300,7 +3300,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-12-producer-activity",
     "route": "/agent/a-12-producer-activity",
-    "file": "app/(agent)/a-12-producer-activity.tsx",
+    "file": "app/agent/a-12-producer-activity.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3343,7 +3343,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-13-report-discrepancy",
     "route": "/agent/a-13-report-discrepancy",
-    "file": "app/(agent)/a-13-report-discrepancy.tsx",
+    "file": "app/agent/a-13-report-discrepancy.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3360,7 +3360,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-14-record-advance",
     "route": "/agent/a-14-record-advance",
-    "file": "app/(agent)/a-14-record-advance.tsx",
+    "file": "app/agent/a-14-record-advance.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3377,7 +3377,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-15-buyers",
     "route": "/agent/a-15-buyers",
-    "file": "app/(agent)/a-15-buyers.tsx",
+    "file": "app/agent/a-15-buyers.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3404,7 +3404,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-16-add-buyer",
     "route": "/agent/a-16-add-buyer",
-    "file": "app/(agent)/a-16-add-buyer.tsx",
+    "file": "app/agent/a-16-add-buyer.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3421,7 +3421,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-17-buyer-risk",
     "route": "/agent/a-17-buyer-risk",
-    "file": "app/(agent)/a-17-buyer-risk.tsx",
+    "file": "app/agent/a-17-buyer-risk.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -3452,7 +3452,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-18-buyer-requirements",
     "route": "/agent/a-18-buyer-requirements",
-    "file": "app/(agent)/a-18-buyer-requirements.tsx",
+    "file": "app/agent/a-18-buyer-requirements.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3476,7 +3476,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-19-edit-listing",
     "route": "/agent/a-19-edit-listing",
-    "file": "app/(agent)/a-19-edit-listing.tsx",
+    "file": "app/agent/a-19-edit-listing.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3493,7 +3493,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-20-listings",
     "route": "/agent/a-20-listings",
-    "file": "app/(agent)/a-20-listings.tsx",
+    "file": "app/agent/a-20-listings.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3552,7 +3552,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-21-live-auction",
     "route": "/agent/a-21-live-auction",
-    "file": "app/(agent)/a-21-live-auction.tsx",
+    "file": "app/agent/a-21-live-auction.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -3570,7 +3570,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-22-negotiation",
     "route": "/agent/a-22-negotiation",
-    "file": "app/(agent)/a-22-negotiation.tsx",
+    "file": "app/agent/a-22-negotiation.tsx",
     "kind": "mobile",
     "template": "chat",
     "items": [
@@ -3595,7 +3595,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-23-sampling-request",
     "route": "/agent/a-23-sampling-request",
-    "file": "app/(agent)/a-23-sampling-request.tsx",
+    "file": "app/agent/a-23-sampling-request.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3612,7 +3612,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-24-sampling-result",
     "route": "/agent/a-24-sampling-result",
-    "file": "app/(agent)/a-24-sampling-result.tsx",
+    "file": "app/agent/a-24-sampling-result.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -3636,7 +3636,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-25-cancel-auction",
     "route": "/agent/a-25-cancel-auction",
-    "file": "app/(agent)/a-25-cancel-auction.tsx",
+    "file": "app/agent/a-25-cancel-auction.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3653,7 +3653,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-26-next-bidder",
     "route": "/agent/a-26-next-bidder",
-    "file": "app/(agent)/a-26-next-bidder.tsx",
+    "file": "app/agent/a-26-next-bidder.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -3671,7 +3671,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-27-force-close",
     "route": "/agent/a-27-force-close",
-    "file": "app/(agent)/a-27-force-close.tsx",
+    "file": "app/agent/a-27-force-close.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3688,7 +3688,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-28-weighment-schedule",
     "route": "/agent/a-28-weighment-schedule",
-    "file": "app/(agent)/a-28-weighment-schedule.tsx",
+    "file": "app/agent/a-28-weighment-schedule.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3714,7 +3714,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-29-assisted-weighment",
     "route": "/agent/a-29-assisted-weighment",
-    "file": "app/(agent)/a-29-assisted-weighment.tsx",
+    "file": "app/agent/a-29-assisted-weighment.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "live"
@@ -3732,7 +3732,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-30-weight-variance",
     "route": "/agent/a-30-weight-variance",
-    "file": "app/(agent)/a-30-weight-variance.tsx",
+    "file": "app/agent/a-30-weight-variance.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "discrepancy"
@@ -3750,7 +3750,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-31-generate-bill",
     "route": "/agent/a-31-generate-bill",
-    "file": "app/(agent)/a-31-generate-bill.tsx",
+    "file": "app/agent/a-31-generate-bill.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "bill"
@@ -3768,7 +3768,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-32-settlement-confirmed",
     "route": "/agent/a-32-settlement-confirmed",
-    "file": "app/(agent)/a-32-settlement-confirmed.tsx",
+    "file": "app/agent/a-32-settlement-confirmed.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -3792,7 +3792,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-33-bill-discounting",
     "route": "/agent/a-33-bill-discounting",
-    "file": "app/(agent)/a-33-bill-discounting.tsx",
+    "file": "app/agent/a-33-bill-discounting.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3818,7 +3818,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-34-financiers",
     "route": "/agent/a-34-financiers",
-    "file": "app/(agent)/a-34-financiers.tsx",
+    "file": "app/agent/a-34-financiers.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -3842,7 +3842,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-35-discount-offer",
     "route": "/agent/a-35-discount-offer",
-    "file": "app/(agent)/a-35-discount-offer.tsx",
+    "file": "app/agent/a-35-discount-offer.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -3866,7 +3866,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-36-discount-receipt",
     "route": "/agent/a-36-discount-receipt",
-    "file": "app/(agent)/a-36-discount-receipt.tsx",
+    "file": "app/agent/a-36-discount-receipt.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -3890,7 +3890,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-37-book-storage",
     "route": "/agent/a-37-book-storage",
-    "file": "app/(agent)/a-37-book-storage.tsx",
+    "file": "app/agent/a-37-book-storage.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -3907,7 +3907,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-38-ledger-interest",
     "route": "/agent/a-38-ledger-interest",
-    "file": "app/(agent)/a-38-ledger-interest.tsx",
+    "file": "app/agent/a-38-ledger-interest.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "ledger"
@@ -3925,7 +3925,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-39-bill-interest",
     "route": "/agent/a-39-bill-interest",
-    "file": "app/(agent)/a-39-bill-interest.tsx",
+    "file": "app/agent/a-39-bill-interest.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "bill"
@@ -3943,7 +3943,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-40-interest-statement",
     "route": "/agent/a-40-interest-statement",
-    "file": "app/(agent)/a-40-interest-statement.tsx",
+    "file": "app/agent/a-40-interest-statement.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "statement"
@@ -3961,7 +3961,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-41-partial-payment",
     "route": "/agent/a-41-partial-payment",
-    "file": "app/(agent)/a-41-partial-payment.tsx",
+    "file": "app/agent/a-41-partial-payment.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "partial"
@@ -3979,7 +3979,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-42-waiver",
     "route": "/agent/a-42-waiver",
-    "file": "app/(agent)/a-42-waiver.tsx",
+    "file": "app/agent/a-42-waiver.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "waiver"
@@ -3997,7 +3997,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-43-reminders",
     "route": "/agent/a-43-reminders",
-    "file": "app/(agent)/a-43-reminders.tsx",
+    "file": "app/agent/a-43-reminders.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "reminders"
@@ -4015,7 +4015,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-44-payment-terms",
     "route": "/agent/a-44-payment-terms",
-    "file": "app/(agent)/a-44-payment-terms.tsx",
+    "file": "app/agent/a-44-payment-terms.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "rules"
@@ -4033,7 +4033,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-45-terms-sheet",
     "route": "/agent/a-45-terms-sheet",
-    "file": "app/(agent)/a-45-terms-sheet.tsx",
+    "file": "app/agent/a-45-terms-sheet.tsx",
     "kind": "mobile",
     "template": "master",
     "mode": "rules"
@@ -4051,7 +4051,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-46-yard-sheet",
     "route": "/agent/a-46-yard-sheet",
-    "file": "app/(agent)/a-46-yard-sheet.tsx",
+    "file": "app/agent/a-46-yard-sheet.tsx",
     "kind": "mobile",
     "template": "cascade"
   },
@@ -4068,7 +4068,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-47-reserve-for-producer",
     "route": "/agent/a-47-reserve-for-producer",
-    "file": "app/(agent)/a-47-reserve-for-producer.tsx",
+    "file": "app/agent/a-47-reserve-for-producer.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "offer"
@@ -4086,7 +4086,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-48-role-limits",
     "route": "/agent/a-48-role-limits",
-    "file": "app/(agent)/a-48-role-limits.tsx",
+    "file": "app/agent/a-48-role-limits.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -4104,7 +4104,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-49-audit",
     "route": "/agent/a-49-audit",
-    "file": "app/(agent)/a-49-audit.tsx",
+    "file": "app/agent/a-49-audit.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -4137,7 +4137,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-50-empty-book",
     "route": "/agent/a-50-empty-book",
-    "file": "app/(agent)/a-50-empty-book.tsx",
+    "file": "app/agent/a-50-empty-book.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -4154,7 +4154,7 @@ export const catalog: ScreenSpec[] = [
     "group": "agent",
     "slug": "a-51-loading-book",
     "route": "/agent/a-51-loading-book",
-    "file": "app/(agent)/a-51-loading-book.tsx",
+    "file": "app/agent/a-51-loading-book.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -4171,7 +4171,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-01-market",
     "route": "/buyer/b-01-market",
-    "file": "app/(buyer)/b-01-market.tsx",
+    "file": "app/buyer/b-01-market.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "browse"
@@ -4189,7 +4189,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-02-lot-detail",
     "route": "/buyer/b-02-lot-detail",
-    "file": "app/(buyer)/b-02-lot-detail.tsx",
+    "file": "app/buyer/b-02-lot-detail.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "detail"
@@ -4207,7 +4207,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-03-home",
     "route": "/buyer/b-03-home",
-    "file": "app/(buyer)/b-03-home.tsx",
+    "file": "app/buyer/b-03-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -4267,7 +4267,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-04-provenance",
     "route": "/buyer/b-04-provenance",
-    "file": "app/(buyer)/b-04-provenance.tsx",
+    "file": "app/buyer/b-04-provenance.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -4296,7 +4296,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-05-qc-report",
     "route": "/buyer/b-05-qc-report",
-    "file": "app/(buyer)/b-05-qc-report.tsx",
+    "file": "app/buyer/b-05-qc-report.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -4322,7 +4322,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-06-watchlist",
     "route": "/buyer/b-06-watchlist",
-    "file": "app/(buyer)/b-06-watchlist.tsx",
+    "file": "app/buyer/b-06-watchlist.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -4365,7 +4365,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-07-post-requirement",
     "route": "/buyer/b-07-post-requirement",
-    "file": "app/(buyer)/b-07-post-requirement.tsx",
+    "file": "app/buyer/b-07-post-requirement.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -4382,7 +4382,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-08-rfq-detail",
     "route": "/buyer/b-08-rfq-detail",
-    "file": "app/(buyer)/b-08-rfq-detail.tsx",
+    "file": "app/buyer/b-08-rfq-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -4411,7 +4411,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-09-ai-matches",
     "route": "/buyer/b-09-ai-matches",
-    "file": "app/(buyer)/b-09-ai-matches.tsx",
+    "file": "app/buyer/b-09-ai-matches.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "why"
@@ -4429,7 +4429,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-10-compare-lots",
     "route": "/buyer/b-10-compare-lots",
-    "file": "app/(buyer)/b-10-compare-lots.tsx",
+    "file": "app/buyer/b-10-compare-lots.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -4472,7 +4472,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-11-price-history",
     "route": "/buyer/b-11-price-history",
-    "file": "app/(buyer)/b-11-price-history.tsx",
+    "file": "app/buyer/b-11-price-history.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -4506,7 +4506,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-12-seller-profile",
     "route": "/buyer/b-12-seller-profile",
-    "file": "app/(buyer)/b-12-seller-profile.tsx",
+    "file": "app/buyer/b-12-seller-profile.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -4535,7 +4535,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-13-advanced-search",
     "route": "/buyer/b-13-advanced-search",
-    "file": "app/(buyer)/b-13-advanced-search.tsx",
+    "file": "app/buyer/b-13-advanced-search.tsx",
     "kind": "mobile",
     "template": "cascade"
   },
@@ -4552,7 +4552,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-14-live-auction",
     "route": "/buyer/b-14-live-auction",
-    "file": "app/(buyer)/b-14-live-auction.tsx",
+    "file": "app/buyer/b-14-live-auction.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "detail"
@@ -4570,7 +4570,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-15-hire-inspector",
     "route": "/buyer/b-15-hire-inspector",
-    "file": "app/(buyer)/b-15-hire-inspector.tsx",
+    "file": "app/buyer/b-15-hire-inspector.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -4587,7 +4587,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-16-inspection-report",
     "route": "/buyer/b-16-inspection-report",
-    "file": "app/(buyer)/b-16-inspection-report.tsx",
+    "file": "app/buyer/b-16-inspection-report.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -4613,7 +4613,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-17-request-sample",
     "route": "/buyer/b-17-request-sample",
-    "file": "app/(buyer)/b-17-request-sample.tsx",
+    "file": "app/buyer/b-17-request-sample.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -4630,7 +4630,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-18-trade-contract",
     "route": "/buyer/b-18-trade-contract",
-    "file": "app/(buyer)/b-18-trade-contract.tsx",
+    "file": "app/buyer/b-18-trade-contract.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -4659,7 +4659,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-19-negotiations",
     "route": "/buyer/b-19-negotiations",
-    "file": "app/(buyer)/b-19-negotiations.tsx",
+    "file": "app/buyer/b-19-negotiations.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -4685,7 +4685,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-20-negotiation-chat",
     "route": "/buyer/b-20-negotiation-chat",
-    "file": "app/(buyer)/b-20-negotiation-chat.tsx",
+    "file": "app/buyer/b-20-negotiation-chat.tsx",
     "kind": "mobile",
     "template": "chat",
     "items": [
@@ -4714,7 +4714,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-21-contracts",
     "route": "/buyer/b-21-contracts",
-    "file": "app/(buyer)/b-21-contracts.tsx",
+    "file": "app/buyer/b-21-contracts.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -4740,7 +4740,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-22-request-amendment",
     "route": "/buyer/b-22-request-amendment",
-    "file": "app/(buyer)/b-22-request-amendment.tsx",
+    "file": "app/buyer/b-22-request-amendment.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -4757,7 +4757,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-23-weighment-tasks",
     "route": "/buyer/b-23-weighment-tasks",
-    "file": "app/(buyer)/b-23-weighment-tasks.tsx",
+    "file": "app/buyer/b-23-weighment-tasks.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -4783,7 +4783,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-24-buyer-weighment",
     "route": "/buyer/b-24-buyer-weighment",
-    "file": "app/(buyer)/b-24-buyer-weighment.tsx",
+    "file": "app/buyer/b-24-buyer-weighment.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "buyer"
@@ -4801,7 +4801,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-25-final-weight",
     "route": "/buyer/b-25-final-weight",
-    "file": "app/(buyer)/b-25-final-weight.tsx",
+    "file": "app/buyer/b-25-final-weight.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "summary"
@@ -4819,7 +4819,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-26-track-delivery",
     "route": "/buyer/b-26-track-delivery",
-    "file": "app/(buyer)/b-26-track-delivery.tsx",
+    "file": "app/buyer/b-26-track-delivery.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -4848,7 +4848,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-27-confirm-delivery",
     "route": "/buyer/b-27-confirm-delivery",
-    "file": "app/(buyer)/b-27-confirm-delivery.tsx",
+    "file": "app/buyer/b-27-confirm-delivery.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -4865,7 +4865,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-28-record-payment",
     "route": "/buyer/b-28-record-payment",
-    "file": "app/(buyer)/b-28-record-payment.tsx",
+    "file": "app/buyer/b-28-record-payment.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "partial"
@@ -4883,7 +4883,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-29-buyer-ledger",
     "route": "/buyer/b-29-buyer-ledger",
-    "file": "app/(buyer)/b-29-buyer-ledger.tsx",
+    "file": "app/buyer/b-29-buyer-ledger.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "ledger"
@@ -4901,7 +4901,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-30-rate-seller",
     "route": "/buyer/b-30-rate-seller",
-    "file": "app/(buyer)/b-30-rate-seller.tsx",
+    "file": "app/buyer/b-30-rate-seller.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -4918,7 +4918,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-31-raise-dispute",
     "route": "/buyer/b-31-raise-dispute",
-    "file": "app/(buyer)/b-31-raise-dispute.tsx",
+    "file": "app/buyer/b-31-raise-dispute.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -4935,7 +4935,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-32-dispute-thread",
     "route": "/buyer/b-32-dispute-thread",
-    "file": "app/(buyer)/b-32-dispute-thread.tsx",
+    "file": "app/buyer/b-32-dispute-thread.tsx",
     "kind": "mobile",
     "template": "chat",
     "items": [
@@ -4964,7 +4964,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-33-reorder",
     "route": "/buyer/b-33-reorder",
-    "file": "app/(buyer)/b-33-reorder.tsx",
+    "file": "app/buyer/b-33-reorder.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -4981,7 +4981,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-34-order-detail",
     "route": "/buyer/b-34-order-detail",
-    "file": "app/(buyer)/b-34-order-detail.tsx",
+    "file": "app/buyer/b-34-order-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5005,7 +5005,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-35-weighment-certificate",
     "route": "/buyer/b-35-weighment-certificate",
-    "file": "app/(buyer)/b-35-weighment-certificate.tsx",
+    "file": "app/buyer/b-35-weighment-certificate.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5031,7 +5031,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-36-deal-otp",
     "route": "/buyer/b-36-deal-otp",
-    "file": "app/(buyer)/b-36-deal-otp.tsx",
+    "file": "app/buyer/b-36-deal-otp.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -5048,7 +5048,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-37-inventory",
     "route": "/buyer/b-37-inventory",
-    "file": "app/(buyer)/b-37-inventory.tsx",
+    "file": "app/buyer/b-37-inventory.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5074,7 +5074,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-38-book-storage",
     "route": "/buyer/b-38-book-storage",
-    "file": "app/(buyer)/b-38-book-storage.tsx",
+    "file": "app/buyer/b-38-book-storage.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -5091,7 +5091,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-39-request-release",
     "route": "/buyer/b-39-request-release",
-    "file": "app/(buyer)/b-39-request-release.tsx",
+    "file": "app/buyer/b-39-request-release.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -5108,7 +5108,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-40-pledged-inventory",
     "route": "/buyer/b-40-pledged-inventory",
-    "file": "app/(buyer)/b-40-pledged-inventory.tsx",
+    "file": "app/buyer/b-40-pledged-inventory.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5132,7 +5132,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-41-ageing",
     "route": "/buyer/b-41-ageing",
-    "file": "app/(buyer)/b-41-ageing.tsx",
+    "file": "app/buyer/b-41-ageing.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5158,7 +5158,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-42-downstream-buyers",
     "route": "/buyer/b-42-downstream-buyers",
-    "file": "app/(buyer)/b-42-downstream-buyers.tsx",
+    "file": "app/buyer/b-42-downstream-buyers.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5182,7 +5182,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-43-create-quotation",
     "route": "/buyer/b-43-create-quotation",
-    "file": "app/(buyer)/b-43-create-quotation.tsx",
+    "file": "app/buyer/b-43-create-quotation.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -5199,7 +5199,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-44-sales-orders",
     "route": "/buyer/b-44-sales-orders",
-    "file": "app/(buyer)/b-44-sales-orders.tsx",
+    "file": "app/buyer/b-44-sales-orders.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5225,7 +5225,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-45-finance",
     "route": "/buyer/b-45-finance",
-    "file": "app/(buyer)/b-45-finance.tsx",
+    "file": "app/buyer/b-45-finance.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "ledger"
@@ -5243,7 +5243,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-46-trade-analytics",
     "route": "/buyer/b-46-trade-analytics",
-    "file": "app/(buyer)/b-46-trade-analytics.tsx",
+    "file": "app/buyer/b-46-trade-analytics.tsx",
     "kind": "mobile",
     "template": "detail",
     "stats": [
@@ -5277,7 +5277,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-47-p-and-l",
     "route": "/buyer/b-47-p-and-l",
-    "file": "app/(buyer)/b-47-p-and-l.tsx",
+    "file": "app/buyer/b-47-p-and-l.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5306,7 +5306,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-48-tax-summary",
     "route": "/buyer/b-48-tax-summary",
-    "file": "app/(buyer)/b-48-tax-summary.tsx",
+    "file": "app/buyer/b-48-tax-summary.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5330,7 +5330,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-49-market-feed",
     "route": "/buyer/b-49-market-feed",
-    "file": "app/(buyer)/b-49-market-feed.tsx",
+    "file": "app/buyer/b-49-market-feed.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5354,7 +5354,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-50-wallet",
     "route": "/buyer/b-50-wallet",
-    "file": "app/(buyer)/b-50-wallet.tsx",
+    "file": "app/buyer/b-50-wallet.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5378,7 +5378,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-51-addresses",
     "route": "/buyer/b-51-addresses",
-    "file": "app/(buyer)/b-51-addresses.tsx",
+    "file": "app/buyer/b-51-addresses.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5402,7 +5402,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-52-payment-methods",
     "route": "/buyer/b-52-payment-methods",
-    "file": "app/(buyer)/b-52-payment-methods.tsx",
+    "file": "app/buyer/b-52-payment-methods.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5431,7 +5431,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-53-my-team",
     "route": "/buyer/b-53-my-team",
-    "file": "app/(buyer)/b-53-my-team.tsx",
+    "file": "app/buyer/b-53-my-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -5449,7 +5449,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-54-role-sheet",
     "route": "/buyer/b-54-role-sheet",
-    "file": "app/(buyer)/b-54-role-sheet.tsx",
+    "file": "app/buyer/b-54-role-sheet.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -5467,7 +5467,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-55-assignments",
     "route": "/buyer/b-55-assignments",
-    "file": "app/(buyer)/b-55-assignments.tsx",
+    "file": "app/buyer/b-55-assignments.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5500,7 +5500,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-56-mandate",
     "route": "/buyer/b-56-mandate",
-    "file": "app/(buyer)/b-56-mandate.tsx",
+    "file": "app/buyer/b-56-mandate.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5534,7 +5534,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-57-terms-otp",
     "route": "/buyer/b-57-terms-otp",
-    "file": "app/(buyer)/b-57-terms-otp.tsx",
+    "file": "app/buyer/b-57-terms-otp.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -5551,7 +5551,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-58-payables",
     "route": "/buyer/b-58-payables",
-    "file": "app/(buyer)/b-58-payables.tsx",
+    "file": "app/buyer/b-58-payables.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "ledger"
@@ -5569,7 +5569,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-59-overdue-notice",
     "route": "/buyer/b-59-overdue-notice",
-    "file": "app/(buyer)/b-59-overdue-notice.tsx",
+    "file": "app/buyer/b-59-overdue-notice.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "reminders"
@@ -5587,7 +5587,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-60-client-notice",
     "route": "/buyer/b-60-client-notice",
-    "file": "app/(buyer)/b-60-client-notice.tsx",
+    "file": "app/buyer/b-60-client-notice.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "sms"
@@ -5605,7 +5605,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-61-physical-inspection",
     "route": "/buyer/b-61-physical-inspection",
-    "file": "app/(buyer)/b-61-physical-inspection.tsx",
+    "file": "app/buyer/b-61-physical-inspection.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "detail"
@@ -5623,7 +5623,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-62-inspected-badge",
     "route": "/buyer/b-62-inspected-badge",
-    "file": "app/(buyer)/b-62-inspected-badge.tsx",
+    "file": "app/buyer/b-62-inspected-badge.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "browse"
@@ -5641,7 +5641,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-63-bid-not-accepted",
     "route": "/buyer/b-63-bid-not-accepted",
-    "file": "app/(buyer)/b-63-bid-not-accepted.tsx",
+    "file": "app/buyer/b-63-bid-not-accepted.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "detail"
@@ -5659,7 +5659,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-64-auto-bid-setup",
     "route": "/buyer/b-64-auto-bid-setup",
-    "file": "app/(buyer)/b-64-auto-bid-setup.tsx",
+    "file": "app/buyer/b-64-auto-bid-setup.tsx",
     "kind": "mobile",
     "template": "autobid",
     "mode": "setup"
@@ -5677,7 +5677,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-65-active-auto-bids",
     "route": "/buyer/b-65-active-auto-bids",
-    "file": "app/(buyer)/b-65-active-auto-bids.tsx",
+    "file": "app/buyer/b-65-active-auto-bids.tsx",
     "kind": "mobile",
     "template": "autobid",
     "mode": "active"
@@ -5695,7 +5695,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-66-bid-history",
     "route": "/buyer/b-66-bid-history",
-    "file": "app/(buyer)/b-66-bid-history.tsx",
+    "file": "app/buyer/b-66-bid-history.tsx",
     "kind": "mobile",
     "template": "autobid",
     "mode": "history"
@@ -5713,7 +5713,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-67-outbid-over-max",
     "route": "/buyer/b-67-outbid-over-max",
-    "file": "app/(buyer)/b-67-outbid-over-max.tsx",
+    "file": "app/buyer/b-67-outbid-over-max.tsx",
     "kind": "mobile",
     "template": "autobid",
     "mode": "outbid"
@@ -5731,7 +5731,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-68-raise-max-approval",
     "route": "/buyer/b-68-raise-max-approval",
-    "file": "app/(buyer)/b-68-raise-max-approval.tsx",
+    "file": "app/buyer/b-68-raise-max-approval.tsx",
     "kind": "mobile",
     "template": "autobid",
     "mode": "approval"
@@ -5749,7 +5749,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-69-processor-batch",
     "route": "/buyer/b-69-processor-batch",
-    "file": "app/(buyer)/b-69-processor-batch.tsx",
+    "file": "app/buyer/b-69-processor-batch.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5780,7 +5780,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-70-plant-qa",
     "route": "/buyer/b-70-plant-qa",
-    "file": "app/(buyer)/b-70-plant-qa.tsx",
+    "file": "app/buyer/b-70-plant-qa.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -5797,7 +5797,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-71-export-docs",
     "route": "/buyer/b-71-export-docs",
-    "file": "app/(buyer)/b-71-export-docs.tsx",
+    "file": "app/buyer/b-71-export-docs.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5826,7 +5826,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-72-empty-market",
     "route": "/buyer/b-72-empty-market",
-    "file": "app/(buyer)/b-72-empty-market.tsx",
+    "file": "app/buyer/b-72-empty-market.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -5843,7 +5843,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-73-loading-market",
     "route": "/buyer/b-73-loading-market",
-    "file": "app/(buyer)/b-73-loading-market.tsx",
+    "file": "app/buyer/b-73-loading-market.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -5860,7 +5860,7 @@ export const catalog: ScreenSpec[] = [
     "group": "buyer",
     "slug": "b-74-offline-market",
     "route": "/buyer/b-74-offline-market",
-    "file": "app/(buyer)/b-74-offline-market.tsx",
+    "file": "app/buyer/b-74-offline-market.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -5877,7 +5877,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-01-home",
     "route": "/quality/i-01-home",
-    "file": "app/(quality)/i-01-home.tsx",
+    "file": "app/quality/i-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -5927,7 +5927,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-02-assigned-jobs",
     "route": "/quality/i-02-assigned-jobs",
-    "file": "app/(quality)/i-02-assigned-jobs.tsx",
+    "file": "app/quality/i-02-assigned-jobs.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -5953,7 +5953,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-03-visit",
     "route": "/quality/i-03-visit",
-    "file": "app/(quality)/i-03-visit.tsx",
+    "file": "app/quality/i-03-visit.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -5977,7 +5977,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-04-sample",
     "route": "/quality/i-04-sample",
-    "file": "app/(quality)/i-04-sample.tsx",
+    "file": "app/quality/i-04-sample.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -5994,7 +5994,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-05-moisture",
     "route": "/quality/i-05-moisture",
-    "file": "app/(quality)/i-05-moisture.tsx",
+    "file": "app/quality/i-05-moisture.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6011,7 +6011,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-06-colour",
     "route": "/quality/i-06-colour",
-    "file": "app/(quality)/i-06-colour.tsx",
+    "file": "app/quality/i-06-colour.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6028,7 +6028,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-07-photos",
     "route": "/quality/i-07-photos",
-    "file": "app/(quality)/i-07-photos.tsx",
+    "file": "app/quality/i-07-photos.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6045,7 +6045,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-08-checklist",
     "route": "/quality/i-08-checklist",
-    "file": "app/(quality)/i-08-checklist.tsx",
+    "file": "app/quality/i-08-checklist.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6074,7 +6074,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-09-submit-report",
     "route": "/quality/i-09-submit-report",
-    "file": "app/(quality)/i-09-submit-report.tsx",
+    "file": "app/quality/i-09-submit-report.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6091,7 +6091,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-10-otp-handoff",
     "route": "/quality/i-10-otp-handoff",
-    "file": "app/(quality)/i-10-otp-handoff.tsx",
+    "file": "app/quality/i-10-otp-handoff.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -6108,7 +6108,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-11-reinspection",
     "route": "/quality/i-11-reinspection",
-    "file": "app/(quality)/i-11-reinspection.tsx",
+    "file": "app/quality/i-11-reinspection.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6132,7 +6132,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-12-conflict-check",
     "route": "/quality/i-12-conflict-check",
-    "file": "app/(quality)/i-12-conflict-check.tsx",
+    "file": "app/quality/i-12-conflict-check.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6158,7 +6158,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-13-my-team",
     "route": "/quality/i-13-my-team",
-    "file": "app/(quality)/i-13-my-team.tsx",
+    "file": "app/quality/i-13-my-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -6176,7 +6176,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-14-rates",
     "route": "/quality/i-14-rates",
-    "file": "app/(quality)/i-14-rates.tsx",
+    "file": "app/quality/i-14-rates.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6193,7 +6193,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-15-empty-jobs",
     "route": "/quality/i-15-empty-jobs",
-    "file": "app/(quality)/i-15-empty-jobs.tsx",
+    "file": "app/quality/i-15-empty-jobs.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -6210,7 +6210,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "i-16-loading-jobs",
     "route": "/quality/i-16-loading-jobs",
-    "file": "app/(quality)/i-16-loading-jobs.tsx",
+    "file": "app/quality/i-16-loading-jobs.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -6227,7 +6227,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-01-home",
     "route": "/quality/v-01-home",
-    "file": "app/(quality)/v-01-home.tsx",
+    "file": "app/quality/v-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "items": [
@@ -6253,7 +6253,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-02-queue",
     "route": "/quality/v-02-queue",
-    "file": "app/(quality)/v-02-queue.tsx",
+    "file": "app/quality/v-02-queue.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6279,7 +6279,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-03-accept-report",
     "route": "/quality/v-03-accept-report",
-    "file": "app/(quality)/v-03-accept-report.tsx",
+    "file": "app/quality/v-03-accept-report.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -6296,7 +6296,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-04-raise-issue",
     "route": "/quality/v-04-raise-issue",
-    "file": "app/(quality)/v-04-raise-issue.tsx",
+    "file": "app/quality/v-04-raise-issue.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6313,7 +6313,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-05-history",
     "route": "/quality/v-05-history",
-    "file": "app/(quality)/v-05-history.tsx",
+    "file": "app/quality/v-05-history.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6337,7 +6337,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-06-authenticity",
     "route": "/quality/v-06-authenticity",
-    "file": "app/(quality)/v-06-authenticity.tsx",
+    "file": "app/quality/v-06-authenticity.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6363,7 +6363,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-07-limits",
     "route": "/quality/v-07-limits",
-    "file": "app/(quality)/v-07-limits.tsx",
+    "file": "app/quality/v-07-limits.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -6381,7 +6381,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "v-08-offline",
     "route": "/quality/v-08-offline",
-    "file": "app/(quality)/v-08-offline.tsx",
+    "file": "app/quality/v-08-offline.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -6398,7 +6398,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-01-home",
     "route": "/quality/l-01-home",
-    "file": "app/(quality)/l-01-home.tsx",
+    "file": "app/quality/l-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "items": [
@@ -6424,7 +6424,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-02-samples",
     "route": "/quality/l-02-samples",
-    "file": "app/(quality)/l-02-samples.tsx",
+    "file": "app/quality/l-02-samples.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6448,7 +6448,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-03-result-entry",
     "route": "/quality/l-03-result-entry",
-    "file": "app/(quality)/l-03-result-entry.tsx",
+    "file": "app/quality/l-03-result-entry.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6465,7 +6465,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-04-certificate",
     "route": "/quality/l-04-certificate",
-    "file": "app/(quality)/l-04-certificate.tsx",
+    "file": "app/quality/l-04-certificate.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6489,7 +6489,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-05-aflatoxin",
     "route": "/quality/l-05-aflatoxin",
-    "file": "app/(quality)/l-05-aflatoxin.tsx",
+    "file": "app/quality/l-05-aflatoxin.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6506,7 +6506,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-06-retest",
     "route": "/quality/l-06-retest",
-    "file": "app/(quality)/l-06-retest.tsx",
+    "file": "app/quality/l-06-retest.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6523,7 +6523,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-07-team",
     "route": "/quality/l-07-team",
-    "file": "app/(quality)/l-07-team.tsx",
+    "file": "app/quality/l-07-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -6541,7 +6541,7 @@ export const catalog: ScreenSpec[] = [
     "group": "quality",
     "slug": "l-08-empty-bench",
     "route": "/quality/l-08-empty-bench",
-    "file": "app/(quality)/l-08-empty-bench.tsx",
+    "file": "app/quality/l-08-empty-bench.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -6558,7 +6558,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-01-home",
     "route": "/transport/t-01-home",
-    "file": "app/(transport)/t-01-home.tsx",
+    "file": "app/transport/t-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -6601,7 +6601,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-02-available-loads",
     "route": "/transport/t-02-available-loads",
-    "file": "app/(transport)/t-02-available-loads.tsx",
+    "file": "app/transport/t-02-available-loads.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6627,7 +6627,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-03-trip-detail",
     "route": "/transport/t-03-trip-detail",
-    "file": "app/(transport)/t-03-trip-detail.tsx",
+    "file": "app/transport/t-03-trip-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6656,7 +6656,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-04-loading-order",
     "route": "/transport/t-04-loading-order",
-    "file": "app/(transport)/t-04-loading-order.tsx",
+    "file": "app/transport/t-04-loading-order.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6680,7 +6680,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-05-e-permit",
     "route": "/transport/t-05-e-permit",
-    "file": "app/(transport)/t-05-e-permit.tsx",
+    "file": "app/transport/t-05-e-permit.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6704,7 +6704,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-06-live-tracking",
     "route": "/transport/t-06-live-tracking",
-    "file": "app/(transport)/t-06-live-tracking.tsx",
+    "file": "app/transport/t-06-live-tracking.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6728,7 +6728,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-07-confirm-pickup",
     "route": "/transport/t-07-confirm-pickup",
-    "file": "app/(transport)/t-07-confirm-pickup.tsx",
+    "file": "app/transport/t-07-confirm-pickup.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -6745,7 +6745,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-08-confirm-delivery",
     "route": "/transport/t-08-confirm-delivery",
-    "file": "app/(transport)/t-08-confirm-delivery.tsx",
+    "file": "app/transport/t-08-confirm-delivery.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -6762,7 +6762,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-09-trip-history",
     "route": "/transport/t-09-trip-history",
-    "file": "app/(transport)/t-09-trip-history.tsx",
+    "file": "app/transport/t-09-trip-history.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6788,7 +6788,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-10-report-issue",
     "route": "/transport/t-10-report-issue",
-    "file": "app/(transport)/t-10-report-issue.tsx",
+    "file": "app/transport/t-10-report-issue.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6805,7 +6805,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-11-earnings",
     "route": "/transport/t-11-earnings",
-    "file": "app/(transport)/t-11-earnings.tsx",
+    "file": "app/transport/t-11-earnings.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6829,7 +6829,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-12-vehicles",
     "route": "/transport/t-12-vehicles",
-    "file": "app/(transport)/t-12-vehicles.tsx",
+    "file": "app/transport/t-12-vehicles.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -6853,7 +6853,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-13-drivers",
     "route": "/transport/t-13-drivers",
-    "file": "app/(transport)/t-13-drivers.tsx",
+    "file": "app/transport/t-13-drivers.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -6871,7 +6871,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-14-ratings",
     "route": "/transport/t-14-ratings",
-    "file": "app/(transport)/t-14-ratings.tsx",
+    "file": "app/transport/t-14-ratings.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -6895,7 +6895,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-15-quote",
     "route": "/transport/t-15-quote",
-    "file": "app/(transport)/t-15-quote.tsx",
+    "file": "app/transport/t-15-quote.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6912,7 +6912,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-16-assign-vehicle",
     "route": "/transport/t-16-assign-vehicle",
-    "file": "app/(transport)/t-16-assign-vehicle.tsx",
+    "file": "app/transport/t-16-assign-vehicle.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -6929,7 +6929,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-17-offline-trip",
     "route": "/transport/t-17-offline-trip",
-    "file": "app/(transport)/t-17-offline-trip.tsx",
+    "file": "app/transport/t-17-offline-trip.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -6946,7 +6946,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-18-kyc",
     "route": "/transport/t-18-kyc",
-    "file": "app/(transport)/t-18-kyc.tsx",
+    "file": "app/transport/t-18-kyc.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "identity"
@@ -6964,7 +6964,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-19-limits",
     "route": "/transport/t-19-limits",
-    "file": "app/(transport)/t-19-limits.tsx",
+    "file": "app/transport/t-19-limits.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -6982,7 +6982,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-20-empty-loads",
     "route": "/transport/t-20-empty-loads",
-    "file": "app/(transport)/t-20-empty-loads.tsx",
+    "file": "app/transport/t-20-empty-loads.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -6999,7 +6999,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-21-loading",
     "route": "/transport/t-21-loading",
-    "file": "app/(transport)/t-21-loading.tsx",
+    "file": "app/transport/t-21-loading.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -7016,7 +7016,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-22-seal-photo",
     "route": "/transport/t-22-seal-photo",
-    "file": "app/(transport)/t-22-seal-photo.tsx",
+    "file": "app/transport/t-22-seal-photo.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -7033,7 +7033,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-23-pod",
     "route": "/transport/t-23-pod",
-    "file": "app/(transport)/t-23-pod.tsx",
+    "file": "app/transport/t-23-pod.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7057,7 +7057,7 @@ export const catalog: ScreenSpec[] = [
     "group": "transport",
     "slug": "t-24-help",
     "route": "/transport/t-24-help",
-    "file": "app/(transport)/t-24-help.tsx",
+    "file": "app/transport/t-24-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7086,7 +7086,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-01-home",
     "route": "/storage/s-01-home",
-    "file": "app/(storage)/s-01-home.tsx",
+    "file": "app/storage/s-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -7129,7 +7129,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-02-inward-requests",
     "route": "/storage/s-02-inward-requests",
-    "file": "app/(storage)/s-02-inward-requests.tsx",
+    "file": "app/storage/s-02-inward-requests.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7155,7 +7155,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-03-inward-scan",
     "route": "/storage/s-03-inward-scan",
-    "file": "app/(storage)/s-03-inward-scan.tsx",
+    "file": "app/storage/s-03-inward-scan.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -7172,7 +7172,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-04-assign-location",
     "route": "/storage/s-04-assign-location",
-    "file": "app/(storage)/s-04-assign-location.tsx",
+    "file": "app/storage/s-04-assign-location.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -7189,7 +7189,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-05-bond",
     "route": "/storage/s-05-bond",
-    "file": "app/(storage)/s-05-bond.tsx",
+    "file": "app/storage/s-05-bond.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7213,7 +7213,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-06-inventory",
     "route": "/storage/s-06-inventory",
-    "file": "app/(storage)/s-06-inventory.tsx",
+    "file": "app/storage/s-06-inventory.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7239,7 +7239,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-07-lot-detail",
     "route": "/storage/s-07-lot-detail",
-    "file": "app/(storage)/s-07-lot-detail.tsx",
+    "file": "app/storage/s-07-lot-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7268,7 +7268,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-08-rent-invoice",
     "route": "/storage/s-08-rent-invoice",
-    "file": "app/(storage)/s-08-rent-invoice.tsx",
+    "file": "app/storage/s-08-rent-invoice.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7292,7 +7292,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-09-outward-requests",
     "route": "/storage/s-09-outward-requests",
-    "file": "app/(storage)/s-09-outward-requests.tsx",
+    "file": "app/storage/s-09-outward-requests.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7318,7 +7318,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-10-outward-scan",
     "route": "/storage/s-10-outward-scan",
-    "file": "app/(storage)/s-10-outward-scan.tsx",
+    "file": "app/storage/s-10-outward-scan.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -7335,7 +7335,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-11-noc",
     "route": "/storage/s-11-noc",
-    "file": "app/(storage)/s-11-noc.tsx",
+    "file": "app/storage/s-11-noc.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7359,7 +7359,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-12-environment",
     "route": "/storage/s-12-environment",
-    "file": "app/(storage)/s-12-environment.tsx",
+    "file": "app/storage/s-12-environment.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7383,7 +7383,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-13-ledger",
     "route": "/storage/s-13-ledger",
-    "file": "app/(storage)/s-13-ledger.tsx",
+    "file": "app/storage/s-13-ledger.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7407,7 +7407,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-14-capacity",
     "route": "/storage/s-14-capacity",
-    "file": "app/(storage)/s-14-capacity.tsx",
+    "file": "app/storage/s-14-capacity.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -7424,7 +7424,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-15-facility-settings",
     "route": "/storage/s-15-facility-settings",
-    "file": "app/(storage)/s-15-facility-settings.tsx",
+    "file": "app/storage/s-15-facility-settings.tsx",
     "kind": "mobile",
     "template": "settings",
     "items": [
@@ -7448,7 +7448,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-16-team",
     "route": "/storage/s-16-team",
-    "file": "app/(storage)/s-16-team.tsx",
+    "file": "app/storage/s-16-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -7466,7 +7466,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-17-lien",
     "route": "/storage/s-17-lien",
-    "file": "app/(storage)/s-17-lien.tsx",
+    "file": "app/storage/s-17-lien.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7490,7 +7490,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-18-temperature-log",
     "route": "/storage/s-18-temperature-log",
-    "file": "app/(storage)/s-18-temperature-log.tsx",
+    "file": "app/storage/s-18-temperature-log.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7514,7 +7514,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-19-empty-shed",
     "route": "/storage/s-19-empty-shed",
-    "file": "app/(storage)/s-19-empty-shed.tsx",
+    "file": "app/storage/s-19-empty-shed.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -7531,7 +7531,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-20-loading",
     "route": "/storage/s-20-loading",
-    "file": "app/(storage)/s-20-loading.tsx",
+    "file": "app/storage/s-20-loading.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -7548,7 +7548,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-21-offline-gate",
     "route": "/storage/s-21-offline-gate",
-    "file": "app/(storage)/s-21-offline-gate.tsx",
+    "file": "app/storage/s-21-offline-gate.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -7565,7 +7565,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-22-sample-hold",
     "route": "/storage/s-22-sample-hold",
-    "file": "app/(storage)/s-22-sample-hold.tsx",
+    "file": "app/storage/s-22-sample-hold.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7589,7 +7589,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-23-help",
     "route": "/storage/s-23-help",
-    "file": "app/(storage)/s-23-help.tsx",
+    "file": "app/storage/s-23-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7618,7 +7618,7 @@ export const catalog: ScreenSpec[] = [
     "group": "storage",
     "slug": "s-24-rating",
     "route": "/storage/s-24-rating",
-    "file": "app/(storage)/s-24-rating.tsx",
+    "file": "app/storage/s-24-rating.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7642,7 +7642,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-01-home",
     "route": "/bank/f-01-home",
-    "file": "app/(bank)/f-01-home.tsx",
+    "file": "app/bank/f-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -7685,7 +7685,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-02-applications",
     "route": "/bank/f-02-applications",
-    "file": "app/(bank)/f-02-applications.tsx",
+    "file": "app/bank/f-02-applications.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7714,7 +7714,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-03-review",
     "route": "/bank/f-03-review",
-    "file": "app/(bank)/f-03-review.tsx",
+    "file": "app/bank/f-03-review.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7745,7 +7745,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-04-disburse",
     "route": "/bank/f-04-disburse",
-    "file": "app/(bank)/f-04-disburse.tsx",
+    "file": "app/bank/f-04-disburse.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -7762,7 +7762,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-05-collateral",
     "route": "/bank/f-05-collateral",
-    "file": "app/(bank)/f-05-collateral.tsx",
+    "file": "app/bank/f-05-collateral.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7786,7 +7786,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-06-bill-purchase",
     "route": "/bank/f-06-bill-purchase",
-    "file": "app/(bank)/f-06-bill-purchase.tsx",
+    "file": "app/bank/f-06-bill-purchase.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7810,7 +7810,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-07-repayments",
     "route": "/bank/f-07-repayments",
-    "file": "app/(bank)/f-07-repayments.tsx",
+    "file": "app/bank/f-07-repayments.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7834,7 +7834,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-08-overdue",
     "route": "/bank/f-08-overdue",
-    "file": "app/(bank)/f-08-overdue.tsx",
+    "file": "app/bank/f-08-overdue.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7860,7 +7860,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-09-compliance",
     "route": "/bank/f-09-compliance",
-    "file": "app/(bank)/f-09-compliance.tsx",
+    "file": "app/bank/f-09-compliance.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -7884,7 +7884,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-10-consent",
     "route": "/bank/f-10-consent",
-    "file": "app/(bank)/f-10-consent.tsx",
+    "file": "app/bank/f-10-consent.tsx",
     "kind": "mobile",
     "template": "otp"
   },
@@ -7901,7 +7901,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-11-team",
     "route": "/bank/f-11-team",
-    "file": "app/(bank)/f-11-team.tsx",
+    "file": "app/bank/f-11-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -7919,7 +7919,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-12-sanction-limit",
     "route": "/bank/f-12-sanction-limit",
-    "file": "app/(bank)/f-12-sanction-limit.tsx",
+    "file": "app/bank/f-12-sanction-limit.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -7948,7 +7948,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-13-settings",
     "route": "/bank/f-13-settings",
-    "file": "app/(bank)/f-13-settings.tsx",
+    "file": "app/bank/f-13-settings.tsx",
     "kind": "mobile",
     "template": "settings",
     "items": [
@@ -7972,7 +7972,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-14-empty-pipeline",
     "route": "/bank/f-14-empty-pipeline",
-    "file": "app/(bank)/f-14-empty-pipeline.tsx",
+    "file": "app/bank/f-14-empty-pipeline.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -7989,7 +7989,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-15-loading",
     "route": "/bank/f-15-loading",
-    "file": "app/(bank)/f-15-loading.tsx",
+    "file": "app/bank/f-15-loading.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -8006,7 +8006,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-16-ai-score-why",
     "route": "/bank/f-16-ai-score-why",
-    "file": "app/(bank)/f-16-ai-score-why.tsx",
+    "file": "app/bank/f-16-ai-score-why.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "why"
@@ -8024,7 +8024,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-17-lien-release",
     "route": "/bank/f-17-lien-release",
-    "file": "app/(bank)/f-17-lien-release.tsx",
+    "file": "app/bank/f-17-lien-release.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8041,7 +8041,7 @@ export const catalog: ScreenSpec[] = [
     "group": "bank",
     "slug": "f-18-help",
     "route": "/bank/f-18-help",
-    "file": "app/(bank)/f-18-help.tsx",
+    "file": "app/bank/f-18-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8065,7 +8065,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-01-home",
     "route": "/insurance/n-01-home",
-    "file": "app/(insurance)/n-01-home.tsx",
+    "file": "app/insurance/n-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -8108,7 +8108,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-02-products",
     "route": "/insurance/n-02-products",
-    "file": "app/(insurance)/n-02-products.tsx",
+    "file": "app/insurance/n-02-products.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8137,7 +8137,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-03-issue-policy",
     "route": "/insurance/n-03-issue-policy",
-    "file": "app/(insurance)/n-03-issue-policy.tsx",
+    "file": "app/insurance/n-03-issue-policy.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8154,7 +8154,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-04-policy-detail",
     "route": "/insurance/n-04-policy-detail",
-    "file": "app/(insurance)/n-04-policy-detail.tsx",
+    "file": "app/insurance/n-04-policy-detail.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -8183,7 +8183,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-05-claim-review",
     "route": "/insurance/n-05-claim-review",
-    "file": "app/(insurance)/n-05-claim-review.tsx",
+    "file": "app/insurance/n-05-claim-review.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -8209,7 +8209,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-06-assign-surveyor",
     "route": "/insurance/n-06-assign-surveyor",
-    "file": "app/(insurance)/n-06-assign-surveyor.tsx",
+    "file": "app/insurance/n-06-assign-surveyor.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8226,7 +8226,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-07-assessment",
     "route": "/insurance/n-07-assessment",
-    "file": "app/(insurance)/n-07-assessment.tsx",
+    "file": "app/insurance/n-07-assessment.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8243,7 +8243,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-08-payout",
     "route": "/insurance/n-08-payout",
-    "file": "app/(insurance)/n-08-payout.tsx",
+    "file": "app/insurance/n-08-payout.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -8267,7 +8267,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-09-policies",
     "route": "/insurance/n-09-policies",
-    "file": "app/(insurance)/n-09-policies.tsx",
+    "file": "app/insurance/n-09-policies.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8291,7 +8291,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-10-ledger",
     "route": "/insurance/n-10-ledger",
-    "file": "app/(insurance)/n-10-ledger.tsx",
+    "file": "app/insurance/n-10-ledger.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8315,7 +8315,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-11-settings",
     "route": "/insurance/n-11-settings",
-    "file": "app/(insurance)/n-11-settings.tsx",
+    "file": "app/insurance/n-11-settings.tsx",
     "kind": "mobile",
     "template": "settings",
     "items": [
@@ -8339,7 +8339,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-12-team",
     "route": "/insurance/n-12-team",
-    "file": "app/(insurance)/n-12-team.tsx",
+    "file": "app/insurance/n-12-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -8357,7 +8357,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-13-survey-photos",
     "route": "/insurance/n-13-survey-photos",
-    "file": "app/(insurance)/n-13-survey-photos.tsx",
+    "file": "app/insurance/n-13-survey-photos.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8374,7 +8374,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-14-why-this-premium",
     "route": "/insurance/n-14-why-this-premium",
-    "file": "app/(insurance)/n-14-why-this-premium.tsx",
+    "file": "app/insurance/n-14-why-this-premium.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "why"
@@ -8392,7 +8392,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-15-empty-claims",
     "route": "/insurance/n-15-empty-claims",
-    "file": "app/(insurance)/n-15-empty-claims.tsx",
+    "file": "app/insurance/n-15-empty-claims.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -8409,7 +8409,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-16-loading",
     "route": "/insurance/n-16-loading",
-    "file": "app/(insurance)/n-16-loading.tsx",
+    "file": "app/insurance/n-16-loading.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -8426,7 +8426,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-17-head-office",
     "route": "/insurance/n-17-head-office",
-    "file": "app/(insurance)/n-17-head-office.tsx",
+    "file": "app/insurance/n-17-head-office.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -8450,7 +8450,7 @@ export const catalog: ScreenSpec[] = [
     "group": "insurance",
     "slug": "n-18-help",
     "route": "/insurance/n-18-help",
-    "file": "app/(insurance)/n-18-help.tsx",
+    "file": "app/insurance/n-18-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8474,7 +8474,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-01-gate",
     "route": "/yard/y-01-gate",
-    "file": "app/(yard)/y-01-gate.tsx",
+    "file": "app/yard/y-01-gate.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8507,7 +8507,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-02-home",
     "route": "/yard/y-02-home",
-    "file": "app/(yard)/y-02-home.tsx",
+    "file": "app/yard/y-02-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -8541,7 +8541,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-03-manual-entry",
     "route": "/yard/y-03-manual-entry",
-    "file": "app/(yard)/y-03-manual-entry.tsx",
+    "file": "app/yard/y-03-manual-entry.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8558,7 +8558,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-04-queue",
     "route": "/yard/y-04-queue",
-    "file": "app/(yard)/y-04-queue.tsx",
+    "file": "app/yard/y-04-queue.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8591,7 +8591,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-05-price-board",
     "route": "/yard/y-05-price-board",
-    "file": "app/(yard)/y-05-price-board.tsx",
+    "file": "app/yard/y-05-price-board.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8625,7 +8625,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-06-weighbridge",
     "route": "/yard/y-06-weighbridge",
-    "file": "app/(yard)/y-06-weighbridge.tsx",
+    "file": "app/yard/y-06-weighbridge.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "yard"
@@ -8643,7 +8643,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-07-cess",
     "route": "/yard/y-07-cess",
-    "file": "app/(yard)/y-07-cess.tsx",
+    "file": "app/yard/y-07-cess.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -8667,7 +8667,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-08-price-bulletin",
     "route": "/yard/y-08-price-bulletin",
-    "file": "app/(yard)/y-08-price-bulletin.tsx",
+    "file": "app/yard/y-08-price-bulletin.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -8691,7 +8691,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-09-disputes",
     "route": "/yard/y-09-disputes",
-    "file": "app/(yard)/y-09-disputes.tsx",
+    "file": "app/yard/y-09-disputes.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8717,7 +8717,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-10-auction-watch",
     "route": "/yard/y-10-auction-watch",
-    "file": "app/(yard)/y-10-auction-watch.tsx",
+    "file": "app/yard/y-10-auction-watch.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -8735,7 +8735,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-11-staff",
     "route": "/yard/y-11-staff",
-    "file": "app/(yard)/y-11-staff.tsx",
+    "file": "app/yard/y-11-staff.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -8753,7 +8753,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-12-holidays",
     "route": "/yard/y-12-holidays",
-    "file": "app/(yard)/y-12-holidays.tsx",
+    "file": "app/yard/y-12-holidays.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8777,7 +8777,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-13-membership",
     "route": "/yard/y-13-membership",
-    "file": "app/(yard)/y-13-membership.tsx",
+    "file": "app/yard/y-13-membership.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8810,7 +8810,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-14-collusion-flag",
     "route": "/yard/y-14-collusion-flag",
-    "file": "app/(yard)/y-14-collusion-flag.tsx",
+    "file": "app/yard/y-14-collusion-flag.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8827,7 +8827,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-15-empty-yard",
     "route": "/yard/y-15-empty-yard",
-    "file": "app/(yard)/y-15-empty-yard.tsx",
+    "file": "app/yard/y-15-empty-yard.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -8844,7 +8844,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-16-loading",
     "route": "/yard/y-16-loading",
-    "file": "app/(yard)/y-16-loading.tsx",
+    "file": "app/yard/y-16-loading.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -8861,7 +8861,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-17-offline-gate",
     "route": "/yard/y-17-offline-gate",
-    "file": "app/(yard)/y-17-offline-gate.tsx",
+    "file": "app/yard/y-17-offline-gate.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -8878,7 +8878,7 @@ export const catalog: ScreenSpec[] = [
     "group": "yard",
     "slug": "y-18-help",
     "route": "/yard/y-18-help",
-    "file": "app/(yard)/y-18-help.tsx",
+    "file": "app/yard/y-18-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8907,7 +8907,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-01-home",
     "route": "/inputs/is-01-home",
-    "file": "app/(inputs)/is-01-home.tsx",
+    "file": "app/inputs/is-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "items": [
@@ -8933,7 +8933,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-02-catalog",
     "route": "/inputs/is-02-catalog",
-    "file": "app/(inputs)/is-02-catalog.tsx",
+    "file": "app/inputs/is-02-catalog.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -8962,7 +8962,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-03-add-product",
     "route": "/inputs/is-03-add-product",
-    "file": "app/(inputs)/is-03-add-product.tsx",
+    "file": "app/inputs/is-03-add-product.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -8979,7 +8979,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-04-orders",
     "route": "/inputs/is-04-orders",
-    "file": "app/(inputs)/is-04-orders.tsx",
+    "file": "app/inputs/is-04-orders.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9003,7 +9003,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-05-fulfil",
     "route": "/inputs/is-05-fulfil",
-    "file": "app/(inputs)/is-05-fulfil.tsx",
+    "file": "app/inputs/is-05-fulfil.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -9020,7 +9020,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-06-delivery",
     "route": "/inputs/is-06-delivery",
-    "file": "app/(inputs)/is-06-delivery.tsx",
+    "file": "app/inputs/is-06-delivery.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -9044,7 +9044,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-07-settlements",
     "route": "/inputs/is-07-settlements",
-    "file": "app/(inputs)/is-07-settlements.tsx",
+    "file": "app/inputs/is-07-settlements.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9070,7 +9070,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-08-ratings",
     "route": "/inputs/is-08-ratings",
-    "file": "app/(inputs)/is-08-ratings.tsx",
+    "file": "app/inputs/is-08-ratings.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -9094,7 +9094,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-09-team",
     "route": "/inputs/is-09-team",
-    "file": "app/(inputs)/is-09-team.tsx",
+    "file": "app/inputs/is-09-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -9112,7 +9112,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-10-kyc",
     "route": "/inputs/is-10-kyc",
-    "file": "app/(inputs)/is-10-kyc.tsx",
+    "file": "app/inputs/is-10-kyc.tsx",
     "kind": "mobile",
     "template": "kyc",
     "mode": "identity"
@@ -9130,7 +9130,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-11-empty-orders",
     "route": "/inputs/is-11-empty-orders",
-    "file": "app/(inputs)/is-11-empty-orders.tsx",
+    "file": "app/inputs/is-11-empty-orders.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -9147,7 +9147,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "is-12-help",
     "route": "/inputs/is-12-help",
-    "file": "app/(inputs)/is-12-help.tsx",
+    "file": "app/inputs/is-12-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9171,7 +9171,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-01-home",
     "route": "/inputs/sp-01-home",
-    "file": "app/(inputs)/sp-01-home.tsx",
+    "file": "app/inputs/sp-01-home.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "items": [
@@ -9197,7 +9197,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-02-catalog",
     "route": "/inputs/sp-02-catalog",
-    "file": "app/(inputs)/sp-02-catalog.tsx",
+    "file": "app/inputs/sp-02-catalog.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9221,7 +9221,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-03-requests",
     "route": "/inputs/sp-03-requests",
-    "file": "app/(inputs)/sp-03-requests.tsx",
+    "file": "app/inputs/sp-03-requests.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9245,7 +9245,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-04-assign",
     "route": "/inputs/sp-04-assign",
-    "file": "app/(inputs)/sp-04-assign.tsx",
+    "file": "app/inputs/sp-04-assign.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -9262,7 +9262,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-05-job-status",
     "route": "/inputs/sp-05-job-status",
-    "file": "app/(inputs)/sp-05-job-status.tsx",
+    "file": "app/inputs/sp-05-job-status.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -9286,7 +9286,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-06-proof",
     "route": "/inputs/sp-06-proof",
-    "file": "app/(inputs)/sp-06-proof.tsx",
+    "file": "app/inputs/sp-06-proof.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -9303,7 +9303,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-07-billing",
     "route": "/inputs/sp-07-billing",
-    "file": "app/(inputs)/sp-07-billing.tsx",
+    "file": "app/inputs/sp-07-billing.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -9327,7 +9327,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-08-dispute",
     "route": "/inputs/sp-08-dispute",
-    "file": "app/(inputs)/sp-08-dispute.tsx",
+    "file": "app/inputs/sp-08-dispute.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -9344,7 +9344,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-09-team",
     "route": "/inputs/sp-09-team",
-    "file": "app/(inputs)/sp-09-team.tsx",
+    "file": "app/inputs/sp-09-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "list"
@@ -9362,7 +9362,7 @@ export const catalog: ScreenSpec[] = [
     "group": "inputs",
     "slug": "sp-10-empty",
     "route": "/inputs/sp-10-empty",
-    "file": "app/(inputs)/sp-10-empty.tsx",
+    "file": "app/inputs/sp-10-empty.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -9379,7 +9379,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-01-search",
     "route": "/shared/sh-01-search",
-    "file": "app/(shared)/sh-01-search.tsx",
+    "file": "app/shared/sh-01-search.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -9396,7 +9396,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-02-notifications",
     "route": "/shared/sh-02-notifications",
-    "file": "app/(shared)/sh-02-notifications.tsx",
+    "file": "app/shared/sh-02-notifications.tsx",
     "kind": "mobile",
     "template": "alerts",
     "items": [
@@ -9439,7 +9439,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-03-deal-chat",
     "route": "/shared/sh-03-deal-chat",
-    "file": "app/(shared)/sh-03-deal-chat.tsx",
+    "file": "app/shared/sh-03-deal-chat.tsx",
     "kind": "mobile",
     "template": "chat",
     "items": [
@@ -9463,7 +9463,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-04-voice-call",
     "route": "/shared/sh-04-voice-call",
-    "file": "app/(shared)/sh-04-voice-call.tsx",
+    "file": "app/shared/sh-04-voice-call.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -9487,7 +9487,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-05-documents",
     "route": "/shared/sh-05-documents",
-    "file": "app/(shared)/sh-05-documents.tsx",
+    "file": "app/shared/sh-05-documents.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9516,7 +9516,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-06-scan-token",
     "route": "/shared/sh-06-scan-token",
-    "file": "app/(shared)/sh-06-scan-token.tsx",
+    "file": "app/shared/sh-06-scan-token.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -9533,7 +9533,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-07-help",
     "route": "/shared/sh-07-help",
-    "file": "app/(shared)/sh-07-help.tsx",
+    "file": "app/shared/sh-07-help.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9567,7 +9567,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-08-support-ticket",
     "route": "/shared/sh-08-support-ticket",
-    "file": "app/(shared)/sh-08-support-ticket.tsx",
+    "file": "app/shared/sh-08-support-ticket.tsx",
     "kind": "mobile",
     "template": "form"
   },
@@ -9584,7 +9584,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-09-profile",
     "route": "/shared/sh-09-profile",
-    "file": "app/(shared)/sh-09-profile.tsx",
+    "file": "app/shared/sh-09-profile.tsx",
     "kind": "mobile",
     "template": "detail",
     "items": [
@@ -9608,7 +9608,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-10-settings",
     "route": "/shared/sh-10-settings",
-    "file": "app/(shared)/sh-10-settings.tsx",
+    "file": "app/shared/sh-10-settings.tsx",
     "kind": "mobile",
     "template": "settings",
     "items": [
@@ -9634,7 +9634,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-11-ai-consent",
     "route": "/shared/sh-11-ai-consent",
-    "file": "app/(shared)/sh-11-ai-consent.tsx",
+    "file": "app/shared/sh-11-ai-consent.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "settings"
@@ -9652,7 +9652,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-12-offline",
     "route": "/shared/sh-12-offline",
-    "file": "app/(shared)/sh-12-offline.tsx",
+    "file": "app/shared/sh-12-offline.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -9669,7 +9669,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-13-empty",
     "route": "/shared/sh-13-empty",
-    "file": "app/(shared)/sh-13-empty.tsx",
+    "file": "app/shared/sh-13-empty.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -9686,7 +9686,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-14-loading",
     "route": "/shared/sh-14-loading",
-    "file": "app/(shared)/sh-14-loading.tsx",
+    "file": "app/shared/sh-14-loading.tsx",
     "kind": "mobile",
     "template": "loading"
   },
@@ -9703,7 +9703,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-15-error",
     "route": "/shared/sh-15-error",
-    "file": "app/(shared)/sh-15-error.tsx",
+    "file": "app/shared/sh-15-error.tsx",
     "kind": "mobile",
     "template": "error"
   },
@@ -9720,7 +9720,7 @@ export const catalog: ScreenSpec[] = [
     "group": "shared",
     "slug": "sh-16-why-this-suggestion",
     "route": "/shared/sh-16-why-this-suggestion",
-    "file": "app/(shared)/sh-16-why-this-suggestion.tsx",
+    "file": "app/shared/sh-16-why-this-suggestion.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "why"
@@ -9738,7 +9738,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-01-live-ops",
     "route": "/admin/am-01-live-ops",
-    "file": "app/(admin)/am-01-live-ops.tsx",
+    "file": "app/admin/am-01-live-ops.tsx",
     "kind": "mobile",
     "template": "dashboard",
     "stats": [
@@ -9798,7 +9798,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-02-weighment-progress",
     "route": "/admin/am-02-weighment-progress",
-    "file": "app/(admin)/am-02-weighment-progress.tsx",
+    "file": "app/admin/am-02-weighment-progress.tsx",
     "kind": "mobile",
     "template": "weighment",
     "mode": "live"
@@ -9816,7 +9816,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-03-kyc-queue",
     "route": "/admin/am-03-kyc-queue",
-    "file": "app/(admin)/am-03-kyc-queue.tsx",
+    "file": "app/admin/am-03-kyc-queue.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -9842,7 +9842,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-04-alerts",
     "route": "/admin/am-04-alerts",
-    "file": "app/(admin)/am-04-alerts.tsx",
+    "file": "app/admin/am-04-alerts.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "alerts"
@@ -9860,7 +9860,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-05-rules",
     "route": "/admin/am-05-rules",
-    "file": "app/(admin)/am-05-rules.tsx",
+    "file": "app/admin/am-05-rules.tsx",
     "kind": "mobile",
     "template": "master",
     "mode": "rules"
@@ -9878,7 +9878,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-06-auctions",
     "route": "/admin/am-06-auctions",
-    "file": "app/(admin)/am-06-auctions.tsx",
+    "file": "app/admin/am-06-auctions.tsx",
     "kind": "mobile",
     "template": "auction",
     "mode": "bids"
@@ -9896,7 +9896,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-07-team",
     "route": "/admin/am-07-team",
-    "file": "app/(admin)/am-07-team.tsx",
+    "file": "app/admin/am-07-team.tsx",
     "kind": "mobile",
     "template": "team",
     "mode": "limits"
@@ -9914,7 +9914,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-08-waivers",
     "route": "/admin/am-08-waivers",
-    "file": "app/(admin)/am-08-waivers.tsx",
+    "file": "app/admin/am-08-waivers.tsx",
     "kind": "mobile",
     "template": "interest",
     "mode": "waiver"
@@ -9932,7 +9932,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-09-commodities",
     "route": "/admin/am-09-commodities",
-    "file": "app/(admin)/am-09-commodities.tsx",
+    "file": "app/admin/am-09-commodities.tsx",
     "kind": "mobile",
     "template": "master",
     "mode": "commodity"
@@ -9950,7 +9950,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-10-yards",
     "route": "/admin/am-10-yards",
-    "file": "app/(admin)/am-10-yards.tsx",
+    "file": "app/admin/am-10-yards.tsx",
     "kind": "mobile",
     "template": "master",
     "mode": "yard"
@@ -9968,7 +9968,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-11-ai-flags",
     "route": "/admin/am-11-ai-flags",
-    "file": "app/(admin)/am-11-ai-flags.tsx",
+    "file": "app/admin/am-11-ai-flags.tsx",
     "kind": "mobile",
     "template": "assistant",
     "mode": "why"
@@ -9986,7 +9986,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-12-support",
     "route": "/admin/am-12-support",
-    "file": "app/(admin)/am-12-support.tsx",
+    "file": "app/admin/am-12-support.tsx",
     "kind": "mobile",
     "template": "list",
     "items": [
@@ -10010,7 +10010,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-13-empty",
     "route": "/admin/am-13-empty",
-    "file": "app/(admin)/am-13-empty.tsx",
+    "file": "app/admin/am-13-empty.tsx",
     "kind": "mobile",
     "template": "empty"
   },
@@ -10027,7 +10027,7 @@ export const catalog: ScreenSpec[] = [
     "group": "admin",
     "slug": "am-14-offline",
     "route": "/admin/am-14-offline",
-    "file": "app/(admin)/am-14-offline.tsx",
+    "file": "app/admin/am-14-offline.tsx",
     "kind": "mobile",
     "template": "offline"
   },
@@ -10044,7 +10044,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-01-ledger",
     "route": "/backoffice/abo-01-ledger",
-    "file": "app/(backoffice)/abo-01-ledger.tsx",
+    "file": "app/backoffice/abo-01-ledger.tsx",
     "kind": "desktop",
     "template": "interest",
     "mode": "ledger"
@@ -10062,7 +10062,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-02-multi-yard",
     "route": "/backoffice/abo-02-multi-yard",
-    "file": "app/(backoffice)/abo-02-multi-yard.tsx",
+    "file": "app/backoffice/abo-02-multi-yard.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "yard"
@@ -10080,7 +10080,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-03-farmers",
     "route": "/backoffice/abo-03-farmers",
-    "file": "app/(backoffice)/abo-03-farmers.tsx",
+    "file": "app/backoffice/abo-03-farmers.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10123,7 +10123,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-04-auctions",
     "route": "/backoffice/abo-04-auctions",
-    "file": "app/(backoffice)/abo-04-auctions.tsx",
+    "file": "app/backoffice/abo-04-auctions.tsx",
     "kind": "desktop",
     "template": "auction",
     "mode": "bids"
@@ -10141,7 +10141,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-05-bills",
     "route": "/backoffice/abo-05-bills",
-    "file": "app/(backoffice)/abo-05-bills.tsx",
+    "file": "app/backoffice/abo-05-bills.tsx",
     "kind": "desktop",
     "template": "interest",
     "mode": "bill"
@@ -10159,7 +10159,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-06-approvals",
     "route": "/backoffice/abo-06-approvals",
-    "file": "app/(backoffice)/abo-06-approvals.tsx",
+    "file": "app/backoffice/abo-06-approvals.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10185,7 +10185,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-07-team",
     "route": "/backoffice/abo-07-team",
-    "file": "app/(backoffice)/abo-07-team.tsx",
+    "file": "app/backoffice/abo-07-team.tsx",
     "kind": "desktop",
     "template": "team",
     "mode": "limits"
@@ -10203,7 +10203,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-08-waivers",
     "route": "/backoffice/abo-08-waivers",
-    "file": "app/(backoffice)/abo-08-waivers.tsx",
+    "file": "app/backoffice/abo-08-waivers.tsx",
     "kind": "desktop",
     "template": "interest",
     "mode": "waiver"
@@ -10221,7 +10221,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-09-audit",
     "route": "/backoffice/abo-09-audit",
-    "file": "app/(backoffice)/abo-09-audit.tsx",
+    "file": "app/backoffice/abo-09-audit.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10245,7 +10245,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-10-storage",
     "route": "/backoffice/abo-10-storage",
-    "file": "app/(backoffice)/abo-10-storage.tsx",
+    "file": "app/backoffice/abo-10-storage.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10269,7 +10269,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-11-buyers",
     "route": "/backoffice/abo-11-buyers",
-    "file": "app/(backoffice)/abo-11-buyers.tsx",
+    "file": "app/backoffice/abo-11-buyers.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10293,7 +10293,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-12-reports",
     "route": "/backoffice/abo-12-reports",
-    "file": "app/(backoffice)/abo-12-reports.tsx",
+    "file": "app/backoffice/abo-12-reports.tsx",
     "kind": "desktop",
     "template": "detail",
     "stats": [
@@ -10317,7 +10317,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-13-empty",
     "route": "/backoffice/abo-13-empty",
-    "file": "app/(backoffice)/abo-13-empty.tsx",
+    "file": "app/backoffice/abo-13-empty.tsx",
     "kind": "desktop",
     "template": "empty"
   },
@@ -10334,7 +10334,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "abo-14-settings",
     "route": "/backoffice/abo-14-settings",
-    "file": "app/(backoffice)/abo-14-settings.tsx",
+    "file": "app/backoffice/abo-14-settings.tsx",
     "kind": "desktop",
     "template": "settings",
     "items": [
@@ -10363,7 +10363,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-01-dashboard",
     "route": "/backoffice/tbo-01-dashboard",
-    "file": "app/(backoffice)/tbo-01-dashboard.tsx",
+    "file": "app/backoffice/tbo-01-dashboard.tsx",
     "kind": "desktop",
     "template": "desktop-home",
     "stats": [
@@ -10423,7 +10423,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-02-market",
     "route": "/backoffice/tbo-02-market",
-    "file": "app/(backoffice)/tbo-02-market.tsx",
+    "file": "app/backoffice/tbo-02-market.tsx",
     "kind": "desktop",
     "template": "auction",
     "mode": "browse"
@@ -10441,7 +10441,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-03-weighing",
     "route": "/backoffice/tbo-03-weighing",
-    "file": "app/(backoffice)/tbo-03-weighing.tsx",
+    "file": "app/backoffice/tbo-03-weighing.tsx",
     "kind": "desktop",
     "template": "weighment",
     "mode": "buyer"
@@ -10459,7 +10459,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-04-inventory",
     "route": "/backoffice/tbo-04-inventory",
-    "file": "app/(backoffice)/tbo-04-inventory.tsx",
+    "file": "app/backoffice/tbo-04-inventory.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10518,7 +10518,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-05-payables",
     "route": "/backoffice/tbo-05-payables",
-    "file": "app/(backoffice)/tbo-05-payables.tsx",
+    "file": "app/backoffice/tbo-05-payables.tsx",
     "kind": "desktop",
     "template": "interest",
     "mode": "statement"
@@ -10536,7 +10536,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-06-auto-bids",
     "route": "/backoffice/tbo-06-auto-bids",
-    "file": "app/(backoffice)/tbo-06-auto-bids.tsx",
+    "file": "app/backoffice/tbo-06-auto-bids.tsx",
     "kind": "desktop",
     "template": "autobid",
     "mode": "active"
@@ -10554,7 +10554,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-07-approvals",
     "route": "/backoffice/tbo-07-approvals",
-    "file": "app/(backoffice)/tbo-07-approvals.tsx",
+    "file": "app/backoffice/tbo-07-approvals.tsx",
     "kind": "desktop",
     "template": "autobid",
     "mode": "approval"
@@ -10572,7 +10572,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-08-approval-list",
     "route": "/backoffice/tbo-08-approval-list",
-    "file": "app/(backoffice)/tbo-08-approval-list.tsx",
+    "file": "app/backoffice/tbo-08-approval-list.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10598,7 +10598,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-09-finance",
     "route": "/backoffice/tbo-09-finance",
-    "file": "app/(backoffice)/tbo-09-finance.tsx",
+    "file": "app/backoffice/tbo-09-finance.tsx",
     "kind": "desktop",
     "template": "interest",
     "mode": "ledger"
@@ -10616,7 +10616,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-10-mandates",
     "route": "/backoffice/tbo-10-mandates",
-    "file": "app/(backoffice)/tbo-10-mandates.tsx",
+    "file": "app/backoffice/tbo-10-mandates.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10640,7 +10640,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-11-processor",
     "route": "/backoffice/tbo-11-processor",
-    "file": "app/(backoffice)/tbo-11-processor.tsx",
+    "file": "app/backoffice/tbo-11-processor.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10664,7 +10664,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-12-team",
     "route": "/backoffice/tbo-12-team",
-    "file": "app/(backoffice)/tbo-12-team.tsx",
+    "file": "app/backoffice/tbo-12-team.tsx",
     "kind": "desktop",
     "template": "team",
     "mode": "limits"
@@ -10682,7 +10682,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-13-qc",
     "route": "/backoffice/tbo-13-qc",
-    "file": "app/(backoffice)/tbo-13-qc.tsx",
+    "file": "app/backoffice/tbo-13-qc.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10706,7 +10706,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-14-logistics",
     "route": "/backoffice/tbo-14-logistics",
-    "file": "app/(backoffice)/tbo-14-logistics.tsx",
+    "file": "app/backoffice/tbo-14-logistics.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10730,7 +10730,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-15-disputes",
     "route": "/backoffice/tbo-15-disputes",
-    "file": "app/(backoffice)/tbo-15-disputes.tsx",
+    "file": "app/backoffice/tbo-15-disputes.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10754,7 +10754,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-16-contracts",
     "route": "/backoffice/tbo-16-contracts",
-    "file": "app/(backoffice)/tbo-16-contracts.tsx",
+    "file": "app/backoffice/tbo-16-contracts.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10778,7 +10778,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-17-assignments",
     "route": "/backoffice/tbo-17-assignments",
-    "file": "app/(backoffice)/tbo-17-assignments.tsx",
+    "file": "app/backoffice/tbo-17-assignments.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10802,7 +10802,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-18-settings",
     "route": "/backoffice/tbo-18-settings",
-    "file": "app/(backoffice)/tbo-18-settings.tsx",
+    "file": "app/backoffice/tbo-18-settings.tsx",
     "kind": "desktop",
     "template": "settings",
     "items": [
@@ -10836,7 +10836,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-19-empty",
     "route": "/backoffice/tbo-19-empty",
-    "file": "app/(backoffice)/tbo-19-empty.tsx",
+    "file": "app/backoffice/tbo-19-empty.tsx",
     "kind": "desktop",
     "template": "empty"
   },
@@ -10853,7 +10853,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "tbo-20-audit",
     "route": "/backoffice/tbo-20-audit",
-    "file": "app/(backoffice)/tbo-20-audit.tsx",
+    "file": "app/backoffice/tbo-20-audit.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10882,7 +10882,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-01-fleet",
     "route": "/backoffice/trb-01-fleet",
-    "file": "app/(backoffice)/trb-01-fleet.tsx",
+    "file": "app/backoffice/trb-01-fleet.tsx",
     "kind": "desktop",
     "template": "dashboard",
     "stats": [
@@ -10911,7 +10911,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-02-trips",
     "route": "/backoffice/trb-02-trips",
-    "file": "app/(backoffice)/trb-02-trips.tsx",
+    "file": "app/backoffice/trb-02-trips.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10935,7 +10935,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-03-quotes",
     "route": "/backoffice/trb-03-quotes",
-    "file": "app/(backoffice)/trb-03-quotes.tsx",
+    "file": "app/backoffice/trb-03-quotes.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -10961,7 +10961,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-04-drivers",
     "route": "/backoffice/trb-04-drivers",
-    "file": "app/(backoffice)/trb-04-drivers.tsx",
+    "file": "app/backoffice/trb-04-drivers.tsx",
     "kind": "desktop",
     "template": "team",
     "mode": "list"
@@ -10979,7 +10979,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-05-permits",
     "route": "/backoffice/trb-05-permits",
-    "file": "app/(backoffice)/trb-05-permits.tsx",
+    "file": "app/backoffice/trb-05-permits.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11003,7 +11003,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-06-earnings",
     "route": "/backoffice/trb-06-earnings",
-    "file": "app/(backoffice)/trb-06-earnings.tsx",
+    "file": "app/backoffice/trb-06-earnings.tsx",
     "kind": "desktop",
     "template": "detail",
     "stats": [
@@ -11027,7 +11027,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-07-issues",
     "route": "/backoffice/trb-07-issues",
-    "file": "app/(backoffice)/trb-07-issues.tsx",
+    "file": "app/backoffice/trb-07-issues.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11051,7 +11051,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "trb-08-settings",
     "route": "/backoffice/trb-08-settings",
-    "file": "app/(backoffice)/trb-08-settings.tsx",
+    "file": "app/backoffice/trb-08-settings.tsx",
     "kind": "desktop",
     "template": "settings",
     "items": [
@@ -11075,7 +11075,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-01-overview",
     "route": "/backoffice/sbo-01-overview",
-    "file": "app/(backoffice)/sbo-01-overview.tsx",
+    "file": "app/backoffice/sbo-01-overview.tsx",
     "kind": "desktop",
     "template": "dashboard",
     "stats": [
@@ -11104,7 +11104,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-02-requests",
     "route": "/backoffice/sbo-02-requests",
-    "file": "app/(backoffice)/sbo-02-requests.tsx",
+    "file": "app/backoffice/sbo-02-requests.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11133,7 +11133,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-03-inventory",
     "route": "/backoffice/sbo-03-inventory",
-    "file": "app/(backoffice)/sbo-03-inventory.tsx",
+    "file": "app/backoffice/sbo-03-inventory.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11157,7 +11157,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-04-rent",
     "route": "/backoffice/sbo-04-rent",
-    "file": "app/(backoffice)/sbo-04-rent.tsx",
+    "file": "app/backoffice/sbo-04-rent.tsx",
     "kind": "desktop",
     "template": "detail",
     "items": [
@@ -11181,7 +11181,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-05-liens",
     "route": "/backoffice/sbo-05-liens",
-    "file": "app/(backoffice)/sbo-05-liens.tsx",
+    "file": "app/backoffice/sbo-05-liens.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11205,7 +11205,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-06-temperature",
     "route": "/backoffice/sbo-06-temperature",
-    "file": "app/(backoffice)/sbo-06-temperature.tsx",
+    "file": "app/backoffice/sbo-06-temperature.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11229,7 +11229,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-07-finance",
     "route": "/backoffice/sbo-07-finance",
-    "file": "app/(backoffice)/sbo-07-finance.tsx",
+    "file": "app/backoffice/sbo-07-finance.tsx",
     "kind": "desktop",
     "template": "detail",
     "stats": [
@@ -11253,7 +11253,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-08-team",
     "route": "/backoffice/sbo-08-team",
-    "file": "app/(backoffice)/sbo-08-team.tsx",
+    "file": "app/backoffice/sbo-08-team.tsx",
     "kind": "desktop",
     "template": "team",
     "mode": "list"
@@ -11271,7 +11271,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-09-settings",
     "route": "/backoffice/sbo-09-settings",
-    "file": "app/(backoffice)/sbo-09-settings.tsx",
+    "file": "app/backoffice/sbo-09-settings.tsx",
     "kind": "desktop",
     "template": "settings",
     "items": [
@@ -11295,7 +11295,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "sbo-10-empty",
     "route": "/backoffice/sbo-10-empty",
-    "file": "app/(backoffice)/sbo-10-empty.tsx",
+    "file": "app/backoffice/sbo-10-empty.tsx",
     "kind": "desktop",
     "template": "empty"
   },
@@ -11312,7 +11312,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "yrb-01-overview",
     "route": "/backoffice/yrb-01-overview",
-    "file": "app/(backoffice)/yrb-01-overview.tsx",
+    "file": "app/backoffice/yrb-01-overview.tsx",
     "kind": "desktop",
     "template": "dashboard",
     "stats": [
@@ -11346,7 +11346,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "yrb-02-district",
     "route": "/backoffice/yrb-02-district",
-    "file": "app/(backoffice)/yrb-02-district.tsx",
+    "file": "app/backoffice/yrb-02-district.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11370,7 +11370,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "yrb-03-state",
     "route": "/backoffice/yrb-03-state",
-    "file": "app/(backoffice)/yrb-03-state.tsx",
+    "file": "app/backoffice/yrb-03-state.tsx",
     "kind": "desktop",
     "template": "detail",
     "stats": [
@@ -11399,7 +11399,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "yrb-04-compliance",
     "route": "/backoffice/yrb-04-compliance",
-    "file": "app/(backoffice)/yrb-04-compliance.tsx",
+    "file": "app/backoffice/yrb-04-compliance.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11423,7 +11423,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "yrb-05-auction-settings",
     "route": "/backoffice/yrb-05-auction-settings",
-    "file": "app/(backoffice)/yrb-05-auction-settings.tsx",
+    "file": "app/backoffice/yrb-05-auction-settings.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "rules"
@@ -11441,7 +11441,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "yrb-06-yard-master",
     "route": "/backoffice/yrb-06-yard-master",
-    "file": "app/(backoffice)/yrb-06-yard-master.tsx",
+    "file": "app/backoffice/yrb-06-yard-master.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "yard"
@@ -11459,7 +11459,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-01-dashboard",
     "route": "/backoffice/bo-01-dashboard",
-    "file": "app/(backoffice)/bo-01-dashboard.tsx",
+    "file": "app/backoffice/bo-01-dashboard.tsx",
     "kind": "desktop",
     "template": "desktop-home",
     "stats": [
@@ -11519,7 +11519,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-02-users",
     "route": "/backoffice/bo-02-users",
-    "file": "app/(backoffice)/bo-02-users.tsx",
+    "file": "app/backoffice/bo-02-users.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11548,7 +11548,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-03-roles",
     "route": "/backoffice/bo-03-roles",
-    "file": "app/(backoffice)/bo-03-roles.tsx",
+    "file": "app/backoffice/bo-03-roles.tsx",
     "kind": "desktop",
     "template": "team",
     "mode": "limits"
@@ -11566,7 +11566,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-04-role-templates",
     "route": "/backoffice/bo-04-role-templates",
-    "file": "app/(backoffice)/bo-04-role-templates.tsx",
+    "file": "app/backoffice/bo-04-role-templates.tsx",
     "kind": "desktop",
     "template": "detail",
     "items": [
@@ -11600,7 +11600,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-05-kyc-queue",
     "route": "/backoffice/bo-05-kyc-queue",
-    "file": "app/(backoffice)/bo-05-kyc-queue.tsx",
+    "file": "app/backoffice/bo-05-kyc-queue.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11626,7 +11626,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-06-kyc-detail",
     "route": "/backoffice/bo-06-kyc-detail",
-    "file": "app/(backoffice)/bo-06-kyc-detail.tsx",
+    "file": "app/backoffice/bo-06-kyc-detail.tsx",
     "kind": "desktop",
     "template": "kyc",
     "mode": "pending"
@@ -11644,7 +11644,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-07-orgs",
     "route": "/backoffice/bo-07-orgs",
-    "file": "app/(backoffice)/bo-07-orgs.tsx",
+    "file": "app/backoffice/bo-07-orgs.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11678,7 +11678,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-08-entities",
     "route": "/backoffice/bo-08-entities",
-    "file": "app/(backoffice)/bo-08-entities.tsx",
+    "file": "app/backoffice/bo-08-entities.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11702,7 +11702,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-09-disputes",
     "route": "/backoffice/bo-09-disputes",
-    "file": "app/(backoffice)/bo-09-disputes.tsx",
+    "file": "app/backoffice/bo-09-disputes.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11726,7 +11726,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-10-dispute-detail",
     "route": "/backoffice/bo-10-dispute-detail",
-    "file": "app/(backoffice)/bo-10-dispute-detail.tsx",
+    "file": "app/backoffice/bo-10-dispute-detail.tsx",
     "kind": "desktop",
     "template": "detail",
     "items": [
@@ -11750,7 +11750,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-11-rectification",
     "route": "/backoffice/bo-11-rectification",
-    "file": "app/(backoffice)/bo-11-rectification.tsx",
+    "file": "app/backoffice/bo-11-rectification.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11774,7 +11774,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-12-ai-log",
     "route": "/backoffice/bo-12-ai-log",
-    "file": "app/(backoffice)/bo-12-ai-log.tsx",
+    "file": "app/backoffice/bo-12-ai-log.tsx",
     "kind": "desktop",
     "template": "assistant",
     "mode": "why"
@@ -11792,7 +11792,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-13-ledger-correction",
     "route": "/backoffice/bo-13-ledger-correction",
-    "file": "app/(backoffice)/bo-13-ledger-correction.tsx",
+    "file": "app/backoffice/bo-13-ledger-correction.tsx",
     "kind": "desktop",
     "template": "form"
   },
@@ -11809,7 +11809,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-14-audit-trail",
     "route": "/backoffice/bo-14-audit-trail",
-    "file": "app/(backoffice)/bo-14-audit-trail.tsx",
+    "file": "app/backoffice/bo-14-audit-trail.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11838,7 +11838,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-15-broadcast",
     "route": "/backoffice/bo-15-broadcast",
-    "file": "app/(backoffice)/bo-15-broadcast.tsx",
+    "file": "app/backoffice/bo-15-broadcast.tsx",
     "kind": "desktop",
     "template": "form"
   },
@@ -11855,7 +11855,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-16-fees",
     "route": "/backoffice/bo-16-fees",
-    "file": "app/(backoffice)/bo-16-fees.tsx",
+    "file": "app/backoffice/bo-16-fees.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "rules"
@@ -11873,7 +11873,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-17-coins",
     "route": "/backoffice/bo-17-coins",
-    "file": "app/(backoffice)/bo-17-coins.tsx",
+    "file": "app/backoffice/bo-17-coins.tsx",
     "kind": "desktop",
     "template": "detail",
     "items": [
@@ -11902,7 +11902,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-18-integrations",
     "route": "/backoffice/bo-18-integrations",
-    "file": "app/(backoffice)/bo-18-integrations.tsx",
+    "file": "app/backoffice/bo-18-integrations.tsx",
     "kind": "desktop",
     "template": "settings",
     "items": [
@@ -11933,7 +11933,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-19-system",
     "route": "/backoffice/bo-19-system",
-    "file": "app/(backoffice)/bo-19-system.tsx",
+    "file": "app/backoffice/bo-19-system.tsx",
     "kind": "desktop",
     "template": "settings",
     "items": [
@@ -11957,7 +11957,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-20-tickets",
     "route": "/backoffice/bo-20-tickets",
-    "file": "app/(backoffice)/bo-20-tickets.tsx",
+    "file": "app/backoffice/bo-20-tickets.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -11981,7 +11981,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-21-reports",
     "route": "/backoffice/bo-21-reports",
-    "file": "app/(backoffice)/bo-21-reports.tsx",
+    "file": "app/backoffice/bo-21-reports.tsx",
     "kind": "desktop",
     "template": "list",
     "items": [
@@ -12005,7 +12005,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-22-commodity-master",
     "route": "/backoffice/bo-22-commodity-master",
-    "file": "app/(backoffice)/bo-22-commodity-master.tsx",
+    "file": "app/backoffice/bo-22-commodity-master.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "commodity"
@@ -12023,7 +12023,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-23-cotton-master",
     "route": "/backoffice/bo-23-cotton-master",
-    "file": "app/(backoffice)/bo-23-cotton-master.tsx",
+    "file": "app/backoffice/bo-23-cotton-master.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "commodity"
@@ -12041,7 +12041,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-24-add-variety",
     "route": "/backoffice/bo-24-add-variety",
-    "file": "app/(backoffice)/bo-24-add-variety.tsx",
+    "file": "app/backoffice/bo-24-add-variety.tsx",
     "kind": "desktop",
     "template": "cascade"
   },
@@ -12058,7 +12058,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-25-yard-master",
     "route": "/backoffice/bo-25-yard-master",
-    "file": "app/(backoffice)/bo-25-yard-master.tsx",
+    "file": "app/backoffice/bo-25-yard-master.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "yard"
@@ -12076,7 +12076,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-26-yard-detail",
     "route": "/backoffice/bo-26-yard-detail",
-    "file": "app/(backoffice)/bo-26-yard-detail.tsx",
+    "file": "app/backoffice/bo-26-yard-detail.tsx",
     "kind": "desktop",
     "template": "detail",
     "items": [
@@ -12110,7 +12110,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-27-payment-rules",
     "route": "/backoffice/bo-27-payment-rules",
-    "file": "app/(backoffice)/bo-27-payment-rules.tsx",
+    "file": "app/backoffice/bo-27-payment-rules.tsx",
     "kind": "desktop",
     "template": "master",
     "mode": "rules"
@@ -12128,7 +12128,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-28-waiver-audit",
     "route": "/backoffice/bo-28-waiver-audit",
-    "file": "app/(backoffice)/bo-28-waiver-audit.tsx",
+    "file": "app/backoffice/bo-28-waiver-audit.tsx",
     "kind": "desktop",
     "template": "interest",
     "mode": "waiver"
@@ -12146,7 +12146,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-29-auction-settings",
     "route": "/backoffice/bo-29-auction-settings",
-    "file": "app/(backoffice)/bo-29-auction-settings.tsx",
+    "file": "app/backoffice/bo-29-auction-settings.tsx",
     "kind": "desktop",
     "template": "auction",
     "mode": "offer"
@@ -12164,7 +12164,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-30-live-auto-bids",
     "route": "/backoffice/bo-30-live-auto-bids",
-    "file": "app/(backoffice)/bo-30-live-auto-bids.tsx",
+    "file": "app/backoffice/bo-30-live-auto-bids.tsx",
     "kind": "desktop",
     "template": "autobid",
     "mode": "active"
@@ -12182,7 +12182,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-31-fraud-flags",
     "route": "/backoffice/bo-31-fraud-flags",
-    "file": "app/(backoffice)/bo-31-fraud-flags.tsx",
+    "file": "app/backoffice/bo-31-fraud-flags.tsx",
     "kind": "desktop",
     "template": "assistant",
     "mode": "alerts"
@@ -12200,7 +12200,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-32-flows-weighment",
     "route": "/backoffice/bo-32-flows-weighment",
-    "file": "app/(backoffice)/bo-32-flows-weighment.tsx",
+    "file": "app/backoffice/bo-32-flows-weighment.tsx",
     "kind": "desktop",
     "template": "flow",
     "notes": [
@@ -12224,7 +12224,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-33-flows-interest",
     "route": "/backoffice/bo-33-flows-interest",
-    "file": "app/(backoffice)/bo-33-flows-interest.tsx",
+    "file": "app/backoffice/bo-33-flows-interest.tsx",
     "kind": "desktop",
     "template": "flow",
     "notes": [
@@ -12248,7 +12248,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-34-flows-auction",
     "route": "/backoffice/bo-34-flows-auction",
-    "file": "app/(backoffice)/bo-34-flows-auction.tsx",
+    "file": "app/backoffice/bo-34-flows-auction.tsx",
     "kind": "desktop",
     "template": "flow",
     "notes": [
@@ -12273,7 +12273,7 @@ export const catalog: ScreenSpec[] = [
     "group": "backoffice",
     "slug": "bo-35-flows-masters",
     "route": "/backoffice/bo-35-flows-masters",
-    "file": "app/(backoffice)/bo-35-flows-masters.tsx",
+    "file": "app/backoffice/bo-35-flows-masters.tsx",
     "kind": "desktop",
     "template": "flow",
     "notes": [
