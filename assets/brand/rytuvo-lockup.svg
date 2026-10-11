@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 800" width="2400" height="800"><rect width="2400" height="800" fill="#FFF8EC"/><g transform="translate(120,144) scale(0.5)"><rect width="1024" height="1024" rx="228" fill="#0F5B3A"/>
+<path d="M512 812 C 470 640 360 520 232 470 C 250 640 360 770 512 812 Z" fill="#E8A317"/>
+<path d="M512 812 C 554 640 664 520 792 470 C 774 640 664 770 512 812 Z" fill="#E8A317"/>
+<path d="M512 812 L512 560" stroke="#E8A317" stroke-width="44" stroke-linecap="round"/>
+<circle cx="512" cy="372" r="118" fill="#FFF8EC"/><circle cx="512" cy="372" r="92" fill="#C8102E"/></g><text x="740" y="470" font-family="Poppins" font-weight="600" font-size="260" fill="#14241B" letter-spacing="-4">Rytuvo</text><text x="748" y="620" font-family="Noto Sans Telugu" font-weight="600" font-size="110" fill="#0F5B3A">రైతువో</text></svg>
