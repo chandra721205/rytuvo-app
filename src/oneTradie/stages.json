@@ -1,0 +1,1089 @@
+[
+ {
+  "id": "dashboard",
+  "phase": "setup",
+  "title": "Dashboard",
+  "description": "AI overview & quick actions",
+  "source": "../ProducerAIDashboardComplete.tsx",
+  "fields": [],
+  "sections": [],
+  "actions": []
+ },
+ {
+  "id": "profile",
+  "phase": "setup",
+  "title": "Producer Profile",
+  "description": "Identity & documents",
+  "source": "ProducerProfile.tsx",
+  "fields": [
+   {
+    "label": "Full Name",
+    "type": "text"
+   },
+   {
+    "label": "Email",
+    "type": "text"
+   },
+   {
+    "label": "Village",
+    "type": "text"
+   },
+   {
+    "label": "Pincode",
+    "type": "text"
+   }
+  ],
+  "sections": [
+   "👤 Producer Profile & Account",
+   "Personal Information",
+   "Farm Information",
+   "Bank Details",
+   "Trade History"
+  ],
+  "actions": []
+ },
+ {
+  "id": "crop-selection",
+  "phase": "farm",
+  "title": "Crop Selection",
+  "description": "AI-powered recommendations",
+  "source": "CropSelectionWithAI.tsx",
+  "fields": [
+   {
+    "label": "Soil Type",
+    "type": "text"
+   },
+   {
+    "label": "Water Availability",
+    "type": "text"
+   },
+   {
+    "label": "Location",
+    "type": "text"
+   },
+   {
+    "label": "Previous Crop",
+    "type": "text"
+   },
+   {
+    "label": "Variety",
+    "type": "text"
+   },
+   {
+    "label": "Irrigation Schedule",
+    "type": "text"
+   },
+   {
+    "label": "Fertilizers Used",
+    "type": "text"
+   },
+   {
+    "label": "Pesticides Used",
+    "type": "text"
+   },
+   {
+    "label": "Harvesting Method",
+    "type": "text"
+   },
+   {
+    "label": "Select soil type",
+    "type": "text"
+   },
+   {
+    "label": "Select water source",
+    "type": "text"
+   },
+   {
+    "label": "e.g., Wheat",
+    "type": "text"
+   },
+   {
+    "label": "e.g., HD-2967",
+    "type": "text"
+   },
+   {
+    "label": "e.g., Weekly",
+    "type": "text"
+   }
+  ],
+  "sections": [
+   "Land Details",
+   "AI Recommendations",
+   "Selected Crop",
+   "Market Insights"
+  ],
+  "actions": []
+ },
+ {
+  "id": "activities",
+  "phase": "farm",
+  "title": "Log Activities",
+  "description": "Ploughing, irrigation, etc.",
+  "source": "ActivityLoggerEnhanced.tsx",
+  "fields": [
+   {
+    "label": "Ploughing Method",
+    "type": "text"
+   },
+   {
+    "label": "Sowing Method",
+    "type": "text"
+   },
+   {
+    "label": "Seed Variety",
+    "type": "text"
+   },
+   {
+    "label": "Seed Source",
+    "type": "text"
+   },
+   {
+    "label": "Irrigation Type",
+    "type": "text"
+   },
+   {
+    "label": "Water Volume",
+    "type": "text"
+   },
+   {
+    "label": "Fertilizer Type",
+    "type": "text"
+   },
+   {
+    "label": "N (%)",
+    "type": "number"
+   },
+   {
+    "label": "P (%)",
+    "type": "number"
+   },
+   {
+    "label": "K (%)",
+    "type": "number"
+   },
+   {
+    "label": "Product Name",
+    "type": "text"
+   },
+   {
+    "label": "Dosage",
+    "type": "text"
+   },
+   {
+    "label": "Application Method",
+    "type": "text"
+   },
+   {
+    "label": "Pesticide Type",
+    "type": "text"
+   }
+  ],
+  "sections": [],
+  "actions": []
+ },
+ {
+  "id": "input-cost",
+  "phase": "farm",
+  "title": "Input & Cost",
+  "description": "Cost tracking by activity",
+  "source": "InputCostTrackerEnhanced.tsx",
+  "fields": [
+   {
+    "label": "View Date",
+    "type": "text"
+   },
+   {
+    "label": "Product Name",
+    "type": "text"
+   },
+   {
+    "label": "Category",
+    "type": "text"
+   },
+   {
+    "label": "Quantity Purchased",
+    "type": "number"
+   },
+   {
+    "label": "Unit",
+    "type": "text"
+   },
+   {
+    "label": "Price per Unit (₹)",
+    "type": "number"
+   },
+   {
+    "label": "Purchase Date",
+    "type": "text"
+   },
+   {
+    "label": "Supplier",
+    "type": "text"
+   },
+   {
+    "label": "Upload Invoice/Receipt",
+    "type": "text"
+   },
+   {
+    "label": "Notes",
+    "type": "text"
+   },
+   {
+    "label": "Activity Name",
+    "type": "text"
+   },
+   {
+    "label": "Activity Type",
+    "type": "text"
+   },
+   {
+    "label": "Date",
+    "type": "text"
+   },
+   {
+    "label": "Total Expense Amount (₹)",
+    "type": "number"
+   }
+  ],
+  "sections": [
+   "Activity Expenses"
+  ],
+  "actions": []
+ },
+ {
+  "id": "crop-journaling",
+  "phase": "farm",
+  "title": "Crop Lifecycle",
+  "description": "Monitor & journal progress",
+  "source": "CropJournalingTokenization.tsx",
+  "fields": [],
+  "sections": [
+   "Crop Journaling Coming Soon"
+  ],
+  "actions": [
+   "Back",
+   "Continue to Harvest"
+  ]
+ },
+ {
+  "id": "crop-health",
+  "phase": "farm",
+  "title": "Crop Health & AI",
+  "description": "AI-powered health monitoring",
+  "source": "CropHealthMonitor.tsx",
+  "fields": [
+   {
+    "label": "Select",
+    "type": "select",
+    "options": [
+     "All Crops"
+    ]
+   }
+  ],
+  "sections": [
+   "🌿 Crop Health & Alerts"
+  ],
+  "actions": []
+ },
+ {
+  "id": "harvest-listing",
+  "phase": "harvest",
+  "title": "Harvest & Listing",
+  "description": "Record harvest & lots",
+  "source": "HarvestCommodityListing.tsx",
+  "fields": [],
+  "sections": [
+   "Commodity Listing Coming Soon"
+  ],
+  "actions": [
+   "Back",
+   "Continue to Transport"
+  ]
+ },
+ {
+  "id": "lot-management",
+  "phase": "harvest",
+  "title": "Lot Management",
+  "description": "Create & manage lots",
+  "source": "CreateLotWorkflow.tsx",
+  "fields": [
+   {
+    "label": "Quantity",
+    "type": "number"
+   },
+   {
+    "label": "Unit",
+    "type": "text"
+   },
+   {
+    "label": "Description (Optional)",
+    "type": "text"
+   },
+   {
+    "label": "Moisture Content (%)",
+    "type": "number"
+   },
+   {
+    "label": "Purity (%)",
+    "type": "number"
+   },
+   {
+    "label": "Foreign Matter (%)",
+    "type": "number"
+   },
+   {
+    "label": "Broken Grains (%)",
+    "type": "number"
+   },
+   {
+    "label": "Enter quantity",
+    "type": "number"
+   },
+   {
+    "label": "Add notes about this lot",
+    "type": "text"
+   },
+   {
+    "label": "e.g., 12",
+    "type": "text"
+   },
+   {
+    "label": "e.g., 98",
+    "type": "text"
+   },
+   {
+    "label": "e.g., 2",
+    "type": "text"
+   },
+   {
+    "label": "e.g., 5",
+    "type": "text"
+   },
+   {
+    "label": "Select",
+    "type": "select",
+    "options": [
+     "Quintals",
+     "Kilograms",
+     "Tons",
+     "Bags"
+    ]
+   }
+  ],
+  "sections": [
+   "Create & Tokenize Lots",
+   "Create New Lots",
+   "Grade Lots",
+   "Graded Lots with AI Insights",
+   "Tokenize Graded Lots",
+   "Tokenized Lots",
+   "Verifications & Certificates",
+   "Buyer View - What Buyers See"
+  ],
+  "actions": []
+ },
+ {
+  "id": "sampling-quality",
+  "phase": "quality",
+  "title": "Sampling & Quality",
+  "description": "Quality verification",
+  "source": "SamplingQualityCheck.tsx",
+  "fields": [],
+  "sections": [
+   "Quality Check Coming Soon"
+  ],
+  "actions": [
+   "Back",
+   "Continue to Weighing"
+  ]
+ },
+ {
+  "id": "ai-quality",
+  "phase": "quality",
+  "title": "AI Quality Check",
+  "description": "Grok AI assessment",
+  "source": "EnhancedQualityCheckWithAI.tsx",
+  "fields": [
+   {
+    "label": "Size",
+    "type": "check"
+   },
+   {
+    "label": "Color",
+    "type": "check"
+   },
+   {
+    "label": "Quality",
+    "type": "check"
+   },
+   {
+    "label": "Moisture",
+    "type": "check"
+   },
+   {
+    "label": "Freshness",
+    "type": "check"
+   },
+   {
+    "label": "Select",
+    "type": "select",
+    "options": [
+     "🌾 Wheat",
+     "🌾 Rice",
+     "🌽 Corn",
+     "🌱 Soybean",
+     "☁️ Cotton"
+    ]
+   }
+  ],
+  "sections": [
+   "Select Commodity",
+   "What AI Analyzes",
+   "Analyzing with Grok AI",
+   "Quality Check Complete!",
+   "Assessment Summary"
+  ],
+  "actions": []
+ },
+ {
+  "id": "grading",
+  "phase": "quality",
+  "title": "Grading",
+  "description": "Final lot grading & grades",
+  "source": "GradingCompletionScreen.tsx",
+  "fields": [],
+  "sections": [
+   "Grading Results"
+  ],
+  "actions": [
+   "Create Lots"
+  ]
+ },
+ {
+  "id": "traceability",
+  "phase": "quality",
+  "title": "QR & Provenance",
+  "description": "Traceability record",
+  "source": "ProvenanceTracker.tsx",
+  "fields": [
+   {
+    "label": "Select Variety/Subtype",
+    "type": "text"
+   },
+   {
+    "label": "Custom Variety Name",
+    "type": "text"
+   },
+   {
+    "label": "Crop Batch ID (will be generated)",
+    "type": "number"
+   },
+   {
+    "label": "Harvest Date",
+    "type": "text"
+   },
+   {
+    "label": "Location",
+    "type": "text"
+   },
+   {
+    "label": "Harvest Method * (select all that apply)",
+    "type": "text"
+   },
+   {
+    "label": "Quantity",
+    "type": "number"
+   },
+   {
+    "label": "Unit",
+    "type": "text"
+   },
+   {
+    "label": "Weather Conditions",
+    "type": "text"
+   },
+   {
+    "label": "Soil Conditions",
+    "type": "text"
+   },
+   {
+    "label": "Notes (optional)",
+    "type": "text"
+   },
+   {
+    "label": "Verification Type",
+    "type": "text"
+   },
+   {
+    "label": "Verifier Name",
+    "type": "text"
+   },
+   {
+    "label": "Rating (out of 5)",
+    "type": "text"
+   }
+  ],
+  "sections": [
+   "Select Commodity & Variety",
+   "Commodity Selection",
+   "Completed Grading Stages",
+   "Verification Records",
+   "Quality Token Generated!",
+   "Token Identifiers",
+   "QR Code",
+   "NFT Metadata"
+  ],
+  "actions": [
+   "Share Link",
+   "Get Shareable Link"
+  ]
+ },
+ {
+  "id": "tokenization",
+  "phase": "quality",
+  "title": "Tokenization",
+  "description": "Digital lot identity",
+  "source": "LotCreationTokenizationWorkflow.tsx",
+  "fields": [
+   {
+    "label": "Batch/Harvest",
+    "type": "text"
+   },
+   {
+    "label": "Grade",
+    "type": "text"
+   },
+   {
+    "label": "Quantity",
+    "type": "number"
+   },
+   {
+    "label": "Unit",
+    "type": "text"
+   },
+   {
+    "label": "Certificate Name",
+    "type": "text"
+   },
+   {
+    "label": "Certificate Type",
+    "type": "text"
+   },
+   {
+    "label": "Notes (Optional)",
+    "type": "text"
+   },
+   {
+    "label": "Select a batch",
+    "type": "text"
+   },
+   {
+    "label": "Select grade",
+    "type": "text"
+   },
+   {
+    "label": "e.g., Organic Certification",
+    "type": "text"
+   },
+   {
+    "label": "Select type",
+    "type": "text"
+   },
+   {
+    "label": "Additional notes...",
+    "type": "text"
+   },
+   {
+    "label": "Select a tokenized lot",
+    "type": "text"
+   },
+   {
+    "label": "Select",
+    "type": "select",
+    "options": [
+     "Kilograms (kg)",
+     "Tons",
+     "Quintals",
+     "Organic",
+     "Quality",
+     "Export",
+     "Food Safety",
+     "Other"
+    ]
+   }
+  ],
+  "sections": [
+   "Select or Create Batch",
+   "Add New Lot",
+   "Tokenization Dashboard",
+   "Token Data Enrichment",
+   "Scan Token / Enter NFT ID"
+  ],
+  "actions": [
+   "Add Lot"
+  ]
+ },
+ {
+  "id": "storage-sell-decision",
+  "phase": "decision",
+  "title": "Store or Sell",
+  "description": "Choose your path",
+  "source": "StorageSellDecisionScreen.tsx",
+  "fields": [],
+  "sections": [
+   "Store",
+   "Sell"
+  ],
+  "actions": [
+   "Select Storage",
+   "List for Sale",
+   "Back to Verification"
+  ]
+ },
+ {
+  "id": "storage",
+  "phase": "decision",
+  "title": "Storage",
+  "description": "Storage facility selection",
+  "source": "EnhancedStorageSelectionScreen.tsx",
+  "fields": [
+   {
+    "label": "Search facilities...",
+    "type": "text"
+   },
+   {
+    "label": "Punjab Agri Warehouse",
+    "type": "check"
+   },
+   {
+    "label": "Green Valley Warehouse",
+    "type": "check"
+   },
+   {
+    "label": "Arctic Cold Storage",
+    "type": "check"
+   },
+   {
+    "label": "FreshKeep Cold Storage",
+    "type": "check"
+   },
+   {
+    "label": "Farm Direct Storage Hub",
+    "type": "check"
+   },
+   {
+    "label": "Farmers Collective Storage",
+    "type": "check"
+   },
+   {
+    "label": "Modern Grain Silos",
+    "type": "check"
+   },
+   {
+    "label": "Select",
+    "type": "select",
+    "options": [
+     "Sort by Distance",
+     "Sort by Price",
+     "Sort by Rating"
+    ]
+   }
+  ],
+  "sections": [
+   "Storage Type"
+  ],
+  "actions": [
+   "Back"
+  ]
+ },
+ {
+  "id": "marketplace-browse",
+  "phase": "selling",
+  "title": "Marketplace",
+  "description": "Browse markets & agents",
+  "source": "MarketplaceAgentBrowsingScreen.tsx",
+  "fields": [
+   {
+    "label": "Min Rating",
+    "type": "text"
+   },
+   {
+    "label": "Specialty",
+    "type": "text"
+   },
+   {
+    "label": "Distance",
+    "type": "text"
+   },
+   {
+    "label": "Punjab Mandi",
+    "type": "check"
+   },
+   {
+    "label": "Green Valley Market",
+    "type": "check"
+   },
+   {
+    "label": "Farmer\\",
+    "type": "check"
+   },
+   {
+    "label": "Rajesh Sharma",
+    "type": "check"
+   },
+   {
+    "label": "Amit Singh",
+    "type": "check"
+   },
+   {
+    "label": "Select",
+    "type": "select",
+    "options": [
+     "All Ratings",
+     "4.5+ Stars",
+     "4.0+ Stars",
+     "3.5+ Stars",
+     "All Specialties",
+     "Wheat",
+     "Rice",
+     "Cotton",
+     "All Distances",
+     "Within 10 km",
+     "Within 20 km",
+     "Within 50 km"
+    ]
+   }
+  ],
+  "sections": [],
+  "actions": [
+   "View Reviews",
+   "View Profile",
+   "Back to Decision"
+  ]
+ },
+ {
+  "id": "matchmaking",
+  "phase": "selling",
+  "title": "Matchmaking",
+  "description": "Match with buyers",
+  "source": "MatchmakingScreen.tsx",
+  "fields": [
+   {
+    "label": "Match Type",
+    "type": "text"
+   },
+   {
+    "label": "Transaction History",
+    "type": "text"
+   },
+   {
+    "label": "Maharashtra Grains Co.",
+    "type": "check"
+   },
+   {
+    "label": "Punjab Agricultural Traders",
+    "type": "check"
+   },
+   {
+    "label": "Karnataka Quality Lots",
+    "type": "check"
+   },
+   {
+    "label": "Gujarat Commodity Exchange",
+    "type": "check"
+   }
+  ],
+  "sections": [],
+  "actions": []
+ },
+ {
+  "id": "commission-agent",
+  "phase": "selling",
+  "title": "Commission Agent",
+  "description": "Agent engagement & deal",
+  "source": "CommissionAgentEngagementScreen.tsx",
+  "fields": [
+   {
+    "label": "Enter OTP",
+    "type": "otp"
+   },
+   {
+    "label": "Enter 6-digit OTP",
+    "type": "otp"
+   }
+  ],
+  "sections": [
+   "Select Service Type",
+   "Authorize Engagement",
+   "Terms of Engagement"
+  ],
+  "actions": [
+   "Send OTP",
+   "Confirm Order",
+   "Resend OTP",
+   "Back to Agents"
+  ]
+ },
+ {
+  "id": "buyer-verification",
+  "phase": "selling",
+  "title": "Buyer Verification",
+  "description": "Verify buyer token",
+  "source": "BuyerVerificationView.tsx",
+  "fields": [
+   {
+    "label": "Enter Token ID or Batch ID",
+    "type": "text"
+   },
+   {
+    "label": "Premium Wheat",
+    "type": "check"
+   },
+   {
+    "label": "Rajesh Kumar",
+    "type": "check"
+   },
+   {
+    "label": "Quality Certificate",
+    "type": "check"
+   },
+   {
+    "label": "Organic Certification",
+    "type": "check"
+   },
+   {
+    "label": "Lab Test Report",
+    "type": "check"
+   }
+  ],
+  "sections": [
+   "Token/NFT Input",
+   "Verified Product Information",
+   "Product Overview",
+   "Producer Information",
+   "Cultivation Timeline",
+   "Certificates and Proofs",
+   "AI-Driven Insights Summary",
+   "Blockchain Verification"
+  ],
+  "actions": [
+   "Scan QR Code",
+   "Share",
+   "Report"
+  ]
+ },
+ {
+  "id": "order-confirmation",
+  "phase": "selling",
+  "title": "Order Confirmation",
+  "description": "OTP & media confirmation",
+  "source": "OrderConfirmationVerificationScreen.tsx",
+  "fields": [
+   {
+    "label": "Enter OTP",
+    "type": "otp"
+   },
+   {
+    "label": "Enter 6-digit OTP",
+    "type": "otp"
+   }
+  ],
+  "sections": [
+   "Order Summary",
+   "Buyer Information",
+   "Commission Agent",
+   "Product Verification (Optional)",
+   "Authorize Order"
+  ],
+  "actions": [
+   "Send OTP",
+   "Confirm Order",
+   "Resend OTP",
+   "Back"
+  ]
+ },
+ {
+  "id": "market-auction",
+  "phase": "transaction",
+  "title": "Market & Auction",
+  "description": "Live bidding & price",
+  "source": "MarketDisplayAuction.tsx",
+  "fields": [],
+  "sections": [
+   "Bid History",
+   "Auction Stats",
+   "Producer Controls",
+   "Auction Complete!"
+  ],
+  "actions": []
+ },
+ {
+  "id": "transport-booking",
+  "phase": "transaction",
+  "title": "Transport",
+  "description": "Arrange logistics",
+  "source": "TransportBooking.tsx",
+  "fields": [
+   {
+    "label": "Vehicle Number",
+    "type": "text"
+   },
+   {
+    "label": "Driver Mobile",
+    "type": "phone"
+   },
+   {
+    "label": "Route",
+    "type": "text"
+   },
+   {
+    "label": "Pickup Date",
+    "type": "text"
+   },
+   {
+    "label": "Pickup Time",
+    "type": "text"
+   },
+   {
+    "label": "Expected Delivery",
+    "type": "text"
+   },
+   {
+    "label": "PB-01-AB-1234",
+    "type": "text"
+   },
+   {
+    "label": "+91-98765-43210",
+    "type": "text"
+   },
+   {
+    "label": "Select",
+    "type": "select",
+    "options": [
+     "Farm → Highway → Mandi (120 km)",
+     "Farm → Ring Road → Mandi (135 km)"
+    ]
+   },
+   {
+    "label": "OTP",
+    "type": "otp"
+   }
+  ],
+  "sections": [
+   "Commodity Details",
+   "Transport Type",
+   "Select Transporter",
+   "Vehicle & Driver Details",
+   "Select Commission Agent",
+   "Optional Services",
+   "Cost Summary",
+   "Delivery Timeline"
+  ],
+  "actions": [
+   "Confirm Booking",
+   "Contact Support"
+  ]
+ },
+ {
+  "id": "destination-receiving",
+  "phase": "transaction",
+  "title": "Destination",
+  "description": "OTP confirmation",
+  "source": "DestinationReceiving.tsx",
+  "fields": [
+   {
+    "label": "Full Name",
+    "type": "text"
+   },
+   {
+    "label": "Employee/Agent ID",
+    "type": "text"
+   },
+   {
+    "label": "Mobile Number",
+    "type": "phone"
+   },
+   {
+    "label": "Role",
+    "type": "text"
+   },
+   {
+    "label": "Issue Type",
+    "type": "text"
+   },
+   {
+    "label": "Affected Bags",
+    "type": "number"
+   },
+   {
+    "label": "Detailed Description",
+    "type": "text"
+   },
+   {
+    "label": "Upload Photos",
+    "type": "text"
+   },
+   {
+    "label": "Assign Storage Location",
+    "type": "text"
+   },
+   {
+    "label": "Enter your full name",
+    "type": "text"
+   },
+   {
+    "label": "Enter your ID",
+    "type": "text"
+   },
+   {
+    "label": "+91-98765-43210",
+    "type": "text"
+   },
+   {
+    "label": "Describe the damage or issue in detail...",
+    "type": "text"
+   },
+   {
+    "label": "e.g., Warehouse A, Section 2, Row 5",
+    "type": "text"
+   }
+  ],
+  "sections": [
+   "Commodity Details",
+   "Authorized Access Only",
+   "Physical Inspection Checklist",
+   "Photo Documentation",
+   "Storage Location Assignment",
+   "Final Confirmation"
+  ],
+  "actions": [
+   "Verify with OTP",
+   "Take Photos"
+  ]
+ },
+ {
+  "id": "weighing-confirmation",
+  "phase": "transaction",
+  "title": "Weighing & Settlement",
+  "description": "Final payment",
+  "source": "WeighingConfirmation.tsx",
+  "fields": [],
+  "sections": [
+   "Final Weighing & Payment"
+  ],
+  "actions": [
+   "Back",
+   "Complete Transaction"
+  ]
+ },
+ {
+  "id": "complete",
+  "phase": "complete",
+  "title": "Complete",
+  "description": "History & AI intelligence",
+  "source": "CompletionScreen.tsx",
+  "fields": [],
+  "sections": [],
+  "actions": []
+ }
+]

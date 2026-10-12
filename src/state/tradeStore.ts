@@ -27,7 +27,23 @@ export interface TradeBag {
   buyerKg: number | null;
 }
 
+export interface TradeBid {
+  buyer: string;
+  rupees: number;
+  at: number;
+}
+
+export interface InboxItem {
+  to: 'producer' | 'agent' | 'buyer';
+  text: string;
+  seq: number;
+}
+
 export interface DemoTrade {
+  bids: TradeBid[];
+  inbox: InboxItem[];
+  /** 1Tradie stage form values, keyed by stage id then field label. */
+  oneTradie: Record<string, Record<string, string>>;
   producerType: 'small' | 'medium' | 'large' | null;
   category: string;
   commodity: string;
@@ -139,10 +155,23 @@ const empty = (): DemoTrade => ({
   receivingIssue: '',
   saleDate: '2026-10-12',
   log: [],
+  bids: [],
+  inbox: [],
+  oneTradie: {},
 });
 
+/** Who hears about an action taken by one role. Every hand-off notifies the other two sides of the trade. */
+const AUDIENCE: Record<string, InboxItem['to'][]> = {
+  producer: ['agent'],
+  agent: ['producer', 'buyer'],
+  buyer: ['agent', 'producer'],
+};
+
 function note(trade: DemoTrade, role: string, action: string): DemoTrade {
-  return { ...trade, log: [{ role, action }, ...trade.log].slice(0, 24) };
+  const inbox = trade.inbox ?? [];
+  const seq = (inbox[0]?.seq ?? 0) + 1;
+  const items = (AUDIENCE[role] ?? []).map((to, i) => ({ to, text: `${role}: ${action}`, seq: seq + i }));
+  return { ...trade, log: [{ role, action }, ...trade.log].slice(0, 24), inbox: [...items.reverse(), ...inbox].slice(0, 60) };
 }
 
 function otpOk(code: string): boolean {
@@ -152,6 +181,9 @@ function otpOk(code: string): boolean {
 interface TradeState {
   trade: DemoTrade;
   resetDemo: () => void;
+  placeBid: (buyer: string, rupees: number) => string | null;
+  saveStage: (stage: string, values: Record<string, string>) => void;
+  inboxFor: (role: InboxItem['to']) => InboxItem[];
   setProducerType: (value: DemoTrade['producerType']) => void;
   createLot: (patch: Partial<DemoTrade>) => string | null;
   engage: (rate: number, code: string) => string | null;
@@ -214,6 +246,21 @@ export const useTrade = create<TradeState>()(
     (set, get) => ({
       trade: empty(),
       resetDemo: () => set({ trade: empty() }),
+      placeBid: (buyer, rupees) => {
+        const trade = get().trade;
+        if (!trade.listed || trade.close !== 'open') return 'This lot is not open for bids';
+        if (!Number.isFinite(rupees) || rupees <= 0) return 'Enter a bid per quintal';
+        const best = (trade.bids ?? []).reduce((m, b) => Math.max(m, b.rupees), 0);
+        if (rupees <= best) return 'Bid must beat the current best bid';
+        // The reserve stays hidden: the buyer only learns the bid was not accepted.
+        if (rupees < trade.reserveRupees) return 'Bid not accepted';
+        const bids = [{ buyer, rupees, at: (trade.bids?.length ?? 0) + 1 }, ...(trade.bids ?? [])];
+        set({ trade: note({ ...trade, bids, saleRupees: rupees }, 'buyer', `Bid ₹${rupees}/q by ${buyer}`) });
+        return null;
+      },
+      saveStage: (stage, values) =>
+        set((state) => ({ trade: { ...state.trade, oneTradie: { ...(state.trade.oneTradie ?? {}), [stage]: values } } })),
+      inboxFor: (role) => (get().trade.inbox ?? []).filter((item) => item.to === role),
       setProducerType: (value) => set((state) => ({ trade: note({ ...state.trade, producerType: value }, 'producer', `Type ${value}`) })),
       createLot: (patch) => {
         const next = { ...get().trade, ...patch };
@@ -404,7 +451,7 @@ export const useTrade = create<TradeState>()(
       risk: () => buyerRiskRank({ overdueDays: get().interestPaise() > 0 ? 5 : 0, disputes: get().trade.escalate ? 1 : 0, backouts: get().trade.backoutReason ? 1 : 0, onTimePayments: 3 }),
     }),
     {
-      name: 'rytuvo-trade-v1',
+      name: 'rytuvo-trade-v2',
       storage: createJSONStorage(() => AsyncStorage),
     },
   ),
