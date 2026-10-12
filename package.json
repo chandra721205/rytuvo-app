@@ -1,6 +1,6 @@
 {
   "name": "rytuvo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
@@ -18,6 +18,7 @@
   "dependencies": {
     "@expo/metro-runtime": "~57.0.16",
     "@expo/vector-icons": "^15.0.2",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~57.0.27",
     "expo-asset": "~57.0.19",
     "expo-constants": "~57.0.21",

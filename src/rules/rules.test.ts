@@ -1,5 +1,22 @@
 import { classifyBid, closeAuction, isShillBidder, nextProxyAction, rankBids, reserveVisibleTo, sourcingBidAllowed } from './auction';
-import { canReconcile, commodityAmountPaise, dueDateFor, validatePayment } from './bill';
+import {
+  advanceInterestPaise,
+  buyerBill,
+  buyerInterestPaise,
+  buyerRiskRank,
+  canReconcile,
+  canReleaseLot,
+  canWithdrawLot,
+  commodityAmountPaise,
+  dueDateFor,
+  GUNTUR_CHILLI_EXAMPLE,
+  producerPatti,
+  producerPayoutDue,
+  validateBackout,
+  validatePayment,
+  resolveWeighbridgeTolerance,
+  weighbridgeFraudAlert,
+} from './bill';
 import { interestStatement, reminderKind } from './interest';
 import { formatInr, simpleInterestPaise } from './money';
 import { can, canReviewOwnKyc, checkLimit, inspectorConflict, moduleVisible } from './rbac';
@@ -264,5 +281,151 @@ describe('two-level RBAC', () => {
     expect(can('CA_OWNER', 'waiver.approve')).toBe(true);
     expect(can('PL_AUDIT', 'reserve.view')).toBe(true);
     expect(can('BY_PURCHASER', 'reserve.view')).toBe(false);
+  });
+});
+
+const EXAMPLE_LOT = {
+  bags: 63,
+  bagKg: 40,
+  tareKgPerBag: GUNTUR_CHILLI_EXAMPLE.tareKgPerBag,
+  pricePaisePerQuintal: 2_285_000,
+};
+
+const EXAMPLE_PATTI = {
+  lot: EXAMPLE_LOT,
+  commissionRate: 0.02,
+  commissionCap: 0.05,
+  hamali: GUNTUR_CHILLI_EXAMPLE.hamali,
+  securityFee: GUNTUR_CHILLI_EXAMPLE.securityFee,
+  advances: [{ amountPaise: 5_000_000, givenOn: '2026-09-12', recoveredOn: '2026-10-12', annualRateBps: 1800 }],
+  storageLoanPaise: 0,
+  saleDate: '2026-10-12',
+  holidays: GUNTUR_CHILLI_EXAMPLE.holidays,
+};
+
+describe('release 1 bill — worked example', () => {
+  const patti = producerPatti(EXAMPLE_PATTI);
+  const bill = buyerBill({
+    lot: EXAMPLE_LOT,
+    marketFeeRate: GUNTUR_CHILLI_EXAMPLE.marketFeeRate,
+    saleDate: '2026-10-12',
+  });
+
+  test('net weight, sale value and producer patti match to the paisa', () => {
+    expect(patti.netKg).toBe(2488.5);
+    expect(patti.saleValuePaise).toBe(56_862_225);
+    expect(patti.commissionPaise).toBe(1_137_244);
+    expect(patti.hamaliPaise).toBe(189_000);
+    expect(patti.hamaliBasis).toBe('per_bag');
+    expect(patti.securityFeePaise).toBe(56_862);
+    expect(patti.securityFeeBasis).toBe('percent');
+    expect(patti.securityFeeRemittedBy).toBe('agent');
+    expect(patti.dryingPaise).toBe(0);
+    expect(patti.regradingPaise).toBe(0);
+    expect(patti.otherExpensesPaise).toBe(0);
+    expect(patti.advancePaise).toBe(5_000_000);
+    expect(patti.advanceInterestPaise).toBe(73_973);
+    expect(patti.netPayablePaise).toBe(50_405_146);
+    expect(formatInr(patti.netPayablePaise)).toBe('₹5,04,051.46');
+    expect(patti.payoutDue).toBe('2026-10-13');
+  });
+
+  test('market fee is payable to the committee and stays outside the agent receivable', () => {
+    expect(bill.marketFeePaise).toBe(568_622);
+    expect(bill.marketFeePayee).toBe('market_committee');
+    expect(bill.agentCollectsMarketFee).toBe(false);
+    expect(bill.gstPaise).toBe(0);
+    expect(bill.tdsPaise).toBe(0);
+    expect(bill.agentReceivablePaise).toBe(56_862_225);
+    expect(bill.buyerPayablePaise).toBe(57_430_847);
+    expect(bill.buyerPayablePaise).toBe(bill.agentReceivablePaise + bill.marketFeePaise);
+    expect(formatInr(bill.buyerPayablePaise)).toBe('₹5,74,308.47');
+    expect(bill.dueDate).toBe('2026-10-27');
+  });
+
+  test('paise stay exact and the total is not rounded to the rupee', () => {
+    expect(patti.netPayablePaise % 100).not.toBe(0);
+    expect(bill.buyerPayablePaise % 100).not.toBe(0);
+    expect(Math.round(patti.netPayablePaise / 100) * 100).not.toBe(patti.netPayablePaise);
+  });
+
+  test('interest runs on the agent receivable, counts holidays, and accepts a part-payment', () => {
+    expect(buyerInterestPaise({ billTotalPaise: bill.agentReceivablePaise, dueDate: bill.dueDate, asOf: '2026-11-01' })).toBe(163_576);
+    expect(formatInr(163_576)).toBe('₹1,635.76');
+    const partial = buyerInterestPaise({
+      billTotalPaise: bill.agentReceivablePaise,
+      dueDate: '2026-10-27',
+      asOf: '2026-11-01',
+      payments: [{ date: '2026-10-29', amountPaise: 20_000_000 }],
+    });
+    expect(partial).toBe(129_056);
+    expect(buyerInterestPaise({ billTotalPaise: bill.agentReceivablePaise, dueDate: '2026-10-27', asOf: '2026-10-27' })).toBe(0);
+  });
+
+  test('security fee and hamali follow the configured basis', () => {
+    const perBag = producerPatti({
+      ...EXAMPLE_PATTI,
+      advances: [],
+      securityFee: { basis: 'per_bag', rate: 200 },
+    });
+    expect(perBag.securityFeePaise).toBe(12_600);
+    const perQuintal = producerPatti({
+      ...EXAMPLE_PATTI,
+      advances: [],
+      hamali: { basis: 'per_quintal', rate: 2_000 },
+      securityFee: { basis: 'per_quintal', rate: 1_000 },
+    });
+    expect(perQuintal.hamaliPaise).toBe(49_770);
+    expect(perQuintal.securityFeePaise).toBe(24_885);
+    expect(perQuintal.securityFeeRemittedBy).toBe('agent');
+    expect(() => producerPatti({ ...EXAMPLE_PATTI, hamali: { basis: 'percent' as 'per_bag', rate: 0.01 } })).toThrow('hamali_basis');
+  });
+
+  test('optional drying, regrading and other lines reduce the farmer payout', () => {
+    const withLines = producerPatti({
+      ...EXAMPLE_PATTI,
+      deductions: [
+        { kind: 'drying', label: 'Excess moisture', amountPaise: 10_000 },
+        { kind: 'regrading', label: 'Cleaning', amountPaise: 5_000 },
+        { kind: 'other', label: 'Gunny', amountPaise: 2_000 },
+      ],
+    });
+    expect(withLines.dryingPaise).toBe(10_000);
+    expect(withLines.regradingPaise).toBe(5_000);
+    expect(withLines.otherExpenses).toEqual([{ kind: 'other', label: 'Gunny', amountPaise: 2_000 }]);
+    expect(withLines.netPayablePaise).toBe(50_405_146 - 17_000);
+    expect(() => producerPatti({ ...EXAMPLE_PATTI, deductions: [{ kind: 'other', label: '  ', amountPaise: 100 }] })).toThrow('other_label_required');
+  });
+
+  test('edges: withdraw, payout consent, storage loan, fraud alert, back-out', () => {
+    expect(canWithdrawLot({ samplingDone: true, saleConfirmed: false }).ok).toBe(true);
+    expect(canWithdrawLot({ samplingDone: true, saleConfirmed: true })).toEqual({ ok: false, reason: 'blocked_after_sampling_and_sale' });
+    expect(producerPayoutDue('2026-10-16', [], '2026-10-20')).toBe('2026-10-20');
+    expect(producerPayoutDue('2026-10-17', [])).toBe('2026-10-19');
+    expect(canReleaseLot({ stored: true, storageLoanPaise: 100, loanSettled: false })).toEqual({ ok: false, reason: 'storage_loan_open' });
+    expect(canReleaseLot({ stored: true, storageLoanPaise: 100, loanSettled: true }).ok).toBe(true);
+    expect(advanceInterestPaise({ amountPaise: 5_000_000, givenOn: '2026-09-12', recoveredOn: '2026-10-12', annualRateBps: 1800 })).toBe(73_973);
+    expect(GUNTUR_CHILLI_EXAMPLE.weighbridgeTolerance).toEqual({ byCommodity: null, sharedLorry: null, note: 'to be defined' });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 2600, bagNetKg: 2488.5, tolerance: null })).toEqual({
+      alert: false,
+      status: 'tolerance_to_be_defined',
+    });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 2500, bagNetKg: 2488.5, tolerance: 0.005 })).toEqual({ alert: false, status: 'within_tolerance' });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 2600, bagNetKg: 2488.5, tolerance: 0.005 }).alert).toBe(true);
+    const configured = { byCommodity: 0.005, sharedLorry: 0.02, note: 'to be defined' as const };
+    expect(resolveWeighbridgeTolerance(configured, false)).toBe(0.005);
+    expect(resolveWeighbridgeTolerance(configured, true)).toBe(0.02);
+    expect(resolveWeighbridgeTolerance(GUNTUR_CHILLI_EXAMPLE.weighbridgeTolerance, true)).toBeNull();
+    expect(validateBackout('other', '')).toEqual({ ok: false, reason: 'other_text_required' });
+    expect(validateBackout('quality_not_as_sample', '').ok).toBe(true);
+    expect(buyerRiskRank({ overdueDays: 0, disputes: 0, backouts: 0, onTimePayments: 4 }).band).toBe('low');
+    expect(() =>
+      producerPatti({
+        ...EXAMPLE_PATTI,
+        commissionRate: 0.06,
+        advances: [],
+        holidays: [],
+      }),
+    ).toThrow('commission_above_cap');
   });
 });

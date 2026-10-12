@@ -98,7 +98,7 @@ cd android
 ./gradlew assembleRelease
 ```
 
-The APK is `android/app/build/outputs/apk/release/app-release.apk`. Package `in.rytuvo.app`, versionName `1.0.0`, versionCode `1`. Check it with the SDK build-tools:
+The APK is `android/app/build/outputs/apk/release/app-release.apk`. Package `in.rytuvo.app`. Version 1.1.0 uses versionName `1.1.0` and versionCode `2` (1.0.0 was versionCode `1`), signed with the same release keystore. Check it with the SDK build-tools:
 
 ```bash
 "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging android/app/build/outputs/apk/release/app-release.apk | head

@@ -4,9 +4,9 @@ Figma file: https://www.figma.com/design/g5MlDevajExftsptWA94OZ
 
 Live Figma node ids were not available in this environment (no Figma connector). Each row uses the Rytuvo screen code as the frame key. Those codes are the ones in the design handoff (`COVERAGE_MATRIX.md`) plus the v4–v7 frames named in the screenshot set.
 
-The Figma file is about 660 frames (542 mobile, 114 desktop). Many of those frames are duplicate states, component variants, and the desktop mirrors of the same flow. This app implements 528 routes (435 mobile, 93 desktop): every stakeholder home, the v5–v7 weighment, payment-terms, AI, dropdown, interest, multi-commodity, reserve, and auto-bid flows, plus empty, loading, and offline states. Rows below are implemented. The next section lists frames that are intentionally not routes.
+The Figma file is about 660 frames (542 mobile, 114 desktop). Many of those frames are duplicate states, component variants, and the desktop mirrors of the same flow. This app implements 555 routes (462 mobile, 93 desktop): every stakeholder home, the v5–v7 weighment, payment-terms, AI, dropdown, interest, multi-commodity, reserve, and auto-bid flows, plus empty, loading, and offline states. Rows below are implemented. The next section lists frames that are intentionally not routes.
 
-Implemented routes: **528**.
+Implemented routes: **555**. Release 1.1 adds the shared-trade routes P-100–P-117, A-60–A-68, and retargets B-60–B-64 and P-88.
 
 | Frame key | Version | Stakeholder | Route | File | Status |
 |---|---|---|---|---|---|
@@ -129,7 +129,7 @@ Implemented routes: **528**.
 | v7 edit reserve audit | v7 | producer | `/producer/p-85-edit-reserve` | `app/producer/p-85-edit-reserve.tsx` | Implemented |
 | v7 close sold | v7 | producer | `/producer/p-86-close-sold` | `app/producer/p-86-close-sold.tsx` | Implemented |
 | v7 close unsold | v7 | producer | `/producer/p-87-close-unsold` | `app/producer/p-87-close-unsold.tsx` | Implemented |
-| v7 producer agent price OTP | v7 | producer | `/producer/p-88-agent-price-otp` | `app/producer/p-88-agent-price-otp.tsx` | Implemented |
+| P-88 revised commission | v1.1 | producer | `/producer/p-88-agent-price-otp` | `app/producer/p-88-agent-price-otp.tsx` | Implemented |
 | v6 lots by commodity | v6 | producer | `/producer/p-89-lots-by-commodity` | `app/producer/p-89-lots-by-commodity.tsx` | Implemented |
 | v6 create lot cascade | v6 | producer | `/producer/p-90-create-lot-cascade` | `app/producer/p-90-create-lot-cascade.tsx` | Implemented |
 | v6 bag picker | v6 | producer | `/producer/p-91-bag-picker` | `app/producer/p-91-bag-picker.tsx` | Implemented |
@@ -244,11 +244,11 @@ Implemented routes: **528**.
 | v5 buyer terms OTP | v5 | buyer | `/buyer/b-57-terms-otp` | `app/buyer/b-57-terms-otp.tsx` | Implemented |
 | v6 payables interest | v6 | buyer | `/buyer/b-58-payables` | `app/buyer/b-58-payables.tsx` | Implemented |
 | v6 overdue notice | v6 | buyer | `/buyer/b-59-overdue-notice` | `app/buyer/b-59-overdue-notice.tsx` | Implemented |
-| v5 client notice | v5 | buyer | `/buyer/b-60-client-notice` | `app/buyer/b-60-client-notice.tsx` | Implemented |
-| v7 physical inspection | v7 | buyer | `/buyer/b-61-physical-inspection` | `app/buyer/b-61-physical-inspection.tsx` | Implemented |
-| v7 inspected badge | v7 | buyer | `/buyer/b-62-inspected-badge` | `app/buyer/b-62-inspected-badge.tsx` | Implemented |
-| v7 bid not accepted | v7 | buyer | `/buyer/b-63-bid-not-accepted` | `app/buyer/b-63-bid-not-accepted.tsx` | Implemented |
-| v7 autobid setup | v7 | buyer | `/buyer/b-64-auto-bid-setup` | `app/buyer/b-64-auto-bid-setup.tsx` | Implemented |
+| B-60 Buyer bill | v1.1 | buyer | `/buyer/b-60-buyer-bill` | `app/buyer/b-60-buyer-bill.tsx` | Implemented |
+| B-61 Back-out | v1.1 | buyer | `/buyer/b-61-back-out` | `app/buyer/b-61-back-out.tsx` | Implemented |
+| B-62 Escalation | v1.1 | buyer | `/buyer/b-62-escalation` | `app/buyer/b-62-escalation.tsx` | Implemented |
+| B-63 E-way | v1.1 | buyer | `/buyer/b-63-eway` | `app/buyer/b-63-eway.tsx` | Implemented |
+| B-64 Re-test | v1.1 | buyer | `/buyer/b-64-retest` | `app/buyer/b-64-retest.tsx` | Implemented |
 | v7 active autobids | v7 | buyer | `/buyer/b-65-active-auto-bids` | `app/buyer/b-65-active-auto-bids.tsx` | Implemented |
 | v7 bid history | v7 | buyer | `/buyer/b-66-bid-history` | `app/buyer/b-66-bid-history.tsx` | Implemented |
 | v7 outbid over max | v7 | buyer | `/buyer/b-67-outbid-over-max` | `app/buyer/b-67-outbid-over-max.tsx` | Implemented |
@@ -561,14 +561,14 @@ Implemented routes: **528**.
 | desktop | transport | 8 |
 | desktop | yard | 6 |
 | mobile | admin | 14 |
-| mobile | agent | 51 |
+| mobile | agent | 60 |
 | mobile | bank | 18 |
 | mobile | buyer | 74 |
 | mobile | inspector | 16 |
 | mobile | insurance | 18 |
 | mobile | lab | 8 |
 | mobile | onboarding | 32 |
-| mobile | producer | 92 |
+| mobile | producer | 110 |
 | mobile | seller | 12 |
 | mobile | service | 10 |
 | mobile | shared | 16 |
@@ -577,4 +577,36 @@ Implemented routes: **528**.
 | mobile | verifier | 8 |
 | mobile | yard | 18 |
 
-Mobile 435 · desktop 93.
+Mobile 462 · desktop 93.
+
+## Release 1.1 trade routes
+
+| Frame key | Version | Stakeholder | Route | File | Status |
+|---|---|---|---|---|---|
+| P-100 Journey | v1.1 | producer | `/producer/p-100-journey` | `app/producer/p-100-journey.tsx` | Implemented |
+| P-101 Producer type | v1.1 | producer | `/producer/p-101-producer-type` | `app/producer/p-101-producer-type.tsx` | Implemented |
+| P-102 Matchmaking | v1.1 | producer | `/producer/p-102-matchmaking` | `app/producer/p-102-matchmaking.tsx` | Implemented |
+| P-103 Engage agent | v1.1 | producer | `/producer/p-103-engage-agent` | `app/producer/p-103-engage-agent.tsx` | Implemented |
+| P-104 AI quality | v1.1 | producer | `/producer/p-104-ai-quality` | `app/producer/p-104-ai-quality.tsx` | Implemented |
+| P-105 Grading done | v1.1 | producer | `/producer/p-105-grading-done` | `app/producer/p-105-grading-done.tsx` | Implemented |
+| P-106 Confirm order | v1.1 | producer | `/producer/p-106-confirm-order` | `app/producer/p-106-confirm-order.tsx` | Implemented |
+| P-107 Transaction OTP | v1.1 | producer | `/producer/p-107-transaction-otp` | `app/producer/p-107-transaction-otp.tsx` | Implemented |
+| P-108 Receiving | v1.1 | producer | `/producer/p-108-receiving` | `app/producer/p-108-receiving.tsx` | Implemented |
+| P-109 Receiving issue | v1.1 | producer | `/producer/p-109-receiving-issue` | `app/producer/p-109-receiving-issue.tsx` | Implemented |
+| P-110 Record advance | v1.1 | producer | `/producer/p-110-record-advance` | `app/producer/p-110-record-advance.tsx` | Implemented |
+| P-111 Journey complete | v1.1 | producer | `/producer/p-111-journey-complete` | `app/producer/p-111-journey-complete.tsx` | Implemented |
+| P-112 Producer patti | v1.1 | producer | `/producer/p-112-producer-patti` | `app/producer/p-112-producer-patti.tsx` | Implemented |
+| P-113 Withdraw lot | v1.1 | producer | `/producer/p-113-withdraw-lot` | `app/producer/p-113-withdraw-lot.tsx` | Implemented |
+| P-114 Unsold | v1.1 | producer | `/producer/p-114-unsold` | `app/producer/p-114-unsold.tsx` | Implemented |
+| P-115 Storage loan | v1.1 | producer | `/producer/p-115-storage-loan` | `app/producer/p-115-storage-loan.tsx` | Implemented |
+| P-116 Consents | v1.1 | producer | `/producer/p-116-consents` | `app/producer/p-116-consents.tsx` | Implemented |
+| P-117 Payout due | v1.1 | producer | `/producer/p-117-payout-due` | `app/producer/p-117-payout-due.tsx` | Implemented |
+| A-60 Buyer bill | v1.1 | agent | `/agent/a-60-buyer-bill` | `app/agent/a-60-buyer-bill.tsx` | Implemented |
+| A-61 Yard rules | v1.1 | agent | `/agent/a-61-yard-rules` | `app/agent/a-61-yard-rules.tsx` | Implemented |
+| A-62 Weighbridge entry | v1.1 | agent | `/agent/a-62-weighbridge-entry` | `app/agent/a-62-weighbridge-entry.tsx` | Implemented |
+| A-63 Weighbridge exit | v1.1 | agent | `/agent/a-63-weighbridge-exit` | `app/agent/a-63-weighbridge-exit.tsx` | Implemented |
+| A-64 Fraud alert | v1.1 | agent | `/agent/a-64-fraud-alert` | `app/agent/a-64-fraud-alert.tsx` | Implemented |
+| A-65 Buyer risk | v1.1 | agent | `/agent/a-65-buyer-risk` | `app/agent/a-65-buyer-risk.tsx` | Implemented |
+| A-66 Advance recovery | v1.1 | agent | `/agent/a-66-advance-recovery` | `app/agent/a-66-advance-recovery.tsx` | Implemented |
+| A-67 Lifting OTP | v1.1 | agent | `/agent/a-67-lifting-otp` | `app/agent/a-67-lifting-otp.tsx` | Implemented |
+| A-68 Back-out decision | v1.1 | agent | `/agent/a-68-back-out` | `app/agent/a-68-back-out.tsx` | Implemented |

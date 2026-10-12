@@ -3,6 +3,11 @@ import renderer, { act } from 'react-test-renderer';
 import { ScreenHost } from './ScreenHost';
 import { catalog } from './catalog';
 
+jest.mock('@react-native-async-storage/async-storage', () =>
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  require('@react-native-async-storage/async-storage/jest/async-storage-mock'),
+);
+
 jest.mock('expo-router', () => ({
   useRouter: () => ({ push: jest.fn(), replace: jest.fn(), back: jest.fn() }),
   usePathname: () => '/',

@@ -5,8 +5,10 @@ import { colors, space } from '../design-system/tokens';
 import { formatInr } from '../rules/money';
 import { interestStatement } from '../rules/interest';
 import { can, moduleVisible, permissionsFor } from '../rules/rbac';
+import { roleHome, stakeholderInRelease } from '../config/release';
 import { personas, useApp } from '../state/store';
 import { useTx } from '../i18n';
+import { TradeFlow, TradeHomeLinks } from './tradeFlow';
 import type { ScreenSpec } from './types';
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
@@ -29,8 +31,9 @@ export function ScreenBody({ spec, go }: { spec: ScreenSpec; go: (route?: string
   if (template === 'purposes') return <Purposes />;
   if (template === 'cascade') return <Cascade />;
   if (template === 'kyc') return <Kyc spec={spec} />;
+  if (template === 'trade') return <TradeFlow spec={spec} go={go} />;
   if (template === 'weighment') return <Weighment spec={spec} />;
-  if (template === 'auction') return <Auction spec={spec} />;
+  if (template === 'auction') return <Auction spec={spec} go={go} />;
   if (template === 'autobid') return <AutoBid spec={spec} />;
   if (template === 'interest') return <Interest spec={spec} />;
   if (template === 'assistant') return <Assistant spec={spec} />;
@@ -65,7 +68,7 @@ function Splash({ go }: { go: (route?: string) => void }) {
       </View>
       <Text style={styles.p}>{tx('Open a stakeholder. Every screen works on the demo data, offline.', 'ఒక పాత్రను తెరవండి. అన్ని స్క్రీన్లు డెమో డేటాతో పని చేస్తాయి.')}</Text>
       <View style={styles.grid}>
-        {personas.map((persona) => (
+        {personas.filter((persona) => stakeholderInRelease(persona.stakeholder)).map((persona) => (
           <Pressable
             key={persona.memberId + persona.stakeholder}
             style={styles.persona}
@@ -84,23 +87,7 @@ function Splash({ go }: { go: (route?: string) => void }) {
 }
 
 function homeFor(stakeholder: string): string {
-  const map: Record<string, string> = {
-    producer: '/producer/p-01-home',
-    agent: '/agent/a-01-home',
-    buyer: '/buyer/b-01-market',
-    inspector: '/quality/i-01-home',
-    verifier: '/quality/v-01-home',
-    lab: '/quality/l-01-home',
-    transport: '/transport/t-01-home',
-    storage: '/storage/s-01-home',
-    bank: '/bank/f-01-home',
-    insurance: '/insurance/n-01-home',
-    yard: '/yard/y-01-gate',
-    seller: '/inputs/is-01-home',
-    service: '/inputs/sp-01-home',
-    admin: '/admin/am-01-live-ops',
-  };
-  return map[stakeholder] ?? '/';
+  return roleHome(stakeholder);
 }
 
 function Phone() {
@@ -140,8 +127,15 @@ function Roles({ go }: { go: (route?: string) => void }) {
   const tx = useTx();
   return (
     <View style={{ gap: 8 }}>
-      {personas.map((persona) => (
-        <Pressable key={persona.memberId + persona.stakeholder} style={styles.listRow} onPress={() => go(homeFor(persona.stakeholder))}>
+      {personas.filter((persona) => stakeholderInRelease(persona.stakeholder)).map((persona) => (
+        <Pressable
+          key={persona.memberId + persona.stakeholder}
+          style={styles.listRow}
+          onPress={() => {
+            useApp.getState().enterAs(persona.memberId, persona.stakeholder);
+            go(homeFor(persona.stakeholder));
+          }}
+        >
           <Text style={styles.rowTitle}>{tx(persona.label, persona.labelTe)}</Text>
           <Badge label={persona.stakeholder} tone="info" />
         </Pressable>
@@ -209,8 +203,14 @@ function Cascade() {
 
 function Kyc({ spec }: { spec: ScreenSpec }) {
   const tx = useTx();
+  const showToast = useApp((s) => s.showToast);
   const steps = ['Identity', 'Address', 'Bank', 'Review'];
   const current = spec.mode === 'pending' ? 3 : spec.mode === 'bank' ? 2 : spec.mode === 'address' ? 1 : 0;
+  const [name, setName] = useState('Ramesh');
+  const [idValue, setIdValue] = useState('');
+  const [account, setAccount] = useState('');
+  const [ifsc, setIfsc] = useState('');
+  const [error, setError] = useState('');
   return (
     <View style={{ gap: 12 }}>
       <Stepper steps={steps} current={current} />
@@ -219,6 +219,26 @@ function Kyc({ spec }: { spec: ScreenSpec }) {
         <Text style={styles.p}>{tx(spec.summary, spec.summaryTe)}</Text>
         <Badge label={tx('Self-declared · not a government check', 'స్వయం ప్రకటన')} tone="warning" />
       </Card>
+      {spec.mode !== 'pending' ? (
+        <>
+          <Input label={tx('Name', 'పేరు')} value={name} onChangeText={setName} />
+          <Input label={tx('Aadhaar last 4', 'ఆధార్ చివరి 4')} value={idValue} onChangeText={setIdValue} keyboard="numeric" />
+          <Input label={tx('Account number', 'ఖాతా నంబర్')} value={account} onChangeText={setAccount} keyboard="numeric" />
+          <Input label={tx('IFSC', 'IFSC')} value={ifsc} onChangeText={setIfsc} />
+          {error ? <Text style={styles.note}>{error}</Text> : null}
+          <Button
+            label={tx('Save KYC', 'KYC సేవ్')}
+            onPress={() => {
+              if (name.trim().length < 2) return setError('Enter the name');
+              if (!/^\d{4}$/.test(idValue.trim())) return setError('Enter the last 4 digits');
+              if (account.trim().length < 6) return setError('Enter the account number');
+              if (!/^[A-Za-z]{4}0[A-Za-z0-9]{6}$/.test(ifsc.trim())) return setError('Enter a valid IFSC');
+              setError('');
+              showToast(tx('KYC saved in the demo', 'KYC డెమోలో సేవ్'));
+            }}
+          />
+        </>
+      ) : null}
       {(spec.notes ?? []).map((note) => (
         <Text key={note} style={styles.note}>
           {note}
@@ -284,7 +304,7 @@ function Weighment({ spec }: { spec: ScreenSpec }) {
   );
 }
 
-function Auction({ spec }: { spec: ScreenSpec }) {
+function Auction({ spec, go }: { spec: ScreenSpec; go: (route?: string) => void }) {
   const tx = useTx();
   const lots = useApp((s) => s.lots);
   const bids = useApp((s) => s.bids);
@@ -300,6 +320,7 @@ function Auction({ spec }: { spec: ScreenSpec }) {
   const lotBids = bids.filter((bid) => bid.lotId === lot.id);
   return (
     <View style={{ gap: 12 }}>
+      <TradeHomeLinks spec={spec} go={go} />
       <LotCard title="Chilli · Teja · Grade A" token={lot.token} qty={`${lot.bags} bags · ${lot.qtyKg} kg`} status={lot.status} price={`${formatInr(lot.offerPaise)} / q`} />
       <Card>
         <Text style={styles.rowTitle}>{tx('Offer', 'ఆఫర్')} {formatInr(lot.offerPaise)} / q</Text>
@@ -622,6 +643,7 @@ function Generic({ spec, go }: { spec: ScreenSpec; go: (route?: string) => void 
   const showToast = useApp((s) => s.showToast);
   return (
     <View style={{ gap: 12 }}>
+      <TradeHomeLinks spec={spec} go={go} />
       <Text style={styles.p}>{tx(spec.summary, spec.summaryTe)}</Text>
       {spec.stats ? (
         <View style={styles.statRow}>

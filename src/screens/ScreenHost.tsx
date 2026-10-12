@@ -1,11 +1,13 @@
 import { useRouter } from 'expo-router';
 import { useEffect } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+import { ROLE_SWITCH, roleHome, stakeholderInRelease } from '../config/release';
 import { BottomNav, EmptyState, Icon, Toast, TopBar } from '../design-system';
 import { colors, roleColors } from '../design-system/tokens';
 import { useTx } from '../i18n';
 import { can, type Permission } from '../rules/rbac';
 import { useApp } from '../state/store';
+import { useTrade } from '../state/tradeStore';
 import { ScreenBody } from './bodies';
 import { catalogById, tabs } from './catalog';
 
@@ -19,6 +21,9 @@ export function ScreenHost({ id }: { id: string }) {
   const setLanguage = useApp((state) => state.setLanguage);
   const offline = useApp((state) => state.session.offline);
   const role = useApp((state) => state.session.roleCode);
+  const stakeholder = useApp((state) => state.session.stakeholder);
+  const enterAs = useApp((state) => state.enterAs);
+  const resetDemo = useTrade((state) => state.resetDemo);
   const { width } = useWindowDimensions();
   useEffect(() => {
     if (!toast) return;
@@ -40,6 +45,11 @@ export function ScreenHost({ id }: { id: string }) {
     icon: item.icon as 'home',
   }));
   const wide = spec.kind === 'desktop' || width >= 1100;
+  const inRelease = stakeholderInRelease(spec.stakeholder);
+  const goBack = () => {
+    if (typeof router.canGoBack === 'function' && router.canGoBack()) router.back();
+    else router.replace((inRelease ? roleHome(spec.stakeholder) : '/') as never);
+  };
 
   const body = (
     <View style={{ flex: 1 }}>
@@ -48,6 +58,8 @@ export function ScreenHost({ id }: { id: string }) {
         <Text style={styles.kicker}>{spec.id}</Text>
         {locked ? (
           <EmptyState title={tx('Not on this role', 'ఈ పాత్రకు లేదు')} body={tx('The owner can grant this module. Nothing was changed.', 'యజమాని ఈ మాడ్యూల్ ఇవ్వగలరు.')} />
+        ) : !inRelease ? (
+          <EmptyState title={tx('Not in this release', 'ఈ విడుదలలో లేదు')} body={tx('Release 1 is the producer, the commission agent and the buyer.', 'విడుదల 1: రైతు, ఏజెంట్, కొనుగోలుదారు.')} action={tx('Home', 'హోమ్')} onAction={() => router.replace('/' as never)} />
         ) : (
           <ScreenBody spec={spec} go={(route) => route && router.push(route as never)} />
         )}
@@ -57,10 +69,43 @@ export function ScreenHost({ id }: { id: string }) {
   );
 
   const lang = (
-    <Pressable onPress={() => setLanguage(language === 'en' ? 'te' : 'en')} style={styles.lang}>
-      <Text style={styles.langText}>{language === 'en' ? 'తె' : 'EN'}</Text>
-    </Pressable>
+    <View style={styles.tools}>
+      {inRelease && spec.stakeholder !== 'onboarding' ? (
+        <Pressable
+          onPress={() => {
+            resetDemo();
+            showToast(tx('Demo reset', 'డెమో రీసెట్'));
+          }}
+          style={styles.lang}
+        >
+          <Text style={styles.langText}>{tx('Reset', 'రీసెట్')}</Text>
+        </Pressable>
+      ) : null}
+      <Pressable onPress={() => setLanguage(language === 'en' ? 'te' : 'en')} style={styles.lang}>
+        <Text style={styles.langText}>{language === 'en' ? 'తె' : 'EN'}</Text>
+      </Pressable>
+    </View>
   );
+  const switcher =
+    inRelease && spec.stakeholder !== 'onboarding' ? (
+      <View style={styles.switchRow}>
+        {ROLE_SWITCH.map((item) => {
+          const on = stakeholder === item.stakeholder;
+          return (
+            <Pressable
+              key={item.stakeholder}
+              style={[styles.switchChip, on && styles.switchOn]}
+              onPress={() => {
+                enterAs(item.memberId, item.stakeholder);
+                router.replace(roleHome(item.stakeholder) as never);
+              }}
+            >
+              <Text style={[styles.switchText, on && styles.switchTextOn]}>{tx(item.label, item.labelTe)}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    ) : null;
 
   if (wide && spec.kind === 'desktop') {
     return (
@@ -80,7 +125,8 @@ export function ScreenHost({ id }: { id: string }) {
           })}
         </View>
         <View style={styles.desktopMain}>
-          <TopBar title={title} subtitle={spec.figmaFrame} right={lang} />
+          <TopBar title={title} subtitle={spec.figmaFrame} onBack={spec.hideNav ? undefined : goBack} right={lang} />
+          {switcher}
           {body}
         </View>
       </View>
@@ -93,9 +139,10 @@ export function ScreenHost({ id }: { id: string }) {
         <TopBar
           title={title}
           subtitle={subtitle}
-          onBack={spec.hideNav ? undefined : () => router.back()}
+          onBack={spec.hideNav ? undefined : goBack}
           right={lang}
         />
+        {switcher}
         {body}
         {!spec.hideNav && tabItems.length > 0 ? (
           <BottomNav
@@ -123,8 +170,14 @@ const styles = StyleSheet.create({
   scroll: { padding: 16, gap: 12, paddingBottom: 32 },
   kicker: { color: colors.secondary, fontSize: 12, fontWeight: '700' },
   offline: { backgroundColor: colors.warningSoft, color: colors.warning, padding: 8, textAlign: 'center', fontWeight: '700' },
+  tools: { flexDirection: 'row', gap: 6 },
   lang: { borderRadius: 999, borderWidth: 1, borderColor: colors.border, paddingHorizontal: 10, paddingVertical: 6, backgroundColor: colors.surface },
   langText: { fontWeight: '700', color: colors.fieldGreen },
+  switchRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 16, paddingTop: 8 },
+  switchChip: { borderRadius: 999, borderWidth: 1, borderColor: colors.border, paddingHorizontal: 12, paddingVertical: 6, backgroundColor: colors.surface },
+  switchOn: { backgroundColor: colors.fieldGreen, borderColor: colors.fieldGreen },
+  switchText: { fontWeight: '700', color: colors.fieldGreen },
+  switchTextOn: { color: colors.cream },
   desktop: { flex: 1, flexDirection: 'row', backgroundColor: colors.cream },
   side: { width: 248, padding: 16, gap: 4 },
   brand: { color: colors.cream, fontSize: 22, fontWeight: '700', fontFamily: 'Poppins' },
