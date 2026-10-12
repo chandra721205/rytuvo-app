@@ -117,6 +117,7 @@ function Journey({ go }: { go: (route?: string) => void }) {
         );
       })}
       <Button label={tx(`Continue · ${next.key}`, `కొనసాగించండి · ${next.te}`)} onPress={() => next.ready(trade) && go(next.to)} />
+      <Button label={tx('Full 1Tradie producer flow (26 steps)', '1ట్రేడీ పూర్తి ప్రవాహం')} tone="secondary" onPress={() => go('/producer/1t/dashboard')} />
       <Button label={tx('Withdraw the lot', 'లాట్ వెనక్కి')} tone="secondary" onPress={() => go('/producer/p-113-withdraw-lot')} />
     </View>
   );

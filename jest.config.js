@@ -20,7 +20,7 @@ module.exports = {
     {
       displayName: 'smoke',
       preset: 'jest-expo',
-      testMatch: ['<rootDir>/src/screens/**/*.smoke.test.tsx'],
+      testMatch: ['<rootDir>/src/screens/**/*.smoke.test.tsx', '<rootDir>/src/screens/routeGraph.test.ts', '<rootDir>/src/oneTradie/*.test.ts', '<rootDir>/src/state/*.test.ts'],
     },
   ],
 };
