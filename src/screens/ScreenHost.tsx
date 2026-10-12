@@ -10,6 +10,8 @@ import { useApp } from '../state/store';
 import { useTrade } from '../state/tradeStore';
 import { ScreenBody } from './bodies';
 import { catalogById, tabs } from './catalog';
+import { menuRoute, prevNext } from './graph';
+import { Inbox, SyncPanel } from './syncPanels';
 
 export function ScreenHost({ id }: { id: string }) {
   const spec = catalogById[id];
@@ -61,7 +63,12 @@ export function ScreenHost({ id }: { id: string }) {
         ) : !inRelease ? (
           <EmptyState title={tx('Not in this release', 'ఈ విడుదలలో లేదు')} body={tx('Release 1 is the producer, the commission agent and the buyer.', 'విడుదల 1: రైతు, ఏజెంట్, కొనుగోలుదారు.')} action={tx('Home', 'హోమ్')} onAction={() => router.replace('/' as never)} />
         ) : (
-          <ScreenBody spec={spec} go={(route) => route && router.push(route as never)} />
+          <>
+            {['producer', 'agent', 'buyer'].includes(spec.stakeholder) && roleHome(spec.stakeholder).endsWith(spec.slug) ? <Inbox role={spec.stakeholder as 'producer'} /> : null}
+            <SyncPanel id={spec.id} go={(route) => route && router.push(route as never)} />
+            <ScreenBody spec={spec} go={(route) => route && router.push(route as never)} />
+            <ModuleFooter id={spec.id} stakeholder={spec.stakeholder} go={(route) => router.push(route as never)} />
+          </>
         )}
       </ScrollView>
       <Toast message={toast || null} onClose={() => showToast('')} />
@@ -160,6 +167,28 @@ export function ScreenHost({ id }: { id: string }) {
   );
 }
 
+function ModuleFooter({ id, stakeholder, go }: { id: string; stakeholder: string; go: (route: string) => void }) {
+  const tx = useTx();
+  const { prev, next } = prevNext(id);
+  return (
+    <View style={styles.footer}>
+      {prev ? (
+        <Pressable style={styles.footBtn} onPress={() => go(prev.route)}>
+          <Text style={styles.footText} numberOfLines={1}>{`‹ ${tx(prev.title, prev.titleTe)}`}</Text>
+        </Pressable>
+      ) : null}
+      <Pressable style={styles.footBtn} onPress={() => go(menuRoute(stakeholder))}>
+        <Text style={styles.footText}>{tx('All screens', 'అన్నీ')}</Text>
+      </Pressable>
+      {next ? (
+        <Pressable style={styles.footBtn} onPress={() => go(next.route)}>
+          <Text style={styles.footText} numberOfLines={1}>{`${tx(next.title, next.titleTe)} ›`}</Text>
+        </Pressable>
+      ) : null}
+    </View>
+  );
+}
+
 export function screenCount(): number {
   return Object.keys(catalogById).length;
 }
@@ -186,4 +215,7 @@ const styles = StyleSheet.create({
   sideOn: { backgroundColor: colors.cream },
   sideLabel: { color: colors.cream, fontWeight: '600', flex: 1 },
   desktopMain: { flex: 1 },
+  footer: { flexDirection: 'row', gap: 6, marginTop: 8 },
+  footBtn: { flex: 1, minHeight: 44, borderRadius: 12, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface, justifyContent: 'center', paddingHorizontal: 8 },
+  footText: { color: colors.fieldGreen, fontWeight: '700', textAlign: 'center' },
 });
