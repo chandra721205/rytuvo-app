@@ -1,5 +1,5 @@
 /** Release 1 shows producer, commission agent and buyer. Other apps stay in the repo behind this flag. */
-export const APP_VERSION = '1.2.0';
+export const APP_VERSION = '1.2.1';
 export const RELEASE_STAKEHOLDERS = ['producer', 'agent', 'buyer'] as const;
 
 export function stakeholderInRelease(stakeholder: string): boolean {

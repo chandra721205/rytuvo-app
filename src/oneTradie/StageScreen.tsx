@@ -7,11 +7,24 @@ import { useTrade } from '../state/tradeStore';
 import { SyncPanel } from '../screens/syncPanels';
 import { PHASES, STAGES, stageById, stageRoute } from './flow';
 import { submitStage } from './bind';
+import { LocationCard, LotQR, PhotoField, TrendChart } from '../design-system/visuals';
+
+const PRICES = [20850, 21200, 21050, 21600, 21900, 22150, 22400];
+const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Today'];
+const PHOTO_STAGES: Record<string, string> = { 'lot-management': 'Lot photos', 'sampling-quality': 'Sample photos', 'ai-quality': 'Photos for AI grading', 'destination-receiving': 'Arrival photos', 'order-confirmation': 'Order media' };
+const MAP_STAGES: Record<string, [string, string, number]> = {
+  storage: ['Sri Lakshmi Cold Storage', 'Nallapadu Rd, Guntur 522005', 6],
+  'transport-booking': ['Pickup: Ramesh farm', 'Medikonduru, Guntur 522438', 18],
+  'destination-receiving': ['Guntur Mirchi Yard', 'NTR Market Yard, Guntur 522004', 18],
+  'marketplace-browse': ['Guntur Mirchi Yard', 'NTR Market Yard, Guntur 522004', 18],
+};
 
 export function StageScreen({ id }: { id: string }) {
   const router = useRouter();
   const stage = stageById[id] ?? STAGES[0];
   const saved = useTrade((s) => s.trade.oneTradie?.[stage.id]);
+  const lotLabel = useTrade((s) => `${s.trade.commodity || 'Chilli'} ${s.trade.variety || 'Teja'}`);
+  const token = useTrade((s) => `RYT-${(s.trade.yard || 'GNT').slice(0, 3).toUpperCase()}-${s.trade.variety ? s.trade.variety.slice(0, 4).toUpperCase() : 'LOT'}-${s.trade.bags || 0}`);
   const [values, setValues] = useState<Record<string, string>>(saved ?? {});
   const [toast, setToast] = useState<string | null>(null);
   const set = (k: string, v: string) => setValues((p) => ({ ...p, [k]: v }));
@@ -21,7 +34,7 @@ export function StageScreen({ id }: { id: string }) {
   return (
     <View style={styles.page}>
       <TopBar title={stage.title} subtitle={`1Tradie · ${PHASES[phaseIndex]?.label ?? ''}`} onBack={back} />
-      <ScrollView contentContainerStyle={styles.scroll}>
+      <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
         <Stepper steps={PHASES.map((p) => p.label.slice(2))} current={phaseIndex} />
         <Text style={styles.p}>{stage.description}{stage.optional ? ' · optional' : ''}</Text>
         {stage.sections.length ? <Text style={styles.small}>{stage.sections.join(' · ')}</Text> : null}
@@ -52,6 +65,14 @@ export function StageScreen({ id }: { id: string }) {
             );
           })}
         </Card>
+        {['dashboard', 'crop-selection', 'market-auction', 'storage-sell-decision'].includes(stage.id) ? (
+          <TrendChart title={`${lotLabel} · Guntur modal price, 7 days`} points={PRICES} labels={DAYS} />
+        ) : null}
+        {PHOTO_STAGES[stage.id] ? (
+          <PhotoField label={PHOTO_STAGES[stage.id]} value={(values[PHOTO_STAGES[stage.id]] ?? '').split('|').filter(Boolean)} onChange={(u) => set(PHOTO_STAGES[stage.id], u.join('|'))} />
+        ) : null}
+        {['tokenization', 'traceability', 'buyer-verification', 'complete'].includes(stage.id) ? <LotQR token={token} caption="Scan to verify lot provenance" /> : null}
+        {MAP_STAGES[stage.id] ? <LocationCard name={MAP_STAGES[stage.id][0]} address={MAP_STAGES[stage.id][1]} km={MAP_STAGES[stage.id][2]} /> : null}
         {stage.links.map((l) => (
           <Button key={l.to} label={l.label} tone="secondary" onPress={() => go(l.to)} />
         ))}

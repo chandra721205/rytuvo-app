@@ -2,7 +2,7 @@
   "expo": {
     "name": "Rytuvo",
     "slug": "rytuvo",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "scheme": "rytuvo",
@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "in.rytuvo.app",
-      "versionCode": 3,
+      "versionCode": 4,
       "adaptiveIcon": {
         "backgroundColor": "#0F5B3A",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -41,7 +41,14 @@
       ],
       "expo-status-bar",
       "expo-localization",
-      "expo-asset"
+      "expo-asset",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Rytuvo uses photos of your lot and quality samples.",
+          "cameraPermission": "Rytuvo uses the camera to photograph your lot and quality samples."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": false,

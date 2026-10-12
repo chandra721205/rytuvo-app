@@ -17,7 +17,7 @@ export default function Menu() {
   return (
     <View style={styles.page}>
       <TopBar title={tx('All screens', 'అన్ని స్క్రీన్లు')} subtitle={String(who)} onBack={() => (router.canGoBack() ? router.back() : router.replace(roleHome(String(who)) as never))} />
-      <ScrollView contentContainerStyle={styles.scroll}>
+      <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
         {String(who) === 'producer' ? (
           <Pressable style={[styles.row, styles.hl]} onPress={() => router.push('/producer/1t/dashboard' as never)}>
             <Text style={styles.t}>{tx('1Tradie producer flow (8 phases)', '1ట్రేడీ రైతు ప్రవాహం')}</Text>

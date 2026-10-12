@@ -182,6 +182,7 @@ interface TradeState {
   trade: DemoTrade;
   resetDemo: () => void;
   placeBid: (buyer: string, rupees: number) => string | null;
+  autoBid: (buyer: string, maxRupees: number, step?: number) => string | null;
   saveStage: (stage: string, values: Record<string, string>) => void;
   inboxFor: (role: InboxItem['to']) => InboxItem[];
   setProducerType: (value: DemoTrade['producerType']) => void;
@@ -257,6 +258,16 @@ export const useTrade = create<TradeState>()(
         const bids = [{ buyer, rupees, at: (trade.bids?.length ?? 0) + 1 }, ...(trade.bids ?? [])];
         set({ trade: note({ ...trade, bids, saleRupees: rupees }, 'buyer', `Bid ₹${rupees}/q by ${buyer}`) });
         return null;
+      },
+      autoBid: (buyer, maxRupees, step = 50) => {
+        const trade = get().trade;
+        const best = (trade.bids ?? []).reduce((m, b) => Math.max(m, b.rupees), 0);
+        const target = Math.max(best + step, trade.reserveRupees);
+        if (target > maxRupees) {
+          set({ trade: note(trade, 'buyer', `Auto-bid max ₹${maxRupees} is below the next step ₹${target}: raise or stop`) });
+          return `Outbid: next step ₹${target} is above your max ₹${maxRupees}`;
+        }
+        return get().placeBid(buyer, target);
       },
       saveStage: (stage, values) =>
         set((state) => ({ trade: { ...state.trade, oneTradie: { ...(state.trade.oneTradie ?? {}), [stage]: values } } })),

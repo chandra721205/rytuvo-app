@@ -64,3 +64,30 @@ describe('one trade end to end: producer -> agent -> buyer -> settlement', () =>
     expect(t().inboxFor('agent').some((i) => /Buyer payment/.test(i.text))).toBe(true);
   });
 });
+
+describe('auto-bid (1.2.1)', () => {
+  test('auto-bid steps to the reserve, then alerts when the next step exceeds the max', () => {
+    t().resetDemo();
+    t().createLot({ category: 'Spices', commodity: 'Chilli', variety: 'Teja', yard: 'Guntur', bags: 10, bagKg: 40, offerRupees: 22400, reserveRupees: 22000 });
+    t().engage(0.02, '123456');
+    t().listLot();
+    expect(t().autoBid('Sai Exports', 22100)).toBeNull();
+    expect(t().trade.bids[0].rupees).toBe(22000);
+    expect(t().autoBid('Sai Exports', 22100)).toBeNull();
+    expect(t().trade.bids[0].rupees).toBe(22050);
+    expect(t().autoBid('Sai Exports', 22080)).toMatch(/Outbid/);
+    expect(t().inboxFor('agent').some((i) => /Auto-bid max/.test(i.text))).toBe(true);
+  });
+});
+
+describe('language persistence (1.2.1)', () => {
+  test('setLanguage stores the choice for the next launch', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const AsyncStorage = require('@react-native-async-storage/async-storage');
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { useApp, LANG_KEY } = require('./store');
+    useApp.getState().setLanguage('en');
+    expect(await AsyncStorage.getItem(LANG_KEY)).toBe('en');
+    expect(useApp.getState().session.language).toBe('en');
+  });
+});

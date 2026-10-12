@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import type { BagEntry, Bid, Bootstrap, BuyerPurpose, Language, Member, RoleCode, Stakeholder } from '../domain/types';
 import { mockClient } from '../data/client';
@@ -120,7 +121,10 @@ export const useApp = create<AppState>((set, get) => ({
   devCode: null,
   selectedPurposes: ['trader'],
   boot: () => set({ ...mockClient.bootstrap(), ready: true }),
-  setLanguage: (language) => set((state) => ({ session: { ...state.session, language } })),
+  setLanguage: (language) => {
+    AsyncStorage.setItem(LANG_KEY, language).catch(() => undefined);
+    set((state) => ({ session: { ...state.session, language } }));
+  },
   setOffline: (offline) =>
     set((state) => ({
       session: { ...state.session, offline },
@@ -304,3 +308,11 @@ export const useApp = create<AppState>((set, get) => ({
 export function memberById(members: Member[], id: string): Member | undefined {
   return members.find((member) => member.id === id);
 }
+
+/** The language choice survives app restarts (1.2.1 fix: it reset to the seed language on every launch). */
+export const LANG_KEY = 'rytuvo-language';
+AsyncStorage.getItem(LANG_KEY)
+  .then((value) => {
+    if (value === 'en' || value === 'te') useApp.setState((state) => ({ session: { ...state.session, language: value } }));
+  })
+  .catch(() => undefined);

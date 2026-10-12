@@ -56,7 +56,7 @@ export function ScreenHost({ id }: { id: string }) {
   const body = (
     <View style={{ flex: 1 }}>
       {offline ? <Text style={styles.offline}>{tx('Offline · waiting to sync', 'ఆఫ్‌లైన్ · సింక్ కోసం వేచి')}</Text> : null}
-      <ScrollView contentContainerStyle={styles.scroll}>
+      <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
         <Text style={styles.kicker}>{spec.id}</Text>
         {locked ? (
           <EmptyState title={tx('Not on this role', 'ఈ పాత్రకు లేదు')} body={tx('The owner can grant this module. Nothing was changed.', 'యజమాని ఈ మాడ్యూల్ ఇవ్వగలరు.')} />
@@ -97,7 +97,7 @@ export function ScreenHost({ id }: { id: string }) {
     inRelease && spec.stakeholder !== 'onboarding' ? (
       <View style={styles.switchRow}>
         {ROLE_SWITCH.map((item) => {
-          const on = stakeholder === item.stakeholder;
+          const on = spec.stakeholder === item.stakeholder || (!ROLE_SWITCH.some((r) => r.stakeholder === spec.stakeholder) && stakeholder === item.stakeholder);
           return (
             <Pressable
               key={item.stakeholder}
