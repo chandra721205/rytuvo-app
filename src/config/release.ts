@@ -1,5 +1,5 @@
 /** Release 1 shows producer, commission agent and buyer. Other apps stay in the repo behind this flag. */
-export const APP_VERSION = '1.1.0';
+export const APP_VERSION = '1.2.0';
 export const RELEASE_STAKEHOLDERS = ['producer', 'agent', 'buyer'] as const;
 
 export function stakeholderInRelease(stakeholder: string): boolean {
@@ -22,6 +22,7 @@ export function roleHome(stakeholder: string): string {
     seller: '/inputs/is-01-home',
     service: '/inputs/sp-01-home',
     admin: '/admin/am-01-live-ops',
+    shared: '/shared/sh-01-search',
   };
   return map[stakeholder] ?? '/';
 }
