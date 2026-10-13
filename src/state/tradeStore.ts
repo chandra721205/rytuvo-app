@@ -36,6 +36,7 @@ export interface TradeBid {
 export interface InboxItem {
   to: 'producer' | 'agent' | 'buyer';
   text: string;
+  textTe?: string;
   seq: number;
 }
 
@@ -73,7 +74,7 @@ export interface DemoTrade {
   lorryLoadedKg: number | null;
   lorryEmptyKg: number | null;
   fraudAlert: boolean;
-  fraudStatus: 'within_tolerance' | 'possible_fraud' | 'tolerance_to_be_defined';
+  fraudStatus: 'within_tolerance' | 'review' | 'alert' | 'pending';
   sharedLorry: boolean;
   deductions: ProducerDeductionLine[];
   producerPaid: boolean;
@@ -130,7 +131,7 @@ const empty = (): DemoTrade => ({
   lorryLoadedKg: null,
   lorryEmptyKg: null,
   fraudAlert: false,
-  fraudStatus: 'tolerance_to_be_defined',
+  fraudStatus: 'pending',
   sharedLorry: false,
   deductions: [],
   producerPaid: false,
@@ -161,6 +162,22 @@ const empty = (): DemoTrade => ({
 });
 
 /** Who hears about an action taken by one role. Every hand-off notifies the other two sides of the trade. */
+const ROLE_TE: Record<string, string> = { producer: 'రైతు', agent: 'ఏజెంట్', buyer: 'కొనుగోలుదారు' };
+const ACTION_TE: [RegExp, string][] = [
+  [/^Type /, 'రైతు రకం'], [/^Lot created/, 'లాట్ సృష్టించారు'], [/^Agent engaged/, 'ఏజెంట్ నియమించారు'], [/^Lot listed/, 'లాట్ వేలానికి'],
+  [/^Grading done/, 'గ్రేడింగ్ పూర్తి'], [/^Sale OTP/, 'అమ్మకం OTP నిర్ధారణ'], [/^Sold/, 'అమ్ముడైంది'], [/^Unsold/, 'అమ్ముడుపోలేదు'],
+  [/^Lot withdrawn/, 'లాట్ వెనక్కి'], [/^Stored/, 'నిల్వ'], [/^Storage loan settled/, 'నిల్వ రుణం తీర్చారు'], [/^Weighment locked/, 'తూకం లాక్'],
+  [/^Gate entry/, 'గేట్ ప్రవేశం'], [/^Gate exit/, 'గేట్ నిష్క్రమణ'], [/^Deductions accepted/, 'కోతలు అంగీకరించారు'], [/^Producer paid/, 'రైతుకు చెల్లింపు'],
+  [/^Later payout accepted/, 'తర్వాత చెల్లింపు అంగీకారం'], [/^E-way bill uploaded/, 'ఇ-వే బిల్లు అప్‌లోడ్'], [/^Lifting confirmed/, 'లిఫ్టింగ్ నిర్ధారణ'],
+  [/^Buyer payment/, 'కొనుగోలుదారు చెల్లింపు'], [/^Back-out/, 'కొనుగోలుదారు వెనక్కి'], [/^Escalation requested/, 'ఫిర్యాదు అభ్యర్థన'], [/^Escalation OTP/, 'ఫిర్యాదు OTP'],
+  [/^Next bidder/, 'తదుపరి బిడ్డర్'], [/^Re-listed/, 'మళ్ళీ లిస్ట్'], [/^Deduction/, 'కోత'], [/^Re-test paid/, 'మళ్ళీ పరీక్ష చెల్లింపు'],
+  [/^Bid ₹(\d+)/, 'బిడ్ ₹$1/క్వి'], [/^Auto-bid max/, 'ఆటో-బిడ్ గరిష్ఠం దాటింది'],
+];
+export function actionTe(role: string, action: string): string {
+  const hit = ACTION_TE.find(([re]) => re.test(action));
+  return `${ROLE_TE[role] ?? role}: ${hit ? action.replace(/^.*$/, (a) => a.replace(hit[0], hit[1]).replace(/^(.*?)(?: by .*)?$/, '$1')) : action}`;
+}
+
 const AUDIENCE: Record<string, InboxItem['to'][]> = {
   producer: ['agent'],
   agent: ['producer', 'buyer'],
@@ -170,7 +187,7 @@ const AUDIENCE: Record<string, InboxItem['to'][]> = {
 function note(trade: DemoTrade, role: string, action: string): DemoTrade {
   const inbox = trade.inbox ?? [];
   const seq = (inbox[0]?.seq ?? 0) + 1;
-  const items = (AUDIENCE[role] ?? []).map((to, i) => ({ to, text: `${role}: ${action}`, seq: seq + i }));
+  const items = (AUDIENCE[role] ?? []).map((to, i) => ({ to, text: `${role}: ${action}`, textTe: actionTe(role, action), seq: seq + i }));
   return { ...trade, log: [{ role, action }, ...trade.log].slice(0, 24), inbox: [...items.reverse(), ...inbox].slice(0, 60) };
 }
 
@@ -358,10 +375,17 @@ export const useTrade = create<TradeState>()(
           const bagNet = trade.bagRows.reduce((sum, row) => sum + (row.sellerKg ?? 0), 0);
           const lorry = trade.lorryLoadedKg != null && trade.lorryEmptyKg != null ? lorryNetKg(trade.lorryLoadedKg, trade.lorryEmptyKg) : null;
           const tolerance = resolveWeighbridgeTolerance(GUNTUR_CHILLI_EXAMPLE.weighbridgeTolerance, trade.sharedLorry);
-          const check = lorry != null && bagNet > 0 ? weighbridgeFraudAlert({ lorryNetKg: lorry, bagNetKg: bagNet, tolerance }) : { alert: false, status: 'tolerance_to_be_defined' as const };
+          const check = lorry != null && bagNet > 0 ? weighbridgeFraudAlert({ lorryNetKg: lorry, bagNetKg: bagNet, tolerance }) : { alert: false, status: 'pending' as const };
           trade.fraudAlert = check.alert;
           trade.fraudStatus = check.status;
-          return { trade: note(trade, 'agent', which === 'loaded' ? 'Gate entry' : 'Gate exit') };
+          let next = note(trade, 'agent', which === 'loaded' ? 'Gate entry' : 'Gate exit');
+          if (check.status === 'review' || check.status === 'alert') {
+            const pct = (((check as { diffRatio?: number }).diffRatio ?? 0) * 100).toFixed(2);
+            const text = check.status === 'review' ? `Weight check: review ${pct}% difference (3–4%)` : `Weight check: alert ${pct}% difference (>4%), review needed`;
+            const textTe = check.status === 'review' ? `బరువు తనిఖీ: ${pct}% తేడా, పరిశీలించండి` : `బరువు తనిఖీ: ${pct}% తేడా (4% పైగా), పరిశీలన అవసరం`;
+            next = { ...next, inbox: [{ to: 'agent' as const, text, textTe, seq: (next.inbox[0]?.seq ?? 0) + 1 }, ...next.inbox] };
+          }
+          return { trade: next };
         }),
       acceptDeductions: (code) => {
         if (!otpOk(code)) return 'OTP must be 123456';

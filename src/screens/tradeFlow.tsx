@@ -623,15 +623,18 @@ function FraudAlert() {
     <View style={styles.gap}>
       <Badge
         label={
-          trade.fraudStatus === 'possible_fraud'
-            ? tx('Possible weight fraud', 'బరువు అనుమానం')
-            : trade.fraudStatus === 'tolerance_to_be_defined'
-              ? tx('Tolerance to be defined', 'పరిమితి నిర్ణయం కావాలి')
-              : tx('Within tolerance', 'పరిమితిలో')
+          trade.fraudStatus === 'alert'
+            ? tx('Weight difference over 4%: review', 'బరువు తేడా 4% పైగా: పరిశీలించండి')
+            : trade.fraudStatus === 'review'
+              ? tx('Weight difference 3–4%: review', 'బరువు తేడా 3–4%: పరిశీలన')
+              : trade.fraudStatus === 'pending'
+                ? tx('Waiting for entry and exit weights', 'ఎంట్రీ, ఎగ్జిట్ బరువుల కోసం')
+                : tx('Within 3%: normal', '3% లోపు: సాధారణం')
         }
-        tone={trade.fraudStatus === 'possible_fraud' ? 'danger' : trade.fraudStatus === 'tolerance_to_be_defined' ? 'warning' : 'success'}
+        tone={trade.fraudStatus === 'alert' ? 'danger' : trade.fraudStatus === 'review' ? 'warning' : 'success'}
       />
-      <Text style={styles.p}>{tx('Tolerance is configurable per commodity and for a shared lorry. It is unset until the yard defines it. An alert is never an automatic penalty.', 'పరిమితి సరుకు మరియు షేర్డ్ లారీకి వేరు. యార్డు పెట్టే వరకు ఖాళీ. ఆటో పెనాల్టీ లేదు.')}</Text>
+      <Text style={styles.p}>{tx('Basic rule check: lorry net vs bag total. Up to 3% is normal, 3–4% is a review warning, over 4% is an alert to the agent and admin. Yard or commodity can change these limits. It never notifies authorities or penalises automatically.', 'ప్రాథమిక నియమ తనిఖీ: 3% వరకు సాధారణం, 3–4% పరిశీలన, 4% పైగా ఏజెంట్, అడ్మిన్‌కు హెచ్చరిక. యార్డు/సరుకు మార్చవచ్చు. అధికారులకు ఆటోగా తెలియజేయదు.')}</Text>
+      <Text style={styles.note}>{tx('AI fraud model: coming later.', 'AI మోసం మోడల్: త్వరలో.')}</Text>
       <Text style={styles.note}>{lorry == null ? tx('Record entry and exit first.', 'ముందు ఎంట్రీ, ఎగ్జిట్.') : tx(`Lorry net ${lorry.toFixed(1)} kg`, `లారీ నికరం ${lorry.toFixed(1)} కిలో`)}</Text>
     </View>
   );

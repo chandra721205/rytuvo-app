@@ -72,10 +72,21 @@ export type HamaliBasis = 'per_bag' | 'per_quintal';
  * Lorry-net vs bag-total threshold. Null means the yard has not set it.
  * A shared lorry (several farmers) can use a different number from a single-farmer lorry.
  */
+export interface WeighbridgeBand {
+  /** Above this share of the bag total: review warning to agent and admin. */
+  review: number;
+  /** Above this share: weight-difference alert to agent and admin for review (basic rule check, not AI). */
+  fraud: number;
+}
+
+/** Chandra, 13 Oct 2026 (basic rule check; AI fraud model: coming later): <=3% normal, >3% to <=4% review warning, >4% alert. Applies to all commodities and shared lorries unless a yard/commodity overrides it. */
+export const DEFAULT_WEIGHBRIDGE_BAND: WeighbridgeBand = { review: 0.03, fraud: 0.04 };
+
 export interface WeighbridgeTolerance {
-  byCommodity: number | null;
-  sharedLorry: number | null;
-  note: 'to be defined';
+  /** Yard/commodity override; null uses the default band. A number is a single fraud threshold. */
+  byCommodity: WeighbridgeBand | number | null;
+  sharedLorry: WeighbridgeBand | number | null;
+  note: string;
 }
 
 export const TOLERANCE_TO_BE_DEFINED = 'to be defined' as const;
@@ -119,7 +130,7 @@ export const GUNTUR_CHILLI_EXAMPLE: YardCommodityRates = {
   buyerInterestBps: 2100,
   creditDays: 15,
   advanceInterestBps: 1800,
-  weighbridgeTolerance: { byCommodity: null, sharedLorry: null, note: TOLERANCE_TO_BE_DEFINED },
+  weighbridgeTolerance: { byCommodity: null, sharedLorry: null, note: 'default 3% review / 4% fraud' },
   holidays: ['2026-10-02', '2026-11-01'],
   gstRate: 0,
   tdsRate: 0,
@@ -405,24 +416,30 @@ export function lorryNetKg(loadedKg: number, emptyKg: number): number {
   return loadedKg - emptyKg;
 }
 
-export function resolveWeighbridgeTolerance(config: WeighbridgeTolerance, sharedLorry: boolean): number | null {
-  return sharedLorry ? config.sharedLorry : config.byCommodity;
+export function resolveWeighbridgeTolerance(config: WeighbridgeTolerance, sharedLorry: boolean): WeighbridgeBand {
+  const v = sharedLorry ? config.sharedLorry ?? config.byCommodity : config.byCommodity;
+  if (v == null) return DEFAULT_WEIGHBRIDGE_BAND;
+  return typeof v === 'number' ? { review: v, fraud: v } : v;
 }
 
 export interface WeighbridgeCheck {
   alert: boolean;
-  status: 'within_tolerance' | 'possible_fraud' | 'tolerance_to_be_defined';
+  status: 'within_tolerance' | 'review' | 'alert';
+  diffRatio: number;
+  /** Who is notified: agent + admin for review and alert. Authorities are never notified automatically. */
+  notify: ('agent' | 'admin')[];
 }
 
-/**
- * Alert only, never an automatic penalty.
- * A null tolerance means the yard has not defined one, so no alert is raised.
- */
-export function weighbridgeFraudAlert(input: { lorryNetKg: number; bagNetKg: number; tolerance: number | null }): WeighbridgeCheck {
-  if (input.tolerance == null) return { alert: false, status: 'tolerance_to_be_defined' };
-  if (input.bagNetKg <= 0) return { alert: false, status: 'within_tolerance' };
-  const over = Math.abs(input.lorryNetKg - input.bagNetKg) / input.bagNetKg > input.tolerance;
-  return { alert: over, status: over ? 'possible_fraud' : 'within_tolerance' };
+/** Basic weight-difference rule check (not AI fraud detection; AI fraud model: coming later). Alert only, never a penalty, never auto-notifies authorities. Boundaries are inclusive on the lower band (exactly 3% is normal, exactly 4% is review). */
+export function weighbridgeFraudAlert(input: { lorryNetKg: number; bagNetKg: number; tolerance?: WeighbridgeBand | number | null }): WeighbridgeCheck {
+  const t = input.tolerance;
+  const band = t == null ? DEFAULT_WEIGHBRIDGE_BAND : typeof t === 'number' ? { review: t, fraud: t } : t;
+  if (input.bagNetKg <= 0) return { alert: false, status: 'within_tolerance', diffRatio: 0, notify: [] };
+  const diffRatio = Math.abs(input.lorryNetKg - input.bagNetKg) / input.bagNetKg;
+  const eps = 1e-9;
+  if (diffRatio > band.fraud + eps) return { alert: true, status: 'alert', diffRatio, notify: ['agent', 'admin'] };
+  if (diffRatio > band.review + eps) return { alert: true, status: 'review', diffRatio, notify: ['agent', 'admin'] };
+  return { alert: false, status: 'within_tolerance', diffRatio, notify: [] };
 }
 
 export const BACKOUT_REASONS = [

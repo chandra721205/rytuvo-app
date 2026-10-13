@@ -405,17 +405,19 @@ describe('release 1 bill — worked example', () => {
     expect(canReleaseLot({ stored: true, storageLoanPaise: 100, loanSettled: false })).toEqual({ ok: false, reason: 'storage_loan_open' });
     expect(canReleaseLot({ stored: true, storageLoanPaise: 100, loanSettled: true }).ok).toBe(true);
     expect(advanceInterestPaise({ amountPaise: 5_000_000, givenOn: '2026-09-12', recoveredOn: '2026-10-12', annualRateBps: 1800 })).toBe(73_973);
-    expect(GUNTUR_CHILLI_EXAMPLE.weighbridgeTolerance).toEqual({ byCommodity: null, sharedLorry: null, note: 'to be defined' });
-    expect(weighbridgeFraudAlert({ lorryNetKg: 2600, bagNetKg: 2488.5, tolerance: null })).toEqual({
-      alert: false,
-      status: 'tolerance_to_be_defined',
-    });
-    expect(weighbridgeFraudAlert({ lorryNetKg: 2500, bagNetKg: 2488.5, tolerance: 0.005 })).toEqual({ alert: false, status: 'within_tolerance' });
+    // Basic weight-difference rule (13 Oct 2026): <=3% ok, >3%..<=4% review, >4% alert to agent + admin. Never authorities.
+    expect(resolveWeighbridgeTolerance(GUNTUR_CHILLI_EXAMPLE.weighbridgeTolerance, false)).toEqual({ review: 0.03, fraud: 0.04 });
+    expect(resolveWeighbridgeTolerance(GUNTUR_CHILLI_EXAMPLE.weighbridgeTolerance, true)).toEqual({ review: 0.03, fraud: 0.04 });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 1030, bagNetKg: 1000 })).toMatchObject({ alert: false, status: 'within_tolerance', notify: [] });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 1031, bagNetKg: 1000 })).toMatchObject({ alert: true, status: 'review', notify: ['agent', 'admin'] });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 960, bagNetKg: 1000 })).toMatchObject({ status: 'review' });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 1041, bagNetKg: 1000 })).toMatchObject({ alert: true, status: 'alert', notify: ['agent', 'admin'] });
+    expect(weighbridgeFraudAlert({ lorryNetKg: 1041, bagNetKg: 1000 }).notify).not.toContain('authorities');
+    // Yard/commodity override still works.
+    const configured = { byCommodity: 0.005, sharedLorry: { review: 0.05, fraud: 0.06 }, note: 'yard override' };
+    expect(resolveWeighbridgeTolerance(configured, false)).toEqual({ review: 0.005, fraud: 0.005 });
+    expect(resolveWeighbridgeTolerance(configured, true)).toEqual({ review: 0.05, fraud: 0.06 });
     expect(weighbridgeFraudAlert({ lorryNetKg: 2600, bagNetKg: 2488.5, tolerance: 0.005 }).alert).toBe(true);
-    const configured = { byCommodity: 0.005, sharedLorry: 0.02, note: 'to be defined' as const };
-    expect(resolveWeighbridgeTolerance(configured, false)).toBe(0.005);
-    expect(resolveWeighbridgeTolerance(configured, true)).toBe(0.02);
-    expect(resolveWeighbridgeTolerance(GUNTUR_CHILLI_EXAMPLE.weighbridgeTolerance, true)).toBeNull();
     expect(validateBackout('other', '')).toEqual({ ok: false, reason: 'other_text_required' });
     expect(validateBackout('quality_not_as_sample', '').ok).toBe(true);
     expect(buyerRiskRank({ overdueDays: 0, disputes: 0, backouts: 0, onTimePayments: 4 }).band).toBe('low');

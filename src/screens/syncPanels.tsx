@@ -154,7 +154,7 @@ export function Inbox({ role }: { role: InboxItem['to'] }) {
     <Card>
       <Text style={styles.h}>{tx('Notifications', 'నోటిఫికేషన్లు')}</Text>
       {items.map((i) => (
-        <Text key={i.seq} style={styles.p}>{`• ${i.text}`}</Text>
+        <Text key={i.seq} style={styles.p}>{`• ${tx(i.text, i.textTe ?? i.text)}`}</Text>
       ))}
     </Card>
   );

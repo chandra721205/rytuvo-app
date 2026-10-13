@@ -91,3 +91,18 @@ describe('language persistence (1.2.1)', () => {
     expect(useApp.getState().session.language).toBe('en');
   });
 });
+
+describe('weighbridge basic rule check + Telugu notifications (1.2.2)', () => {
+  test('3-4% difference warns the agent for review; Telugu text present', () => {
+    t().resetDemo();
+    t().createLot({ category: 'Spices', commodity: 'Chilli', variety: 'Teja', yard: 'Guntur', bags: 1, bagKg: 100, offerRupees: 22400, reserveRupees: 22000 });
+    t().setBag('B-01', 'seller', 1000);
+    t().setLorry('loaded', 11035);
+    t().setLorry('empty', 10000);
+    expect(t().trade.fraudStatus).toBe('review');
+    expect(t().inboxFor('agent')[0].text).toMatch(/review 3\.50%/);
+    t().setLorry('loaded', 11050);
+    expect(t().trade.fraudStatus).toBe('alert');
+    expect(t().inboxFor('agent').find((i) => /Lot created/.test(i.text))?.textTe).toBe('రైతు: లాట్ సృష్టించారు');
+  });
+});
